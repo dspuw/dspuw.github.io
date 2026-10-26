@@ -29,8 +29,8 @@ const { eyebrow, title, accent, photo, alt, placeholder } = Astro.props;
       <Picture
         src={photo}
         formats={['avif', 'webp']}
-        widths={[640, 1024, 1600]}
-        sizes="(min-width: 1200px) 1152px, 100vw"
+        widths={[640, 1024, 1600, 2000]}
+        sizes="(min-width: 1360px) 1280px, 100vw"
         alt={alt}
         class="aspect-[4/3] w-full object-cover sm:aspect-[21/8]"
         loading="eager"

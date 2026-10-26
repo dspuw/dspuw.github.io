@@ -51,7 +51,7 @@ All of these live in `src/data`. A few rules apply to every file:
 - **`socials`:** the Instagram and LinkedIn links.
 - **`email`:** the chapter's main point of contact, shown on the Home and Contact pages.
   - There is no contact form right now. If you want one later, get a free access key from [Web3Forms](https://web3forms.com) that delivers to the chapter email, and ask a developer (or Claude) to add the form back.
-- **`stats`:** the three numbers on the home page (founded 2012, 75+ brothers, 3 majors). Only change these if the facts change.
+- **`stats`:** the numbers on the home page (founded 2012, 75+ brothers). Only change these if the facts change.
 - **`nav` and `footerLinks`:** the menu links.
 - **`landAcknowledgment`:** shown in the footer of every page. Do not reword it.
 

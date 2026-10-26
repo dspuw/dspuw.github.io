@@ -35,7 +35,7 @@ const cards = [
           <Button href={home.about.link.href} variant="secondary">{home.about.link.label}</Button>
         </div>
 
-        <ul class="mt-12 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:gap-8">
+        <ul class="mt-12 grid grid-cols-2 gap-4 border-t border-border pt-8 sm:gap-8">
           {
             site.stats.map((stat) => (
               <li class="reveal">
@@ -57,7 +57,7 @@ const cards = [
           src={heroPhoto}
           formats={['avif', 'webp']}
           widths={[480, 800, 1200, 1536]}
-          sizes="(min-width: 1200px) 564px, (min-width: 1024px) 46vw, 100vw"
+          sizes="(min-width: 1360px) 640px, (min-width: 1024px) 46vw, 100vw"
           alt="Sigma Upsilon brothers in business attire filling a lecture hall, with the front row holding a purple and gold Delta Sigma Pi banner"
           class="aspect-[4/5] w-full object-cover object-[50%_62%]"
           loading="eager"
@@ -68,7 +68,7 @@ const cards = [
   </section>
 
   <!-- About DSP -->
-  <section class="py-24 sm:py-32" aria-labelledby="about-title">
+  <section class="py-20 sm:py-24" aria-labelledby="about-title">
     <Container class="grid gap-10 lg:grid-cols-12">
       <div class="lg:col-span-4">
         <p class="eyebrow reveal">01</p>
@@ -92,7 +92,7 @@ const cards = [
   </section>
 
   <!-- Who We Are / Join Us -->
-  <section class="pb-24 sm:pb-32" aria-label="Explore the chapter">
+  <section class="pb-20 sm:pb-24" aria-label="Explore the chapter">
     <Container class="grid gap-6 md:grid-cols-2">
       {
         cards.map((card, index) => (
@@ -129,7 +129,7 @@ const cards = [
 
   <!-- Contact Us -->
   <section id="contact" class="bg-brand text-white" aria-labelledby="contact-title">
-    <Container class="grid gap-12 py-24 sm:py-32 lg:grid-cols-12">
+    <Container class="grid gap-12 py-20 sm:py-24 lg:grid-cols-12">
       <div class="lg:col-span-5">
         <p class="eyebrow reveal text-accent-on-brand">05</p>
         <h2 id="contact-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{home.contact.heading}</h2>

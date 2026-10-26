@@ -14,7 +14,7 @@ const unknown = alumniCompanies.companies.filter((c) => c.logo && !logos[c.logo]
 if (unknown.length) throw new Error(`Missing logo files: ${unknown.map((c) => c.logo).join(', ')}`);
 ---
 
-<section class="border-t border-border py-24 sm:py-32" aria-labelledby="alumni-title">
+<section class="border-t border-border py-20 sm:py-24" aria-labelledby="alumni-title">
   <Container class="grid gap-12 lg:grid-cols-12">
     <div class="lg:col-span-4">
       <p class="eyebrow reveal">04</p>
