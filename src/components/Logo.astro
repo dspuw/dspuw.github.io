@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import logoBlack from '../assets/brand/logo-black.png';
+import logoWhite from '../assets/brand/logo-white.png';
+
+interface Props {
+  class?: string;
+  /** Always use the white logo, for placement on purple or photo backgrounds. */
+  onDark?: boolean;
+}
+const { class: className, onDark = false } = Astro.props;
+const alt = 'Delta Sigma Pi, University of Washington';
+---
+
+{
+  onDark ? (
+    <Image src={logoWhite} alt={alt} class:list={['h-auto', className]} widths={[160, 320]} sizes="160px" />
+  ) : (
+    <>
+      <Image src={logoBlack} alt={alt} class:list={['h-auto dark:hidden', className]} widths={[160, 320]} sizes="160px" />
+      <Image src={logoWhite} alt={alt} class:list={['hidden h-auto dark:block', className]} widths={[160, 320]} sizes="160px" />
+    </>
+  )
+}
