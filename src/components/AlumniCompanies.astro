@@ -5,9 +5,9 @@ import Button from './Button.astro';
 import { alumniCompanies } from '../lib/data';
 
 // Every logo in src/assets/logos, keyed by file name, in each company's original colors.
-const files = import.meta.glob<{ default: ImageMetadata }>('../assets/logos/*.svg', { eager: true });
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/logos/*.{svg,png}', { eager: true });
 const logos = Object.fromEntries(
-  Object.entries(files).map(([path, mod]) => [path.split('/').pop()!.replace('.svg', ''), mod.default]),
+  Object.entries(files).map(([path, mod]) => [path.split('/').pop()!.replace(/\.(svg|png)$/, ''), mod.default]),
 );
 
 const unknown = alumniCompanies.companies.filter((c) => c.logo && !logos[c.logo]);
@@ -31,10 +31,12 @@ if (unknown.length) throw new Error(`Missing logo files: ${unknown.map((c) => c.
         alumniCompanies.companies.map((company) => {
           const logo = company.logo ? logos[company.logo] : undefined;
           const invert = company.invertInDark ? 'dark:brightness-0 dark:invert' : '';
+          // Evens out how heavy each wordmark looks next to the others.
+          const size = { sm: 'h-5 sm:h-6', md: 'h-6 sm:h-7', lg: 'h-9 sm:h-10' }[company.size ?? 'md'];
           return (
             <li class="flex min-h-24 items-center justify-center gap-2.5 border-r border-b border-border px-4 py-6 transition-colors duration-200 hover:bg-surface sm:px-6">
               {logo && company.type === 'wordmark' && (
-                <img src={logo.src} alt={company.name} loading="lazy" decoding="async" class:list={['h-6 w-auto max-w-[8.5rem] object-contain sm:h-7', invert]} />
+                <img src={logo.src} alt={company.name} loading="lazy" decoding="async" class:list={['w-auto object-contain', size, company.wide ? 'max-w-[10.5rem]' : 'max-w-[8.5rem]', invert]} />
               )}
               {logo && company.type === 'mark' && (
                 <>

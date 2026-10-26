@@ -17,7 +17,8 @@ const siteSchema = z.object({
   shortName: z.string(),
   description: z.string(),
   socials: z.object({ instagram: z.url(), linkedin: z.url() }),
-  formEndpoint: z.string(),
+  // The main point of contact, shown on Home and Contact.
+  email: z.email(),
   stats: z.array(
     z.object({ value: z.number(), suffix: z.string().optional(), label: z.string() }),
   ),
@@ -78,12 +79,16 @@ const alumniCompaniesSchema = z.object({
   companies: z.array(
     z.object({
       name: z.string(),
-      // File name in src/assets/logos without .svg, or null for a monogram placeholder.
+      // File name in src/assets/logos without .svg or .png, or null for a monogram placeholder.
       logo: z.string().nullable(),
       // A wordmark already spells the name; a mark (symbol only) is shown with the name beside it.
       type: z.enum(['wordmark', 'mark']).optional(),
       // Dark logos turn white in dark mode so they stay visible.
       invertInDark: z.boolean().optional(),
+      // Optional fine-tuning so logos look balanced: "sm" for heavy logos, "lg" for compact ones.
+      size: z.enum(['sm', 'md', 'lg']).optional(),
+      // Very wide wordmarks get a little more room.
+      wide: z.boolean().optional(),
     }),
   ),
 });

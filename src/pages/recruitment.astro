@@ -32,7 +32,14 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
   >
     <div class="reveal mt-8 flex max-w-2xl items-start gap-3 rounded-card border border-border bg-surface p-5">
       <span class:list={['mt-2 size-2 shrink-0 rounded-full', open ? 'bg-success' : 'bg-accent']} aria-hidden="true"></span>
-      <p class="text-body text-text">{bannerMessage(recruitment)}</p>
+      <div>
+        <p class="text-body text-text">{bannerMessage(recruitment)}</p>
+        {sorted.length === 0 && (
+          <p class="mt-1 text-small text-text-muted">
+            {recruitment.nextCycle.term} {recruitment.nextCycle.year} dates: <strong class="font-semibold text-text">TBD</strong>
+          </p>
+        )}
+      </div>
     </div>
   </PageHero>
 
@@ -65,7 +72,11 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
         {open && nextEvent && <div class="reveal mb-10"><Countdown client:visible target={nextEvent.start} title={nextEvent.title} /></div>}
         {
           sorted.length === 0 ? (
-            <p class="reveal rounded-card border border-dashed border-text-muted/40 p-8 text-body-lg text-text-muted">{page.scheduleEmpty}</p>
+            <div class="reveal rounded-card border border-border bg-bg p-8 sm:p-10">
+              <p class="eyebrow">{recruitment.nextCycle.term} {recruitment.nextCycle.year} dates</p>
+              <p class="mt-3 font-display text-[3rem] leading-none text-primary">TBD</p>
+              <p class="mt-4 max-w-xl text-body-lg text-text-muted">{page.scheduleEmpty}</p>
+            </div>
           ) : (
             <ol class="relative border-l border-border">
               {sorted.map((event) => {

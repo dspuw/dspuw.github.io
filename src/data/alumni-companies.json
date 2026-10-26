@@ -20,15 +20,22 @@
     },
     {
       "name": "PwC",
-      "logo": null
+      "logo": "pwc",
+      "type": "wordmark",
+      "invertInDark": true
     },
     {
       "name": "EY",
-      "logo": null
+      "logo": "ey",
+      "type": "wordmark",
+      "invertInDark": true,
+      "size": "lg"
     },
     {
       "name": "Bain & Company",
-      "logo": null
+      "logo": "bain-and-company",
+      "type": "wordmark",
+      "wide": true
     },
     {
       "name": "Microsoft",
@@ -38,7 +45,10 @@
     },
     {
       "name": "Deloitte",
-      "logo": null
+      "logo": "deloitte",
+      "type": "wordmark",
+      "invertInDark": true,
+      "size": "sm"
     },
     {
       "name": "Google",
@@ -78,15 +88,22 @@
     },
     {
       "name": "BCG",
-      "logo": null
+      "logo": "bcg",
+      "type": "wordmark",
+      "invertInDark": true
     },
     {
       "name": "KPMG",
-      "logo": null
+      "logo": "kpmg",
+      "type": "wordmark",
+      "invertInDark": true,
+      "size": "lg"
     },
     {
       "name": "J.P. Morgan",
-      "logo": null
+      "logo": "jp-morgan",
+      "type": "wordmark",
+      "invertInDark": true
     },
     {
       "name": "Visa",
@@ -96,7 +113,10 @@
     },
     {
       "name": "Nordstrom",
-      "logo": null
+      "logo": "nordstrom",
+      "type": "wordmark",
+      "invertInDark": true,
+      "wide": true
     },
     {
       "name": "Alaska Airlines",

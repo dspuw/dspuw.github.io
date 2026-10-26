@@ -49,9 +49,8 @@ All of these live in `src/data`. A few rules apply to every file:
 ### `site.json` — links and site-wide text
 
 - **`socials`:** the Instagram and LinkedIn links.
-- **`formEndpoint`:** where the contact form sends messages.
-  - It is still a placeholder. Create a free form on [Formspree](https://formspree.io) or [Web3Forms](https://web3forms.com) that delivers to the shared chapter email, then paste its URL here. It starts with `https://`.
-  - Until then, the form tells visitors to message the chapter on Instagram or LinkedIn.
+- **`email`:** the chapter's main point of contact, shown on the Home and Contact pages.
+  - There is no contact form right now. If you want one later, get a free access key from [Web3Forms](https://web3forms.com) that delivers to the chapter email, and ask a developer (or Claude) to add the form back.
 - **`stats`:** the three numbers on the home page (founded 2012, 75+ brothers, 3 majors). Only change these if the facts change.
 - **`nav` and `footerLinks`:** the menu links.
 - **`landAcknowledgment`:** shown in the footer of every page. Do not reword it.
@@ -133,7 +132,8 @@ All of these live in `src/data`. A few rules apply to every file:
 - `home.json` holds the home page.
 - `about.json` holds the About page. Keep the official About text word for word.
 - `alumni-companies.json` holds the "Our Alumni" logos on the home page.
-  - Logo files go in `src/assets/logos` as SVG. Use `"logo": null` to show initials instead.
+  - Logo files go in `src/assets/logos` as SVG or PNG with a transparent background. Use `"logo": null` to show initials instead.
+  - Optional: `"size": "sm"` or `"lg"` evens out a logo that looks too heavy or too small, and `"wide": true` gives very wide wordmarks more room.
   - **Never** commit the alumni spreadsheet itself. It contains private contact details. Only company names belong here.
 
 ### Photos
@@ -181,7 +181,7 @@ Same steps as Fall. After recruitment ends, set `lastCycle` to Winter of this ye
 | --- | --- |
 | Data files | `src/data` |
 | Pages | `src/pages` (one file per page; `brothers/` holds the three Brothers views) |
-| Reusable pieces (navbar, footer, cards, gallery, forms) | `src/components` |
+| Reusable pieces (navbar, footer, cards, gallery) | `src/components` |
 | Colors, fonts and spacing (design tokens) | `src/styles/global.css` |
 | Photos | `src/assets/images` |
 | Logo | `src/assets/brand` |

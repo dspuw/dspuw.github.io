@@ -6,10 +6,10 @@ import Button from '../components/Button.astro';
 import PlaceholderTag from '../components/PlaceholderTag.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import StatCounter from '../components/StatCounter';
-import ContactForm from '../components/ContactForm';
+import EmailCard from '../components/EmailCard.astro';
 import AlumniCompanies from '../components/AlumniCompanies.astro';
 import { home, site } from '../lib/data';
-import heroPhoto from '../assets/images/home/chapter-group-classroom.jpg';
+import heroPhoto from '../assets/images/home/chapter-group-with-letters-banner.jpg';
 import brothersPhoto from '../assets/images/home/brothers-paccar-hall.jpg';
 import joinPhoto from '../assets/images/home/brothers-formal-night.jpg';
 
@@ -22,53 +22,48 @@ const cards = [
 <BaseLayout>
   <!-- Hero -->
   <section class="pt-12 sm:pt-20" aria-labelledby="hero-title">
-    <Container>
-      <div class="grid items-end gap-8 lg:grid-cols-12">
-        <div class="lg:col-span-8">
-          <p class="eyebrow reveal">University of Washington</p>
-          <h1 id="hero-title" class="reveal mt-5 text-[3.5rem] leading-[0.98] sm:text-display-xl">
-            {home.hero.title}
-            <span class="block text-primary italic">{home.hero.subtitle}</span>
-          </h1>
+    <Container class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
+      <div class="lg:col-span-6">
+        <p class="eyebrow reveal">University of Washington</p>
+        <h1 id="hero-title" class="reveal mt-5 text-[3.5rem] leading-[0.98] sm:text-display-xl">
+          {home.hero.title}
+          <span class="block text-primary italic">{home.hero.subtitle}</span>
+        </h1>
+        <p class="reveal mt-8 max-w-md text-body-lg text-text-muted">{home.hero.tagline}</p>
+        <div class="reveal mt-6 flex flex-wrap gap-3">
+          <Button href={home.joinUs.link.href}>{home.joinUs.link.label}</Button>
+          <Button href={home.about.link.href} variant="secondary">{home.about.link.label}</Button>
         </div>
-        <div class="reveal lg:col-span-4 lg:pb-3">
-          <p class="text-body-lg text-text-muted">{home.hero.tagline}</p>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <Button href={home.joinUs.link.href}>{home.joinUs.link.label}</Button>
-            <Button href={home.about.link.href} variant="secondary">{home.about.link.label}</Button>
-          </div>
-        </div>
+
+        <ul class="mt-12 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:gap-8">
+          {
+            site.stats.map((stat) => (
+              <li class="reveal">
+                <StatCounter
+                  client:visible
+                  value={stat.value}
+                  suffix={stat.suffix}
+                  label={stat.label}
+                  from={stat.value > 1000 ? stat.value - 40 : 0}
+                />
+              </li>
+            ))
+          }
+        </ul>
       </div>
 
-      <figure class="reveal relative mt-12 overflow-hidden rounded-card sm:mt-16">
+      <figure class="reveal overflow-hidden rounded-card lg:col-span-6">
         <Picture
           src={heroPhoto}
           formats={['avif', 'webp']}
-          widths={[640, 1024, 1600, 2047]}
-          sizes="(min-width: 1200px) 1152px, 100vw"
-          alt="Sigma Upsilon brothers in business attire posing together in a lecture hall under a Delta Sigma Pi banner"
-          class="aspect-[4/5] w-full object-cover sm:aspect-[21/9]"
+          widths={[480, 800, 1200, 1536]}
+          sizes="(min-width: 1200px) 564px, (min-width: 1024px) 46vw, 100vw"
+          alt="Sigma Upsilon brothers in business attire filling a lecture hall, with the front row holding a purple and gold Delta Sigma Pi banner"
+          class="aspect-[4/5] w-full object-cover object-[50%_62%]"
           loading="eager"
           fetchpriority="high"
         />
-        <PlaceholderTag class="absolute top-4 left-4">Placeholder photo: swap in a newer chapter photo</PlaceholderTag>
       </figure>
-
-      <ul class="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:gap-8">
-        {
-          site.stats.map((stat) => (
-            <li class="reveal">
-              <StatCounter
-                client:visible
-                value={stat.value}
-                suffix={stat.suffix}
-                label={stat.label}
-                from={stat.value > 1000 ? stat.value - 40 : 0}
-              />
-            </li>
-          ))
-        }
-      </ul>
     </Container>
   </section>
 
@@ -141,9 +136,7 @@ const cards = [
         <p class="reveal mt-6 max-w-md text-body-lg text-white/80">{home.contact.text}</p>
         <SocialLinks class="reveal mt-8 [&_a]:border-white/25 [&_a]:text-white [&_a:hover]:border-accent-on-brand [&_a:hover]:text-accent-on-brand" />
       </div>
-      <div class="reveal lg:col-span-6 lg:col-start-7">
-        <ContactForm client:visible endpoint={site.formEndpoint} />
-      </div>
+      <EmailCard class="reveal lg:col-span-6 lg:col-start-7 lg:self-center" />
     </Container>
   </section>
 </BaseLayout>
