@@ -1,5 +1,5 @@
 ---
-import Container from './Container.astro';
+import PageHeader from './PageHeader.astro';
 import { site } from '../lib/data';
 
 interface Props {
@@ -8,48 +8,31 @@ interface Props {
   /** Second line of the title, set in italic brand purple. */
   accent?: string;
 }
-const { eyebrow, title, accent } = Astro.props;
 
 const views = site.nav.find((item) => item.href === '/brothers')?.children ?? [];
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
-<section class="pt-12 pb-10 sm:pt-20 sm:pb-14" aria-labelledby="page-title">
-  <Container>
-    <div class="grid items-end gap-8 lg:grid-cols-12">
-      <div class="lg:col-span-8">
-        <p class="eyebrow reveal">{eyebrow}</p>
-        <h1 id="page-title" class="reveal mt-5 text-[3rem] leading-[1] sm:text-display-lg lg:text-display-xl">
-          {title}
-          {accent && <span class="block text-primary italic">{accent}</span>}
-        </h1>
-      </div>
-      <div class="reveal lg:col-span-4 lg:pb-3">
-        <slot />
-      </div>
-    </div>
-
-    <nav aria-label="Brothers" class="reveal mt-10 border-b border-border">
-      <ul class="-mb-px flex gap-6 overflow-x-auto">
-        {
-          views.map((view) => (
-            <li>
-              <a
-                href={view.href}
-                class:list={[
-                  'inline-flex min-h-11 items-center border-b-2 pb-1 text-small font-semibold whitespace-nowrap transition duration-200',
-                  path === view.href
-                    ? 'border-accent text-primary'
-                    : 'border-transparent text-text-muted hover:text-primary',
-                ]}
-                aria-current={path === view.href ? 'page' : undefined}
-              >
-                {view.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </nav>
-  </Container>
-</section>
+<PageHeader {...Astro.props}>
+  <slot />
+  <nav slot="below" aria-label="Brothers" class="reveal mt-10 border-b border-border">
+    <ul class="-mb-px flex gap-6 overflow-x-auto">
+      {
+        views.map((view) => (
+          <li>
+            <a
+              href={view.href}
+              class:list={[
+                'inline-flex min-h-11 items-center border-b-2 pb-1 text-small font-semibold whitespace-nowrap transition duration-200',
+                path === view.href ? 'border-accent text-primary' : 'border-transparent text-text-muted hover:text-primary',
+              ]}
+              aria-current={path === view.href ? 'page' : undefined}
+            >
+              {view.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</PageHeader>

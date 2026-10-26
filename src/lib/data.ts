@@ -8,6 +8,7 @@ import alumniCompaniesJson from '../data/alumni-companies.json';
 import aboutJson from '../data/about.json';
 import peopleJson from '../data/people.json';
 import executiveBoardJson from '../data/executive-board.json';
+import galleryJson from '../data/gallery.json';
 
 const link = z.object({ label: z.string(), href: z.string() });
 
@@ -23,6 +24,7 @@ const siteSchema = z.object({
   nav: z.array(link.extend({ children: z.array(link).optional() })),
   footerLinks: z.array(link),
   landAcknowledgment: z.string(),
+  contactPage: z.object({ heading: z.string(), text: z.string() }),
 });
 
 const term = z.enum(['Fall', 'Winter']);
@@ -151,3 +153,28 @@ const executiveBoardSchema = z.object({
 });
 
 export const executiveBoard = executiveBoardSchema.parse(executiveBoardJson);
+
+const gallerySchema = z
+  .object({
+    // The filter buttons, in this order.
+    categories: z.array(z.string()),
+    photos: z.array(
+      z.object({
+        // File name in src/assets/images/gallery.
+        image: z.string(),
+        // Describe what is in the photo for people using screen readers.
+        alt: z.string().min(1),
+        category: z.string(),
+        event: z.string(),
+      }),
+    ),
+  })
+  .superRefine((data, ctx) => {
+    for (const photo of data.photos) {
+      if (!data.categories.includes(photo.category)) {
+        ctx.addIssue({ code: 'custom', message: `${photo.image}: "${photo.category}" is not in categories` });
+      }
+    }
+  });
+
+export const gallery = gallerySchema.parse(galleryJson);

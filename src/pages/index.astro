@@ -54,10 +54,10 @@ const cards = [
         <PlaceholderTag class="absolute top-4 left-4">Placeholder photo: swap in a newer chapter photo</PlaceholderTag>
       </figure>
 
-      <dl class="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:gap-8">
+      <ul class="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:gap-8">
         {
           site.stats.map((stat) => (
-            <div class="reveal">
+            <li class="reveal">
               <StatCounter
                 client:visible
                 value={stat.value}
@@ -65,10 +65,10 @@ const cards = [
                 label={stat.label}
                 from={stat.value > 1000 ? stat.value - 40 : 0}
               />
-            </div>
+            </li>
           ))
         }
-      </dl>
+      </ul>
     </Container>
   </section>
 

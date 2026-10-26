@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import PageHeader from '../components/PageHeader.astro';
+import PlaceholderTag from '../components/PlaceholderTag.astro';
+import Gallery from '../components/Gallery';
+import { gallery } from '../lib/data';
+import { galleryPhotos } from '../lib/gallery';
+
+const photos = await galleryPhotos();
+---
+
+<BaseLayout title="Gallery" description="Photos from Sigma Upsilon pledge classes, banquets and brotherhood events.">
+  <PageHeader eyebrow="Gallery" title="The Highlights">
+    <PlaceholderTag>Placeholder photos: add newer chapter events to gallery.json</PlaceholderTag>
+  </PageHeader>
+
+  <section class="pb-24 sm:pb-32" aria-label="Photos">
+    <Container>
+      <Gallery client:visible photos={photos} categories={gallery.categories} />
+    </Container>
+  </section>
+</BaseLayout>
