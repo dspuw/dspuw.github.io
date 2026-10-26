@@ -8,6 +8,23 @@
     "term": "Winter",
     "year": 2027
   },
+  "page": {
+    "hero": {
+      "title": "We’re Ready.",
+      "subtitle": "Are you?"
+    },
+    "intro": {
+      "heading": "Join Us!",
+      "paragraphs": [
+        "The Sigma Upsilon chapter is a top fraternity within and around the Michael G. Foster School of Business and the surrounding Seattle community. Our goal is to nurture prospective leaders who are poised to create significant and enduring changes in the world.",
+        "Embodying the phrase \"My ceiling is your floor,\" our commitment lies in supporting each others' goals, pursuits, and successes.",
+        "We offer a diverse array of opportunities for brothers to delve into their personal, academic, and career passions through a mix of professional and social activities. Within our extensive network of brothers and alumni, there is a strong culture of supporting and celebrating in each other's achievements. Brothers also have avenues to engage in leadership pursuits, spanning regional and national conferences, as well as comprehensive training programs."
+      ]
+    },
+    "scheduleHeading": "Recruitment Schedule",
+    "scheduleEmpty": "Dates for our Winter 2027 recruitment events are still being finalized. Follow us on Instagram to hear as soon as they're announced.",
+    "eligibilityHeading": "Application Eligibility"
+  },
   "contacts": [
     {
       "name": "Matthew Chiu",

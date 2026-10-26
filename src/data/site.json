@@ -6,7 +6,7 @@
     "instagram": "https://www.instagram.com/dspuw/",
     "linkedin": "https://www.linkedin.com/company/dspuw/"
   },
-  "formEndpoint": "PLACEHOLDER_FORMSPREE_OR_WEB3FORMS_URL",
+  "email": "dspuw.recruitment@gmail.com",
   "stats": [
     {
       "value": 2012,
@@ -80,6 +80,10 @@
       "href": "/brothers"
     },
     {
+      "label": "Gallery",
+      "href": "/gallery"
+    },
+    {
       "label": "Recruitment",
       "href": "/recruitment"
     },
@@ -88,5 +92,9 @@
       "href": "/contact"
     }
   ],
-  "landAcknowledgment": "We, the Sigma Upsilon chapter of Delta Sigma Pi, acknowledge that we are on the traditional land of the first people of Seattle - the Coast Salish peoples, which encompasses the Duwamish, Suquamish, Tulalip, and Muckleshoot nations - past and present with honor and gratitude for the land itself and the respective tribes."
+  "landAcknowledgment": "We, the Sigma Upsilon chapter of Delta Sigma Pi, acknowledge that we are on the traditional land of the first people of Seattle - the Coast Salish peoples, which encompasses the Duwamish, Suquamish, Tulalip, and Muckleshoot nations - past and present with honor and gratitude for the land itself and the respective tribes.",
+  "contactPage": {
+    "heading": "Contact Us",
+    "text": "To learn more about our chapter, brothers, and recruitment, follow us on Instagram and LinkedIn or send us an email!"
+  }
 }

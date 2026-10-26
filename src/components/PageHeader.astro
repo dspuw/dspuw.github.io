@@ -1,0 +1,30 @@
+---
+// Text-only page header for pages that lead with content instead of a big photo.
+import Container from './Container.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  /** Second line of the title, set in italic brand purple. */
+  accent?: string;
+}
+const { eyebrow, title, accent } = Astro.props;
+---
+
+<section class="pt-12 pb-10 sm:pt-20 sm:pb-14" aria-labelledby="page-title">
+  <Container>
+    <div class="grid items-end gap-8 lg:grid-cols-12">
+      <div class="lg:col-span-8">
+        <p class="eyebrow reveal">{eyebrow}</p>
+        <h1 id="page-title" class="reveal mt-5 text-[3rem] leading-[1] sm:text-display-lg lg:text-display-xl">
+          {title}
+          {accent && <span class="block text-primary italic">{accent}</span>}
+        </h1>
+      </div>
+      <div class="reveal lg:col-span-4 lg:pb-3">
+        <slot />
+      </div>
+    </div>
+    <slot name="below" />
+  </Container>
+</section>

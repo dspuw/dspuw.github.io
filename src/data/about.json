@@ -1,0 +1,46 @@
+{
+  "hero": {
+    "title": "About Us"
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "paragraphs": [
+      "Delta Sigma Pi was founded by four students at New York University’s School of Commerce, Accounts, and Finance in 1907 and has since grown to become one of the world’s foremost fraternities for business majors. With over 300,000 initiated members, the fraternity provides opportunities for brothers to advance both their professional and personal development.",
+      "In 2013, the University of Washington established its chapter – Sigma Upsilon – after only 9 months as a colony. We live by our 4 pillars; Professionalism, Community Service, Scholarship, and Brotherhood."
+    ]
+  },
+  "purpose": {
+    "eyebrow": "Our Purpose",
+    "items": [
+      {
+        "heading": "Founded From Diversity",
+        "text": "Delta Sigma Pi was conceived to foster a brotherhood inclusive of individuals from diverse backgrounds—a radical notion during a time when exclusionary practices were prevalent in other organizations. A key pillar of our fraternity's strength lies in our membership's diversity, mirroring the rich tapestry of the business world we prepare our members for. Comprised of varied voices and backgrounds, we actively challenge conventional perspectives, fostering innovative ideas both within our chapters and in the professional sphere."
+      },
+      {
+        "heading": "From Ideals to Action",
+        "text": "Going beyond mere non-discrimination policies, we actively embrace diversity by welcoming individuals from varied backgrounds who meet our high professional standards. We celebrate and value the unique abilities and differences of each person. Our fraternity encourages authentic relationships among people with diverse backgrounds, fostering a special sense of brotherhood through the camaraderie among individuals with differing perspectives and goals."
+      }
+    ]
+  },
+  "pillars": {
+    "eyebrow": "Our Pillars",
+    "items": [
+      {
+        "name": "Professionalism",
+        "text": "Our ongoing mission is to support our brothers in their professional growth by offering unwavering support, diverse opportunities, and essential resources. We collaborate with companies and organizations to organize one-on-one discussions, networking events, and diverse workshops that target different aspects of professional development. These initiatives provide invaluable platforms for our members to interact with industry professionals, enhancing their skills and knowledge."
+      },
+      {
+        "name": "Community Service",
+        "text": "An integral aspect of Delta Sigma Pi's ethos is our commitment to community service. Throughout the year, we organize numerous community service events aimed at supporting a wide array of causes, organizations, and communities. These initiatives reflect our dedication to making a positive impact and giving back to society. Some of our previous partnerships include the University Food Bank, the Seattle Tilth Alliance, and Friendship Heights Village."
+      },
+      {
+        "name": "Scholarship",
+        "text": "We focus on comprehensive support for our fraternity brothers, addressing both their academic and professional needs. Embracing diversity in age and expertise, we offer specialized tutoring and career guidance tailored to members in similar majors. Specifically, we assist in navigating application processes, especially for competitive majors like Business and Informatics. We foster a culture of solidarity where members actively help each other through one-on-one tutoring and group study sessions, maintaining a strong dedication to academic excellence."
+      },
+      {
+        "name": "Brotherhood",
+        "text": "Our goal is to create a supportive community for our members in college, driven by the motto, \"when one succeeds, we all succeed.\" Each member gets paired with a mentor (\"big\") who provides personalized guidance in personal and professional aspects. They become part of a close-knit family of mentors and mentees, engaging in special bonding activities. We also organize an annual spring retreat near Seattle, strengthening our community and offering members a space to bond and reflect on their growth within DSP."
+      }
+    ]
+  }
+}

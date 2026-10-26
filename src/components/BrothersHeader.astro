@@ -1,0 +1,38 @@
+---
+import PageHeader from './PageHeader.astro';
+import { site } from '../lib/data';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  /** Second line of the title, set in italic brand purple. */
+  accent?: string;
+}
+
+const views = site.nav.find((item) => item.href === '/brothers')?.children ?? [];
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<PageHeader {...Astro.props}>
+  <slot />
+  <nav slot="below" aria-label="Brothers" class="reveal mt-10 border-b border-border">
+    <ul class="-mb-px flex gap-6 overflow-x-auto">
+      {
+        views.map((view) => (
+          <li>
+            <a
+              href={view.href}
+              class:list={[
+                'inline-flex min-h-11 items-center border-b-2 pb-1 text-small font-semibold whitespace-nowrap transition duration-200',
+                path === view.href ? 'border-accent text-primary' : 'border-transparent text-text-muted hover:text-primary',
+              ]}
+              aria-current={path === view.href ? 'page' : undefined}
+            >
+              {view.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</PageHeader>

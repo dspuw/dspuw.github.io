@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import PageHero from '../components/PageHero.astro';
+import Countdown from '../components/Countdown';
+import { recruitment } from '../lib/data';
+import { bannerMessage } from '../lib/recruitment';
+import heroPhoto from '../assets/images/recruitment/brothers-at-paccar.jpg';
+
+const { page, eligibility, events, faq, contacts, email } = recruitment;
+const open = recruitment.status === 'open';
+
+const now = Date.now();
+const sorted = [...events].sort((a, b) => a.start.localeCompare(b.start));
+const nextEvent = sorted.find((event) => new Date(event.start).getTime() > now);
+
+const dateFormat = new Intl.DateTimeFormat('en-US', { weekday: 'long', month: 'long', day: 'numeric', timeZone: 'America/Los_Angeles' });
+const timeFormat = new Intl.DateTimeFormat('en-US', { hour: 'numeric', minute: '2-digit', timeZone: 'America/Los_Angeles' });
+
+const contactNames = contacts.map((c) => c.name).join(' and ');
+const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0]?.title;
+---
+
+<BaseLayout title="Recruitment" description={page.intro.paragraphs[0]}>
+  <PageHero
+    eyebrow="Recruitment"
+    title={page.hero.title}
+    accent={page.hero.subtitle}
+    photo={heroPhoto}
+    alt="Brothers smiling together in matching chapter sweatshirts inside PACCAR Hall"
+    placeholder="Placeholder photo: swap in a newer chapter photo"
+  >
+    <div class="reveal mt-8 flex max-w-2xl items-start gap-3 rounded-card border border-border bg-surface p-5">
+      <span class:list={['mt-2 size-2 shrink-0 rounded-full', open ? 'bg-success' : 'bg-accent']} aria-hidden="true"></span>
+      <div>
+        <p class="text-body text-text">{bannerMessage(recruitment)}</p>
+        {sorted.length === 0 && (
+          <p class="mt-1 text-small text-text-muted">
+            {recruitment.nextCycle.term} {recruitment.nextCycle.year} dates: <strong class="font-semibold text-text">TBD</strong>
+          </p>
+        )}
+      </div>
+    </div>
+  </PageHero>
+
+  <!-- Join Us! -->
+  <section class="py-24 sm:py-32" aria-labelledby="join-title">
+    <Container class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="eyebrow reveal">01</p>
+        <h2 id="join-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{page.intro.heading}</h2>
+      </div>
+      <div class="lg:col-span-8">
+        <p class="reveal max-w-2xl text-body-lg text-text-muted">{page.intro.paragraphs[0]}</p>
+        <blockquote class="reveal my-10 border-l-2 border-accent pl-6 font-display text-[1.75rem] leading-[1.3] sm:text-[2.25rem]">
+          {page.intro.paragraphs[1]}
+        </blockquote>
+        {page.intro.paragraphs.slice(2).map((p) => <p class="reveal max-w-2xl text-body-lg text-text-muted">{p}</p>)}
+      </div>
+    </Container>
+  </section>
+
+  <!-- Schedule -->
+  <section id="schedule" class="border-y border-border bg-surface py-24 sm:py-32" aria-labelledby="schedule-title">
+    <Container class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="eyebrow reveal">02</p>
+        <h2 id="schedule-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{page.scheduleHeading}</h2>
+        <p class="reveal mt-4 text-body-lg text-text-muted">{recruitment.nextCycle.term} {recruitment.nextCycle.year}</p>
+      </div>
+      <div class="lg:col-span-8">
+        {open && nextEvent && <div class="reveal mb-10"><Countdown client:visible target={nextEvent.start} title={nextEvent.title} /></div>}
+        {
+          sorted.length === 0 ? (
+            <div class="reveal rounded-card border border-border bg-bg p-8 sm:p-10">
+              <p class="eyebrow">{recruitment.nextCycle.term} {recruitment.nextCycle.year} dates</p>
+              <p class="mt-3 font-display text-[3rem] leading-none text-primary">TBD</p>
+              <p class="mt-4 max-w-xl text-body-lg text-text-muted">{page.scheduleEmpty}</p>
+            </div>
+          ) : (
+            <ol class="relative border-l border-border">
+              {sorted.map((event) => {
+                const start = new Date(event.start);
+                return (
+                  <li class="reveal relative pb-10 pl-8 last:pb-0">
+                    <span class="absolute top-2 -left-[5px] size-2.5 rounded-full bg-primary" aria-hidden="true" />
+                    <p class="text-small font-semibold text-accent-text">
+                      <time datetime={event.start}>
+                        {dateFormat.format(start)} · {timeFormat.format(start)}
+                        {event.end && ` – ${timeFormat.format(new Date(event.end))}`}
+                      </time>
+                    </p>
+                    <h3 class="mt-1 text-[1.75rem] leading-[1.2]">{event.title}</h3>
+                    {event.room && <p class="mt-1 text-small text-text-muted">{event.room}{event.address && ` · ${event.address}`}</p>}
+                    {event.description && <p class="mt-3 max-w-xl text-body text-text-muted">{event.description}</p>}
+                  </li>
+                );
+              })}
+            </ol>
+          )
+        }
+      </div>
+    </Container>
+  </section>
+
+  <!-- Eligibility -->
+  <section class="py-24 sm:py-32" aria-labelledby="eligibility-title">
+    <Container class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="eyebrow reveal">03</p>
+        <h2 id="eligibility-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{page.eligibilityHeading}</h2>
+      </div>
+      <div class="lg:col-span-8">
+        <ol class="grid gap-4 sm:grid-cols-2">
+          {
+            eligibility.map((rule, index) => (
+              <li class="reveal rounded-card border border-border p-6">
+                <p class="font-display text-[1.25rem] text-accent-text italic">{`0${index + 1}`}</p>
+                <p class="mt-3 text-body-lg">{rule}</p>
+              </li>
+            ))
+          }
+        </ol>
+        <p class="reveal mt-10 max-w-2xl text-body-lg text-text-muted">
+          If you have any questions or concerns, please contact {contactNames}, {contactTitle}, at{' '}
+          <a href={`mailto:${email}`} class="font-semibold text-primary underline underline-offset-4">{email}</a>.
+        </p>
+      </div>
+    </Container>
+  </section>
+
+  {
+    faq.length > 0 && (
+      <section class="border-t border-border py-24 sm:py-32" aria-labelledby="faq-title">
+        <Container class="grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <p class="eyebrow reveal">04</p>
+            <h2 id="faq-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">FAQ</h2>
+          </div>
+          <div class="lg:col-span-8">
+            {faq.map((item) => (
+              <details class="reveal group border-b border-border py-6">
+                <summary class="flex min-h-11 cursor-pointer list-none items-center justify-between gap-4 font-display text-[1.375rem]">
+                  {item.question}
+                  <span aria-hidden="true" class="text-primary transition-transform duration-200 group-open:rotate-45">+</span>
+                </summary>
+                <p class="mt-3 text-body-lg text-text-muted">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </Container>
+      </section>
+    )
+  }
+</BaseLayout>

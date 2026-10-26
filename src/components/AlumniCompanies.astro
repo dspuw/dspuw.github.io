@@ -1,0 +1,65 @@
+---
+import type { ImageMetadata } from 'astro';
+import Container from './Container.astro';
+import Button from './Button.astro';
+import { alumniCompanies } from '../lib/data';
+
+// Every logo in src/assets/logos, keyed by file name, in each company's original colors.
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/logos/*.{svg,png}', { eager: true });
+const logos = Object.fromEntries(
+  Object.entries(files).map(([path, mod]) => [path.split('/').pop()!.replace(/\.(svg|png)$/, ''), mod.default]),
+);
+
+const unknown = alumniCompanies.companies.filter((c) => c.logo && !logos[c.logo]);
+if (unknown.length) throw new Error(`Missing logo files: ${unknown.map((c) => c.logo).join(', ')}`);
+---
+
+<section class="border-t border-border py-24 sm:py-32" aria-labelledby="alumni-title">
+  <Container class="grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-4">
+      <p class="eyebrow reveal">04</p>
+      <h2 id="alumni-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{alumniCompanies.heading}</h2>
+      <p class="reveal mt-6 max-w-sm text-body-lg text-text-muted">{alumniCompanies.intro}</p>
+      <Button href={alumniCompanies.link.href} variant="text" class="reveal mt-4">
+        {alumniCompanies.link.label}
+        <span aria-hidden="true">&rarr;</span>
+      </Button>
+    </div>
+
+    <ul class="reveal grid grid-cols-2 border-t border-l border-border sm:grid-cols-3 lg:col-span-8 lg:grid-cols-4" role="list">
+      {
+        alumniCompanies.companies.map((company) => {
+          const logo = company.logo ? logos[company.logo] : undefined;
+          const invert = company.invertInDark ? 'dark:brightness-0 dark:invert' : '';
+          // Evens out how heavy each wordmark looks next to the others.
+          const size = { sm: 'h-5 sm:h-6', md: 'h-6 sm:h-7', lg: 'h-9 sm:h-10' }[company.size ?? 'md'];
+          return (
+            <li class="flex min-h-24 items-center justify-center gap-2.5 border-r border-b border-border px-4 py-6 transition-colors duration-200 hover:bg-surface sm:px-6">
+              {logo && company.type === 'wordmark' && (
+                <img src={logo.src} alt={company.name} loading="lazy" decoding="async" class:list={['w-auto object-contain', size, company.wide ? 'max-w-[10.5rem]' : 'max-w-[8.5rem]', invert]} />
+              )}
+              {logo && company.type === 'mark' && (
+                <>
+                  <img src={logo.src} alt="" loading="lazy" decoding="async" class:list={['size-7 shrink-0 object-contain', invert]} />
+                  <span class="text-[1.0625rem] font-semibold tracking-tight text-text">{company.name}</span>
+                </>
+              )}
+              {!logo && (
+                <>
+                  <span
+                    class="inline-flex size-7 shrink-0 items-center justify-center rounded-md border border-text-muted text-[0.5625rem] font-bold tracking-tight text-text-muted"
+                    title="Placeholder until the official logo is added"
+                    aria-hidden="true"
+                  >
+                    {company.name.length <= 4 ? company.name : company.name.replace(/[^A-Z]/g, '').slice(0, 3)}
+                  </span>
+                  <span class="text-[1.0625rem] font-semibold tracking-tight text-text">{company.name}</span>
+                </>
+              )}
+            </li>
+          );
+        })
+      }
+    </ul>
+  </Container>
+</section>

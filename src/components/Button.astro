@@ -8,17 +8,17 @@ const { href, variant = 'primary', class: className } = Astro.props;
 
 const styles = {
   primary:
-    'bg-primary text-on-primary shadow-soft hover:bg-primary-hover hover:shadow-lift hover:-translate-y-0.5',
+    'px-5 bg-primary text-on-primary shadow-soft hover:bg-primary-hover hover:shadow-lift hover:-translate-y-0.5',
   secondary:
-    'border border-border bg-bg text-text hover:border-primary hover:text-primary hover:-translate-y-0.5',
-  text: 'px-0 text-primary underline-offset-4 hover:underline',
+    'px-5 border border-border bg-bg text-text hover:border-primary hover:text-primary hover:-translate-y-0.5',
+  text: 'text-primary underline-offset-4 hover:underline',
 };
 ---
 
 <a
   href={href}
   class:list={[
-    'inline-flex min-h-11 items-center justify-center gap-2 rounded-button px-5 text-small font-semibold transition duration-200 ease-out-soft',
+    'inline-flex min-h-11 items-center justify-center gap-2 rounded-button text-small font-semibold transition duration-200 ease-out-soft',
     styles[variant],
     className,
   ]}
