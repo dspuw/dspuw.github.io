@@ -66,8 +66,12 @@ const alumniCompaniesSchema = z.object({
   companies: z.array(
     z.object({
       name: z.string(),
-      // File name in src/assets/logos without .svg, or null to show the name only.
+      // File name in src/assets/logos without .svg, or null for a monogram placeholder.
       logo: z.string().nullable(),
+      // A wordmark already spells the name; a mark (symbol only) is shown with the name beside it.
+      type: z.enum(['wordmark', 'mark']).optional(),
+      // Dark logos turn white in dark mode so they stay visible.
+      invertInDark: z.boolean().optional(),
     }),
   ),
 });

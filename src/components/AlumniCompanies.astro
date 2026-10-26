@@ -1,18 +1,17 @@
 ---
+import type { ImageMetadata } from 'astro';
 import Container from './Container.astro';
 import Button from './Button.astro';
 import { alumniCompanies } from '../lib/data';
 
-// Every logo in src/assets/logos, keyed by file name. They use currentColor so they follow the theme.
-const files = import.meta.glob<string>('../assets/logos/*.svg', { query: '?raw', import: 'default', eager: true });
+// Every logo in src/assets/logos, keyed by file name, in each company's original colors.
+const files = import.meta.glob<{ default: ImageMetadata }>('../assets/logos/*.svg', { eager: true });
 const logos = Object.fromEntries(
-  Object.entries(files).map(([path, svg]) => [path.split('/').pop()!.replace('.svg', ''), svg]),
+  Object.entries(files).map(([path, mod]) => [path.split('/').pop()!.replace('.svg', ''), mod.default]),
 );
 
-const missing = alumniCompanies.companies.filter((c) => !c.logo || !logos[c.logo]);
-if (missing.some((c) => c.logo)) {
-  throw new Error(`Missing logo files: ${missing.filter((c) => c.logo).map((c) => c.logo).join(', ')}`);
-}
+const unknown = alumniCompanies.companies.filter((c) => c.logo && !logos[c.logo]);
+if (unknown.length) throw new Error(`Missing logo files: ${unknown.map((c) => c.logo).join(', ')}`);
 ---
 
 <section class="border-t border-border py-24 sm:py-32" aria-labelledby="alumni-title">
@@ -29,18 +28,35 @@ if (missing.some((c) => c.logo)) {
 
     <ul class="reveal grid grid-cols-2 border-t border-l border-border sm:grid-cols-3 lg:col-span-8 lg:grid-cols-4" role="list">
       {
-        alumniCompanies.companies.map((company) => (
-          <li class="group flex min-h-24 items-center gap-3 border-r border-b border-border px-4 py-6 text-text-muted transition-colors duration-200 hover:bg-surface hover:text-text sm:px-6">
-            {company.logo ? (
-              <span class="size-6 shrink-0 [&>svg]:size-full" aria-hidden="true" set:html={logos[company.logo]} />
-            ) : (
-              <span class="inline-flex size-6 shrink-0 items-center justify-center rounded-md border border-current text-[0.5625rem] font-bold tracking-tight" aria-hidden="true">
-                {company.name.length <= 4 ? company.name : company.name.replace(/[^A-Z]/g, '').slice(0, 3)}
-              </span>
-            )}
-            <span class="text-small font-semibold">{company.name}</span>
-          </li>
-        ))
+        alumniCompanies.companies.map((company) => {
+          const logo = company.logo ? logos[company.logo] : undefined;
+          const invert = company.invertInDark ? 'dark:brightness-0 dark:invert' : '';
+          return (
+            <li class="flex min-h-24 items-center justify-center gap-2.5 border-r border-b border-border px-4 py-6 transition-colors duration-200 hover:bg-surface sm:px-6">
+              {logo && company.type === 'wordmark' && (
+                <img src={logo.src} alt={company.name} loading="lazy" decoding="async" class:list={['h-6 w-auto max-w-[8.5rem] object-contain sm:h-7', invert]} />
+              )}
+              {logo && company.type === 'mark' && (
+                <>
+                  <img src={logo.src} alt="" loading="lazy" decoding="async" class:list={['size-7 shrink-0 object-contain', invert]} />
+                  <span class="text-[1.0625rem] font-semibold tracking-tight text-text">{company.name}</span>
+                </>
+              )}
+              {!logo && (
+                <>
+                  <span
+                    class="inline-flex size-7 shrink-0 items-center justify-center rounded-md border border-text-muted text-[0.5625rem] font-bold tracking-tight text-text-muted"
+                    title="Placeholder until the official logo is added"
+                    aria-hidden="true"
+                  >
+                    {company.name.length <= 4 ? company.name : company.name.replace(/[^A-Z]/g, '').slice(0, 3)}
+                  </span>
+                  <span class="text-[1.0625rem] font-semibold tracking-tight text-text">{company.name}</span>
+                </>
+              )}
+            </li>
+          );
+        })
       }
     </ul>
   </Container>

@@ -1,31 +1,138 @@
 {
   "heading": "Our Alumni",
   "intro": "Sigma Upsilon brothers go on to build careers at companies like these.",
-  "link": { "label": "Meet our alumni", "href": "/brothers/alumni" },
+  "link": {
+    "label": "Meet our alumni",
+    "href": "/brothers/alumni"
+  },
   "companies": [
-    { "name": "Accenture", "logo": "accenture" },
-    { "name": "Amazon", "logo": "amazon" },
-    { "name": "PwC", "logo": null },
-    { "name": "EY", "logo": null },
-    { "name": "Bain & Company", "logo": null },
-    { "name": "Microsoft", "logo": "microsoft" },
-    { "name": "Deloitte", "logo": null },
-    { "name": "Google", "logo": "google" },
-    { "name": "Boeing", "logo": "boeing" },
-    { "name": "Meta", "logo": "meta" },
-    { "name": "Apple", "logo": "apple" },
-    { "name": "LinkedIn", "logo": "linkedin" },
-    { "name": "Starbucks", "logo": "starbucks" },
-    { "name": "BCG", "logo": null },
-    { "name": "KPMG", "logo": null },
-    { "name": "J.P. Morgan", "logo": null },
-    { "name": "Visa", "logo": "visa" },
-    { "name": "Nordstrom", "logo": null },
-    { "name": "Alaska Airlines", "logo": null },
-    { "name": "Nike", "logo": "nike" },
-    { "name": "Intel", "logo": "intel" },
-    { "name": "Zillow", "logo": "zillow" },
-    { "name": "T-Mobile", "logo": "t-mobile" },
-    { "name": "Lyft", "logo": "lyft" }
+    {
+      "name": "Accenture",
+      "logo": "accenture",
+      "type": "mark",
+      "invertInDark": false
+    },
+    {
+      "name": "Amazon",
+      "logo": "amazon",
+      "type": "wordmark",
+      "invertInDark": true
+    },
+    {
+      "name": "PwC",
+      "logo": null
+    },
+    {
+      "name": "EY",
+      "logo": null
+    },
+    {
+      "name": "Bain & Company",
+      "logo": null
+    },
+    {
+      "name": "Microsoft",
+      "logo": "microsoft",
+      "type": "wordmark",
+      "invertInDark": false
+    },
+    {
+      "name": "Deloitte",
+      "logo": null
+    },
+    {
+      "name": "Google",
+      "logo": "google",
+      "type": "wordmark",
+      "invertInDark": false
+    },
+    {
+      "name": "Boeing",
+      "logo": "boeing",
+      "type": "mark",
+      "invertInDark": true
+    },
+    {
+      "name": "Meta",
+      "logo": "meta",
+      "type": "wordmark",
+      "invertInDark": true
+    },
+    {
+      "name": "Apple",
+      "logo": "apple",
+      "type": "mark",
+      "invertInDark": true
+    },
+    {
+      "name": "LinkedIn",
+      "logo": "linkedin",
+      "type": "wordmark",
+      "invertInDark": false
+    },
+    {
+      "name": "Starbucks",
+      "logo": "starbucks",
+      "type": "mark",
+      "invertInDark": true
+    },
+    {
+      "name": "BCG",
+      "logo": null
+    },
+    {
+      "name": "KPMG",
+      "logo": null
+    },
+    {
+      "name": "J.P. Morgan",
+      "logo": null
+    },
+    {
+      "name": "Visa",
+      "logo": "visa",
+      "type": "wordmark",
+      "invertInDark": true
+    },
+    {
+      "name": "Nordstrom",
+      "logo": null
+    },
+    {
+      "name": "Alaska Airlines",
+      "logo": "alaska-airlines",
+      "type": "wordmark",
+      "invertInDark": true
+    },
+    {
+      "name": "Nike",
+      "logo": "nike",
+      "type": "mark",
+      "invertInDark": true
+    },
+    {
+      "name": "Intel",
+      "logo": "intel",
+      "type": "wordmark",
+      "invertInDark": false
+    },
+    {
+      "name": "Zillow",
+      "logo": "zillow",
+      "type": "mark",
+      "invertInDark": false
+    },
+    {
+      "name": "T-Mobile",
+      "logo": "t-mobile",
+      "type": "mark",
+      "invertInDark": false
+    },
+    {
+      "name": "Lyft",
+      "logo": "lyft",
+      "type": "wordmark",
+      "invertInDark": false
+    }
   ]
 }
