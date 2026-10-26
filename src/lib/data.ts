@@ -5,6 +5,7 @@ import siteJson from '../data/site.json';
 import recruitmentJson from '../data/recruitment.json';
 import homeJson from '../data/home.json';
 import alumniCompaniesJson from '../data/alumni-companies.json';
+import aboutJson from '../data/about.json';
 
 const link = z.object({ label: z.string(), href: z.string() });
 
@@ -29,6 +30,13 @@ const recruitmentSchema = z.object({
   status: z.enum(['open', 'closed']),
   lastCycle: cycle,
   nextCycle: cycle,
+  page: z.object({
+    hero: z.object({ title: z.string(), subtitle: z.string() }),
+    intro: z.object({ heading: z.string(), paragraphs: z.array(z.string()) }),
+    scheduleHeading: z.string(),
+    scheduleEmpty: z.string(),
+    eligibilityHeading: z.string(),
+  }),
   contacts: z.array(z.object({ name: z.string(), title: z.string() })),
   email: z.email(),
   eligibility: z.array(z.string()),
@@ -80,3 +88,14 @@ export const alumniCompanies = alumniCompaniesSchema.parse(alumniCompaniesJson);
 export const recruitment = recruitmentSchema.parse(recruitmentJson);
 
 export type Recruitment = z.infer<typeof recruitmentSchema>;
+
+const headed = z.object({ heading: z.string(), text: z.string() });
+
+const aboutSchema = z.object({
+  hero: z.object({ title: z.string() }),
+  story: z.object({ eyebrow: z.string(), paragraphs: z.array(z.string()) }),
+  purpose: z.object({ eyebrow: z.string(), items: z.array(headed) }),
+  pillars: z.object({ eyebrow: z.string(), items: z.array(z.object({ name: z.string(), text: z.string() })) }),
+});
+
+export const about = aboutSchema.parse(aboutJson);
