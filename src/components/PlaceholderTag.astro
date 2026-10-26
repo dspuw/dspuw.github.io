@@ -1,0 +1,17 @@
+---
+// Marks content that is waiting on newer material, so it is never mistaken for final.
+interface Props {
+  class?: string;
+}
+const { class: className } = Astro.props;
+---
+
+<span
+  class:list={[
+    'inline-flex items-center gap-1.5 rounded-full bg-ink/75 px-3 py-1 text-[0.75rem] font-medium text-white backdrop-blur-sm',
+    className,
+  ]}
+>
+  <span class="size-1.5 rounded-full bg-accent" aria-hidden="true"></span>
+  <slot />
+</span>

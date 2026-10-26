@@ -3,6 +3,7 @@
 import { z } from 'astro/zod';
 import siteJson from '../data/site.json';
 import recruitmentJson from '../data/recruitment.json';
+import homeJson from '../data/home.json';
 
 const link = z.object({ label: z.string(), href: z.string() });
 
@@ -44,7 +45,18 @@ const recruitmentSchema = z.object({
   faq: z.array(z.object({ question: z.string(), answer: z.string() })),
 });
 
+const block = z.object({ heading: z.string(), text: z.string(), link: link });
+
+const homeSchema = z.object({
+  hero: z.object({ title: z.string(), subtitle: z.string() }),
+  about: z.object({ heading: z.string(), paragraphs: z.array(z.string()), link: link }),
+  whoWeAre: block,
+  joinUs: block,
+  contact: z.object({ heading: z.string(), text: z.string() }),
+});
+
 export const site = siteSchema.parse(siteJson);
+export const home = homeSchema.parse(homeJson);
 export const recruitment = recruitmentSchema.parse(recruitmentJson);
 
 export type Recruitment = z.infer<typeof recruitmentSchema>;

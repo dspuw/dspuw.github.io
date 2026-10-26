@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "title": "Delta Sigma Pi",
+    "subtitle": "Sigma Upsilon Chapter"
+  },
+  "about": {
+    "heading": "About DSP",
+    "paragraphs": [
+      "Delta Sigma Pi is a professional co-ed fraternity organized to foster the study of business in universities; to encourage scholarship, social activity and the association of students for their mutual advancement by research and practice; to promote closer affiliation between the commercial world and students of commerce, and to further a higher standard of commercial ethics and culture and the civic and commercial welfare of the community.",
+      "The Sigma Upsilon Chapter at the University of Washington – Seattle was founded in 2012 and officially installed as a chapter in May of 2013. We are comprised of over 75 current brothers across the Business, Economics, and Informatics majors at the University of Washington."
+    ],
+    "link": {
+      "label": "Learn More",
+      "href": "/about"
+    }
+  },
+  "whoWeAre": {
+    "heading": "Who We Are",
+    "text": "Meet the brothers of the Sigma Upsilon Chapter.",
+    "link": {
+      "label": "Our Brothers",
+      "href": "/brothers"
+    }
+  },
+  "joinUs": {
+    "heading": "Join Us",
+    "text": "We recruit every Fall and Winter Quarter.",
+    "link": {
+      "label": "Recruitment",
+      "href": "/recruitment"
+    }
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "text": "To learn more about our chapter, brothers, and recruitment, complete the form below!"
+  }
+}

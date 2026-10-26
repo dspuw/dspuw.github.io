@@ -1,20 +1,146 @@
 ---
+import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
 import Button from '../components/Button.astro';
+import PlaceholderTag from '../components/PlaceholderTag.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import StatCounter from '../components/StatCounter';
+import ContactForm from '../components/ContactForm';
+import { home, site } from '../lib/data';
+import heroPhoto from '../assets/images/home/chapter-group-classroom.jpg';
+import brothersPhoto from '../assets/images/home/brothers-paccar-hall.jpg';
+import joinPhoto from '../assets/images/home/brothers-formal-night.jpg';
+
+const cards = [
+  { ...home.whoWeAre, photo: brothersPhoto, alt: 'Brothers in business attire gathered outside PACCAR Hall' },
+  { ...home.joinUs, photo: joinPhoto, alt: 'Brothers in formal wear smiling together at a chapter event' },
+];
 ---
 
 <BaseLayout>
-  <Container class="py-24 sm:py-32">
-    <p class="eyebrow">Placeholder: Home page is built in the next pull request</p>
-    <h1 class="mt-4 text-[2.5rem] leading-[1.05] text-text sm:text-display-xl">
-      Delta Sigma Pi
-      <span class="block text-primary">Sigma Upsilon Chapter</span>
-    </h1>
-    <div class="mt-10 flex flex-wrap gap-3">
-      <Button href="/recruitment">Recruitment</Button>
-      <Button href="/about" variant="secondary">Learn More</Button>
-      <Button href="/brothers" variant="text">Our Brothers</Button>
-    </div>
-  </Container>
+  <!-- Hero -->
+  <section class="pt-12 sm:pt-20" aria-labelledby="hero-title">
+    <Container>
+      <div class="grid items-end gap-8 lg:grid-cols-12">
+        <div class="lg:col-span-8">
+          <p class="eyebrow reveal">University of Washington</p>
+          <h1 id="hero-title" class="reveal mt-5 text-[3.5rem] leading-[0.98] sm:text-display-xl">
+            {home.hero.title}
+            <span class="block text-primary italic">{home.hero.subtitle}</span>
+          </h1>
+        </div>
+        <div class="reveal lg:col-span-4 lg:pb-3">
+          <p class="text-body-lg text-text-muted">{home.joinUs.text}</p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <Button href={home.joinUs.link.href}>{home.joinUs.link.label}</Button>
+            <Button href={home.about.link.href} variant="secondary">{home.about.link.label}</Button>
+          </div>
+        </div>
+      </div>
+
+      <figure class="reveal relative mt-12 overflow-hidden rounded-card sm:mt-16">
+        <Picture
+          src={heroPhoto}
+          formats={['avif', 'webp']}
+          widths={[640, 1024, 1600, 2047]}
+          sizes="(min-width: 1200px) 1152px, 100vw"
+          alt="Sigma Upsilon brothers in business attire posing together in a lecture hall under a Delta Sigma Pi banner"
+          class="aspect-[4/5] w-full object-cover sm:aspect-[21/9]"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <PlaceholderTag class="absolute top-4 left-4">Placeholder photo: swap in a newer chapter photo</PlaceholderTag>
+      </figure>
+
+      <dl class="mt-10 grid grid-cols-3 gap-4 border-t border-border pt-8 sm:gap-8">
+        {
+          site.stats.map((stat) => (
+            <div class="reveal">
+              <StatCounter
+                client:visible
+                value={stat.value}
+                suffix={stat.suffix}
+                label={stat.label}
+                from={stat.value > 1000 ? stat.value - 40 : 0}
+              />
+            </div>
+          ))
+        }
+      </dl>
+    </Container>
+  </section>
+
+  <!-- About DSP -->
+  <section class="py-24 sm:py-32" aria-labelledby="about-title">
+    <Container class="grid gap-10 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <p class="eyebrow reveal">01</p>
+        <h2 id="about-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{home.about.heading}</h2>
+      </div>
+      <div class="lg:col-span-8">
+        <p class="reveal font-display text-[1.5rem] leading-[1.4] text-text sm:text-[1.875rem]">
+          {home.about.paragraphs[0]}
+        </p>
+        {
+          home.about.paragraphs.slice(1).map((paragraph) => (
+            <p class="reveal mt-8 max-w-2xl text-body-lg text-text-muted">{paragraph}</p>
+          ))
+        }
+        <Button href={home.about.link.href} variant="text" class="reveal mt-6">
+          {home.about.link.label}
+          <span aria-hidden="true">&rarr;</span>
+        </Button>
+      </div>
+    </Container>
+  </section>
+
+  <!-- Who We Are / Join Us -->
+  <section class="pb-24 sm:pb-32" aria-label="Explore the chapter">
+    <Container class="grid gap-6 md:grid-cols-2">
+      {
+        cards.map((card, index) => (
+          <a
+            href={card.link.href}
+            class="group reveal relative isolate flex min-h-[28rem] flex-col justify-end overflow-hidden rounded-card p-8 text-white sm:min-h-[34rem] sm:p-10"
+          >
+            <Picture
+              src={card.photo}
+              formats={['avif', 'webp']}
+              widths={[480, 800, 1200]}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              alt={card.alt}
+              class="absolute inset-0 -z-20 size-full object-cover transition-transform duration-300 ease-out-soft group-hover:scale-[1.03]"
+            />
+            <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" aria-hidden="true" />
+            <PlaceholderTag class="absolute top-4 left-4">Placeholder photo</PlaceholderTag>
+            <p class="eyebrow text-accent-on-brand">{`0${index + 2}`}</p>
+            <h2 class="mt-3 text-[2.25rem] leading-[1.05] sm:text-h2">{card.heading}</h2>
+            <p class="mt-3 max-w-sm text-body-lg text-white/80">{card.text}</p>
+            <span class="mt-6 inline-flex items-center gap-2 text-small font-semibold">
+              {card.link.label}
+              <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">
+                &rarr;
+              </span>
+            </span>
+          </a>
+        ))
+      }
+    </Container>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact" class="bg-brand text-white" aria-labelledby="contact-title">
+    <Container class="grid gap-12 py-24 sm:py-32 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <p class="eyebrow reveal text-accent-on-brand">04</p>
+        <h2 id="contact-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{home.contact.heading}</h2>
+        <p class="reveal mt-6 max-w-md text-body-lg text-white/80">{home.contact.text}</p>
+        <SocialLinks class="reveal mt-8 [&_a]:border-white/25 [&_a]:text-white [&_a:hover]:border-accent-on-brand [&_a:hover]:text-accent-on-brand" />
+      </div>
+      <div class="reveal lg:col-span-6 lg:col-start-7">
+        <ContactForm client:visible endpoint={site.formEndpoint} />
+      </div>
+    </Container>
+  </section>
 </BaseLayout>

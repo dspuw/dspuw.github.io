@@ -1,7 +1,7 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/inter';
-@import '@fontsource/josefin-sans/600.css';
-@import '@fontsource/josefin-sans/700.css';
+@import '@fontsource-variable/newsreader';
+@import '@fontsource-variable/newsreader/wght-italic.css';
 
 /* Dark mode follows the data-theme attribute set by ThemeToggle. */
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
@@ -9,44 +9,50 @@
 /*
  * Design tokens. Every color on the site comes from this block.
  * Purple is the primary brand color; gold is the accent and is used sparingly.
+ * Warm paper and ink neutrals give the site its heritage feel.
  */
 :root {
   /* Fixed brand purple for surfaces that stay purple in both themes (banner). */
   --dsp-brand: #4b2e83;
   --dsp-primary: #4b2e83;
   --dsp-primary-hover: #3a2266;
-  --dsp-primary-soft: #eee9f7;
+  --dsp-primary-soft: #ece7f4;
   --dsp-on-primary: #ffffff;
   --dsp-accent: #b7a57a;
   --dsp-accent-text: #7a6a3e;
-  --dsp-bg: #ffffff;
-  --dsp-surface: #f7f7f8;
-  --dsp-border: #e4e4e7;
-  --dsp-text: #18181b;
-  --dsp-text-muted: #52525b;
+  /* On the purple brand surface, gold text needs this lighter tone. */
+  --dsp-accent-on-brand: #d8cba6;
+  --dsp-ink: #16121f;
+  --dsp-bg: #faf8f4;
+  --dsp-surface: #f2efe8;
+  --dsp-border: #e3ded3;
+  --dsp-text: #16121f;
+  --dsp-text-muted: #5a5566;
   --dsp-success: #15803d;
   --dsp-error: #b91c1c;
   --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-  --dsp-shadow-md: 0 8px 24px rgb(0 0 0 / 0.08);
+  --dsp-shadow-md: 0 12px 32px rgb(22 18 31 / 0.10);
   color-scheme: light;
 }
 
 [data-theme='dark'] {
   --dsp-primary: #b9a6e0;
   --dsp-primary-hover: #d0c2ee;
-  --dsp-primary-soft: #2a2140;
-  --dsp-on-primary: #121016;
+  --dsp-primary-soft: #241d33;
+  --dsp-on-primary: #0f0c16;
   --dsp-accent: #c9b98f;
   --dsp-accent-text: #d8cba6;
-  --dsp-bg: #121016;
-  --dsp-surface: #1c1a21;
-  --dsp-border: #2e2b35;
-  --dsp-text: #f4f4f5;
-  --dsp-text-muted: #a1a1aa;
+  --dsp-accent-on-brand: #d8cba6;
+  --dsp-ink: #0b0910;
+  --dsp-bg: #0f0c16;
+  --dsp-surface: #19151f;
+  --dsp-border: #2b2634;
+  --dsp-text: #f3f0ea;
+  --dsp-text-muted: #a8a2b3;
   --dsp-success: #4ade80;
   --dsp-error: #f87171;
   --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --dsp-shadow-md: 0 8px 24px rgb(0 0 0 / 0.5);
+  --dsp-shadow-md: 0 12px 32px rgb(0 0 0 / 0.5);
   color-scheme: dark;
 }
 
@@ -58,6 +64,8 @@
   --color-on-primary: var(--dsp-on-primary);
   --color-accent: var(--dsp-accent);
   --color-accent-text: var(--dsp-accent-text);
+  --color-accent-on-brand: var(--dsp-accent-on-brand);
+  --color-ink: var(--dsp-ink);
   --color-bg: var(--dsp-bg);
   --color-surface: var(--dsp-surface);
   --color-border: var(--dsp-border);
@@ -71,7 +79,7 @@
 
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Newsreader Variable', ui-serif, Georgia, serif;
 
   --radius-card: 16px;
   --radius-button: 12px;
@@ -79,12 +87,12 @@
   --container-content: 1200px;
 
   /* Type scale: size / line height. Phone sizes are set in the utilities below. */
-  --text-display-xl: 3.75rem;
-  --text-display-xl--line-height: 1.05;
-  --text-display-lg: 3rem;
-  --text-display-lg--line-height: 1.1;
-  --text-h2: 2.25rem;
-  --text-h2--line-height: 1.15;
+  --text-display-xl: 6rem;
+  --text-display-xl--line-height: 0.98;
+  --text-display-lg: 4rem;
+  --text-display-lg--line-height: 1.02;
+  --text-h2: 3rem;
+  --text-h2--line-height: 1.08;
   --text-h3: 1.5rem;
   --text-h3--line-height: 1.25;
   --text-body-lg: 1.125rem;
@@ -111,7 +119,7 @@
   h1,
   h2,
   h3 {
-    @apply font-display tracking-tight text-balance;
+    @apply font-display font-normal tracking-[-0.02em] text-balance;
   }
   :focus-visible {
     outline: 3px solid var(--dsp-accent);
