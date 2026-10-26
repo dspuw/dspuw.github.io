@@ -1,0 +1,30 @@
+{
+  "status": "closed",
+  "lastCycle": {
+    "term": "Fall",
+    "year": 2026
+  },
+  "nextCycle": {
+    "term": "Winter",
+    "year": 2027
+  },
+  "contacts": [
+    {
+      "name": "Matthew Chiu",
+      "title": "Senior Vice President"
+    },
+    {
+      "name": "Elle Kim",
+      "title": "Senior Vice President"
+    }
+  ],
+  "email": "dspuw.recruitment@gmail.com",
+  "eligibility": [
+    "Must be enrolled as a full-time student at the University of Washington - Seattle.",
+    "Must be majoring in or intend to major in Business, Economics, or Informatics.",
+    "Have a cumulative GPA of 2.5 or above.",
+    "Must have attended at least 2 of the 4 recruitment events."
+  ],
+  "events": [],
+  "faq": []
+}

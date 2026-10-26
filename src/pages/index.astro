@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Container from '../components/Container.astro';
+import Button from '../components/Button.astro';
+---
+
+<BaseLayout>
+  <Container class="py-24 sm:py-32">
+    <p class="eyebrow">Placeholder: Home page is built in the next pull request</p>
+    <h1 class="mt-4 text-[2.5rem] leading-[1.05] text-text sm:text-display-xl">
+      Delta Sigma Pi
+      <span class="block text-primary">Sigma Upsilon Chapter</span>
+    </h1>
+    <div class="mt-10 flex flex-wrap gap-3">
+      <Button href="/recruitment">Recruitment</Button>
+      <Button href="/about" variant="secondary">Learn More</Button>
+      <Button href="/brothers" variant="text">Our Brothers</Button>
+    </div>
+  </Container>
+</BaseLayout>

@@ -1,0 +1,156 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource/josefin-sans/600.css';
+@import '@fontsource/josefin-sans/700.css';
+
+/* Dark mode follows the data-theme attribute set by ThemeToggle. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/*
+ * Design tokens. Every color on the site comes from this block.
+ * Purple is the primary brand color; gold is the accent and is used sparingly.
+ */
+:root {
+  /* Fixed brand purple for surfaces that stay purple in both themes (banner). */
+  --dsp-brand: #4b2e83;
+  --dsp-primary: #4b2e83;
+  --dsp-primary-hover: #3a2266;
+  --dsp-primary-soft: #eee9f7;
+  --dsp-on-primary: #ffffff;
+  --dsp-accent: #b7a57a;
+  --dsp-accent-text: #7a6a3e;
+  --dsp-bg: #ffffff;
+  --dsp-surface: #f7f7f8;
+  --dsp-border: #e4e4e7;
+  --dsp-text: #18181b;
+  --dsp-text-muted: #52525b;
+  --dsp-success: #15803d;
+  --dsp-error: #b91c1c;
+  --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
+  --dsp-shadow-md: 0 8px 24px rgb(0 0 0 / 0.08);
+  color-scheme: light;
+}
+
+[data-theme='dark'] {
+  --dsp-primary: #b9a6e0;
+  --dsp-primary-hover: #d0c2ee;
+  --dsp-primary-soft: #2a2140;
+  --dsp-on-primary: #121016;
+  --dsp-accent: #c9b98f;
+  --dsp-accent-text: #d8cba6;
+  --dsp-bg: #121016;
+  --dsp-surface: #1c1a21;
+  --dsp-border: #2e2b35;
+  --dsp-text: #f4f4f5;
+  --dsp-text-muted: #a1a1aa;
+  --dsp-success: #4ade80;
+  --dsp-error: #f87171;
+  --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
+  --dsp-shadow-md: 0 8px 24px rgb(0 0 0 / 0.5);
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-brand: var(--dsp-brand);
+  --color-primary: var(--dsp-primary);
+  --color-primary-hover: var(--dsp-primary-hover);
+  --color-primary-soft: var(--dsp-primary-soft);
+  --color-on-primary: var(--dsp-on-primary);
+  --color-accent: var(--dsp-accent);
+  --color-accent-text: var(--dsp-accent-text);
+  --color-bg: var(--dsp-bg);
+  --color-surface: var(--dsp-surface);
+  --color-border: var(--dsp-border);
+  --color-text: var(--dsp-text);
+  --color-text-muted: var(--dsp-text-muted);
+  --color-success: var(--dsp-success);
+  --color-error: var(--dsp-error);
+  --shadow-soft: var(--dsp-shadow-sm);
+  --shadow-lift: var(--dsp-shadow-md);
+}
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Josefin Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --radius-card: 16px;
+  --radius-button: 12px;
+
+  --container-content: 1200px;
+
+  /* Type scale: size / line height. Phone sizes are set in the utilities below. */
+  --text-display-xl: 3.75rem;
+  --text-display-xl--line-height: 1.05;
+  --text-display-lg: 3rem;
+  --text-display-lg--line-height: 1.1;
+  --text-h2: 2.25rem;
+  --text-h2--line-height: 1.15;
+  --text-h3: 1.5rem;
+  --text-h3--line-height: 1.25;
+  --text-body-lg: 1.125rem;
+  --text-body-lg--line-height: 1.7;
+  --text-body: 1rem;
+  --text-body--line-height: 1.65;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.5;
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.4;
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    background: var(--dsp-bg);
+    color: var(--dsp-text);
+    scroll-padding-top: 6rem;
+  }
+  body {
+    @apply bg-bg font-sans text-body text-text antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display tracking-tight text-balance;
+  }
+  :focus-visible {
+    outline: 3px solid var(--dsp-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--dsp-primary-soft);
+  }
+}
+
+@utility eyebrow {
+  @apply font-sans text-eyebrow font-semibold tracking-[0.12em] text-accent-text uppercase;
+}
+
+/* Fade and slide in on scroll. Reveal.astro adds .is-visible. */
+@utility reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 280ms var(--ease-out-soft),
+    transform 280ms var(--ease-out-soft);
+  &.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

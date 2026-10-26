@@ -1,0 +1,21 @@
+---
+import { recruitment } from '../lib/data';
+import { bannerMessage } from '../lib/recruitment';
+
+const message = bannerMessage(recruitment);
+const open = recruitment.status === 'open';
+---
+
+<div class="bg-brand text-white" role="region" aria-label="Recruitment status">
+  <p class="mx-auto max-w-content px-4 py-2.5 text-center text-small sm:px-6 lg:px-8">
+    <span class="mr-2 inline-block size-2 rounded-full bg-accent align-middle" aria-hidden="true"></span>
+    {message}
+    {
+      open && (
+        <a href="/recruitment" class="ml-1 font-semibold underline underline-offset-4">
+          See the schedule
+        </a>
+      )
+    }
+  </p>
+</div>

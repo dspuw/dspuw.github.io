@@ -1,0 +1,92 @@
+{
+  "name": "Delta Sigma Pi - Sigma Upsilon Chapter",
+  "shortName": "DSP UW",
+  "description": "Delta Sigma Pi is a professional co-ed business fraternity. The Sigma Upsilon Chapter at the University of Washington was founded in 2012 and installed as a chapter in May 2013.",
+  "socials": {
+    "instagram": "https://www.instagram.com/dspuw/",
+    "linkedin": "https://www.linkedin.com/company/dspuw/"
+  },
+  "formEndpoint": "PLACEHOLDER_FORMSPREE_OR_WEB3FORMS_URL",
+  "stats": [
+    {
+      "value": 2012,
+      "label": "Founded"
+    },
+    {
+      "value": 75,
+      "suffix": "+",
+      "label": "Brothers"
+    },
+    {
+      "value": 3,
+      "label": "Majors"
+    }
+  ],
+  "nav": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Recruitment",
+      "href": "/recruitment"
+    },
+    {
+      "label": "Brothers",
+      "href": "/brothers",
+      "children": [
+        {
+          "label": "Deltasigs",
+          "href": "/brothers"
+        },
+        {
+          "label": "Executive Board",
+          "href": "/brothers/executive-board"
+        },
+        {
+          "label": "Alumni",
+          "href": "/brothers/alumni"
+        }
+      ]
+    },
+    {
+      "label": "Gallery",
+      "href": "/gallery"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "footerLinks": [
+    {
+      "label": "Recruitment Schedule",
+      "href": "/recruitment#schedule"
+    },
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Brothers",
+      "href": "/brothers"
+    },
+    {
+      "label": "Recruitment",
+      "href": "/recruitment"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "landAcknowledgment": "We, the Sigma Upsilon chapter of Delta Sigma Pi, acknowledge that we are on the traditional land of the first people of Seattle - the Coast Salish peoples, which encompasses the Duwamish, Suquamish, Tulalip, and Muckleshoot nations - past and present with honor and gratitude for the land itself and the respective tribes."
+}
