@@ -7,6 +7,7 @@ import PlaceholderTag from '../components/PlaceholderTag.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import StatCounter from '../components/StatCounter';
 import ContactForm from '../components/ContactForm';
+import AlumniCompanies from '../components/AlumniCompanies.astro';
 import { home, site } from '../lib/data';
 import heroPhoto from '../assets/images/home/chapter-group-classroom.jpg';
 import brothersPhoto from '../assets/images/home/brothers-paccar-hall.jpg';
@@ -31,7 +32,7 @@ const cards = [
           </h1>
         </div>
         <div class="reveal lg:col-span-4 lg:pb-3">
-          <p class="text-body-lg text-text-muted">{home.joinUs.text}</p>
+          <p class="text-body-lg text-text-muted">{home.hero.tagline}</p>
           <div class="mt-6 flex flex-wrap gap-3">
             <Button href={home.joinUs.link.href}>{home.joinUs.link.label}</Button>
             <Button href={home.about.link.href} variant="secondary">{home.about.link.label}</Button>
@@ -129,11 +130,13 @@ const cards = [
     </Container>
   </section>
 
+  <AlumniCompanies />
+
   <!-- Contact Us -->
   <section id="contact" class="bg-brand text-white" aria-labelledby="contact-title">
     <Container class="grid gap-12 py-24 sm:py-32 lg:grid-cols-12">
       <div class="lg:col-span-5">
-        <p class="eyebrow reveal text-accent-on-brand">04</p>
+        <p class="eyebrow reveal text-accent-on-brand">05</p>
         <h2 id="contact-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{home.contact.heading}</h2>
         <p class="reveal mt-6 max-w-md text-body-lg text-white/80">{home.contact.text}</p>
         <SocialLinks class="reveal mt-8 [&_a]:border-white/25 [&_a]:text-white [&_a:hover]:border-accent-on-brand [&_a:hover]:text-accent-on-brand" />

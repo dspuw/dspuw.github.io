@@ -4,6 +4,7 @@ import { z } from 'astro/zod';
 import siteJson from '../data/site.json';
 import recruitmentJson from '../data/recruitment.json';
 import homeJson from '../data/home.json';
+import alumniCompaniesJson from '../data/alumni-companies.json';
 
 const link = z.object({ label: z.string(), href: z.string() });
 
@@ -48,7 +49,7 @@ const recruitmentSchema = z.object({
 const block = z.object({ heading: z.string(), text: z.string(), link: link });
 
 const homeSchema = z.object({
-  hero: z.object({ title: z.string(), subtitle: z.string() }),
+  hero: z.object({ title: z.string(), subtitle: z.string(), tagline: z.string() }),
   about: z.object({ heading: z.string(), paragraphs: z.array(z.string()), link: link }),
   whoWeAre: block,
   joinUs: block,
@@ -57,6 +58,21 @@ const homeSchema = z.object({
 
 export const site = siteSchema.parse(siteJson);
 export const home = homeSchema.parse(homeJson);
+
+const alumniCompaniesSchema = z.object({
+  heading: z.string(),
+  intro: z.string(),
+  link: link,
+  companies: z.array(
+    z.object({
+      name: z.string(),
+      // File name in src/assets/logos without .svg, or null to show the name only.
+      logo: z.string().nullable(),
+    }),
+  ),
+});
+
+export const alumniCompanies = alumniCompaniesSchema.parse(alumniCompaniesJson);
 export const recruitment = recruitmentSchema.parse(recruitmentJson);
 
 export type Recruitment = z.infer<typeof recruitmentSchema>;

@@ -1,7 +1,8 @@
 {
   "hero": {
     "title": "Delta Sigma Pi",
-    "subtitle": "Sigma Upsilon Chapter"
+    "subtitle": "Sigma Upsilon Chapter",
+    "tagline": "Ready to grow with us? We welcome new brothers every Fall and Winter Quarter."
   },
   "about": {
     "heading": "About DSP",
@@ -24,7 +25,7 @@
   },
   "joinUs": {
     "heading": "Join Us",
-    "text": "We recruit every Fall and Winter Quarter.",
+    "text": "New brothers join us every Fall and Winter Quarter. We'd love to meet you.",
     "link": {
       "label": "Recruitment",
       "href": "/recruitment"

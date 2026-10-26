@@ -1,0 +1,47 @@
+---
+import Container from './Container.astro';
+import Button from './Button.astro';
+import { alumniCompanies } from '../lib/data';
+
+// Every logo in src/assets/logos, keyed by file name. They use currentColor so they follow the theme.
+const files = import.meta.glob<string>('../assets/logos/*.svg', { query: '?raw', import: 'default', eager: true });
+const logos = Object.fromEntries(
+  Object.entries(files).map(([path, svg]) => [path.split('/').pop()!.replace('.svg', ''), svg]),
+);
+
+const missing = alumniCompanies.companies.filter((c) => !c.logo || !logos[c.logo]);
+if (missing.some((c) => c.logo)) {
+  throw new Error(`Missing logo files: ${missing.filter((c) => c.logo).map((c) => c.logo).join(', ')}`);
+}
+---
+
+<section class="border-t border-border py-24 sm:py-32" aria-labelledby="alumni-title">
+  <Container class="grid gap-12 lg:grid-cols-12">
+    <div class="lg:col-span-4">
+      <p class="eyebrow reveal">04</p>
+      <h2 id="alumni-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{alumniCompanies.heading}</h2>
+      <p class="reveal mt-6 max-w-sm text-body-lg text-text-muted">{alumniCompanies.intro}</p>
+      <Button href={alumniCompanies.link.href} variant="text" class="reveal mt-4">
+        {alumniCompanies.link.label}
+        <span aria-hidden="true">&rarr;</span>
+      </Button>
+    </div>
+
+    <ul class="reveal grid grid-cols-2 border-t border-l border-border sm:grid-cols-3 lg:col-span-8 lg:grid-cols-4" role="list">
+      {
+        alumniCompanies.companies.map((company) => (
+          <li class="group flex min-h-24 items-center gap-3 border-r border-b border-border px-4 py-6 text-text-muted transition-colors duration-200 hover:bg-surface hover:text-text sm:px-6">
+            {company.logo ? (
+              <span class="size-6 shrink-0 [&>svg]:size-full" aria-hidden="true" set:html={logos[company.logo]} />
+            ) : (
+              <span class="inline-flex size-6 shrink-0 items-center justify-center rounded-md border border-current text-[0.5625rem] font-bold tracking-tight" aria-hidden="true">
+                {company.name.length <= 4 ? company.name : company.name.replace(/[^A-Z]/g, '').slice(0, 3)}
+              </span>
+            )}
+            <span class="text-small font-semibold">{company.name}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </Container>
+</section>
