@@ -6,6 +6,8 @@ import recruitmentJson from '../data/recruitment.json';
 import homeJson from '../data/home.json';
 import alumniCompaniesJson from '../data/alumni-companies.json';
 import aboutJson from '../data/about.json';
+import peopleJson from '../data/people.json';
+import executiveBoardJson from '../data/executive-board.json';
 
 const link = z.object({ label: z.string(), href: z.string() });
 
@@ -99,3 +101,53 @@ const aboutSchema = z.object({
 });
 
 export const about = aboutSchema.parse(aboutJson);
+
+const peopleSchema = z
+  .object({
+    // Newest class first. Add a new pledge class to the top of this list.
+    pledgeClasses: z.array(z.string()),
+    people: z.array(
+      z.object({
+        id: z.string(),
+        name: z.string(),
+        pledgeClass: z.string(),
+        // Change to "alumni" to move a graduating brother to the Alumni view.
+        status: z.enum(['active', 'alumni']),
+        major: z.string().nullable(),
+        graduationYear: z.number().int().nullable(),
+        // File name in src/assets/images/brothers, or null to show initials.
+        headshot: z.string().nullable(),
+        linkedin: z.url().nullable(),
+      }),
+    ),
+  })
+  .superRefine((data, ctx) => {
+    const ids = new Set<string>();
+    for (const person of data.people) {
+      if (!data.pledgeClasses.includes(person.pledgeClass)) {
+        ctx.addIssue({ code: 'custom', message: `${person.name}: "${person.pledgeClass}" is not in pledgeClasses` });
+      }
+      if (ids.has(person.id)) ctx.addIssue({ code: 'custom', message: `Duplicate id "${person.id}"` });
+      ids.add(person.id);
+    }
+  });
+
+export const people = peopleSchema.parse(peopleJson);
+export type Person = z.infer<typeof peopleSchema>['people'][number];
+
+const executiveBoardSchema = z.object({
+  schoolYear: z.string(),
+  officers: z.array(
+    z.object({
+      name: z.string(),
+      title: z.string(),
+      // File name in src/assets/images/executive-board.
+      headshot: z.string(),
+      linkedin: z.url().nullable(),
+      // A sentence or two about the role. Cards expand to show it once it is filled in.
+      description: z.string().nullable(),
+    }),
+  ),
+});
+
+export const executiveBoard = executiveBoardSchema.parse(executiveBoardJson);

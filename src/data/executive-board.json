@@ -1,0 +1,152 @@
+{
+  "schoolYear": "2026 - 2027",
+  "officers": [
+    {
+      "name": "Silvana Salazar",
+      "title": "President",
+      "headshot": "silvana-salazar.jpg",
+      "linkedin": "https://www.linkedin.com/in/silvsalazar5/",
+      "description": null
+    },
+    {
+      "name": "Matthew Chiu",
+      "title": "Senior Vice President",
+      "headshot": "matthew-chiu.jpg",
+      "linkedin": "https://www.linkedin.com/in/matt-chiu/",
+      "description": null
+    },
+    {
+      "name": "Elle Kim",
+      "title": "Senior Vice President",
+      "headshot": "elle-kim.jpg",
+      "linkedin": "https://www.linkedin.com/in/elle-kim-096822335/",
+      "description": null
+    },
+    {
+      "name": "Soliyana Berta",
+      "title": "Chancellor",
+      "headshot": "soliyana-berta.jpg",
+      "linkedin": "https://www.linkedin.com/in/soliyana-berta-056360324/",
+      "description": null
+    },
+    {
+      "name": "Ruhi Subramanian",
+      "title": "Vice President of Brotherhood",
+      "headshot": "ruhi-subramanian.jpg",
+      "linkedin": "https://www.linkedin.com/in/ruhi-lakshmi-subramanian/",
+      "description": null
+    },
+    {
+      "name": "Gabriel Knudsen",
+      "title": "Vice President of Brotherhood",
+      "headshot": "gabriel-knudsen.jpg",
+      "linkedin": "https://www.linkedin.com/in/gabrielknudsen/",
+      "description": null
+    },
+    {
+      "name": "Diane Chang",
+      "title": "Vice President of Community Service",
+      "headshot": "diane-chang.jpg",
+      "linkedin": "https://www.linkedin.com/in/diane-chang-/",
+      "description": null
+    },
+    {
+      "name": "Shira Avitan",
+      "title": "Vice President of Scholarship",
+      "headshot": "shira-avitan.jpg",
+      "linkedin": "https://www.linkedin.com/in/shira-avitan/",
+      "description": null
+    },
+    {
+      "name": "Delaney Flanigen",
+      "title": "Vice President of Professionalism",
+      "headshot": "delaney-flanigen.jpg",
+      "linkedin": "https://www.linkedin.com/in/delaneyflanigen19/",
+      "description": null
+    },
+    {
+      "name": "Aarna Nair",
+      "title": "Vice President of Fundraising",
+      "headshot": "aarna-nair.jpg",
+      "linkedin": "https://www.linkedin.com/in/aarna-nair-7a3297248/",
+      "description": null
+    },
+    {
+      "name": "Nazar Sherstiuk",
+      "title": "Vice President of Finance",
+      "headshot": "nazar-sherstiuk.jpg",
+      "linkedin": "https://www.linkedin.com/in/nazar-sherstiuk/",
+      "description": null
+    },
+    {
+      "name": "Stella Smit",
+      "title": "Vice President of Chapter Operations",
+      "headshot": "stella-smit.jpg",
+      "linkedin": "https://www.linkedin.com/in/stellasmit/",
+      "description": null
+    },
+    {
+      "name": "Yudhith Anil",
+      "title": "Vice President of Alumni Relations",
+      "headshot": "yudhith-anil.jpg",
+      "linkedin": "https://www.linkedin.com/in/yudhith-anil-a70104238/",
+      "description": null
+    },
+    {
+      "name": "Tanvi Kakkireni",
+      "title": "Vice President of Marketing",
+      "headshot": "tanvi-kakkireni.jpg",
+      "linkedin": "https://www.linkedin.com/in/tanvi-kakkireni-331b79269/",
+      "description": null
+    },
+    {
+      "name": "Victor Vitorino",
+      "title": "Vice President of Marketing",
+      "headshot": "victor-vitorino.jpg",
+      "linkedin": "https://www.linkedin.com/in/victor-vitorino-29aa8b309/",
+      "description": null
+    },
+    {
+      "name": "Clara Ruival",
+      "title": "Banquet Chair",
+      "headshot": "clara-ruival.jpg",
+      "linkedin": "https://www.linkedin.com/in/clara-ruival-516b352a0/",
+      "description": null
+    },
+    {
+      "name": "Sean Kern",
+      "title": "Banquet Chair",
+      "headshot": "sean-kern.jpg",
+      "linkedin": "https://www.linkedin.com/in/sean-kern/",
+      "description": null
+    },
+    {
+      "name": "Owen Bischoff",
+      "title": "Technology Chair",
+      "headshot": "owen-bischoff.jpg",
+      "linkedin": "https://www.linkedin.com/in/owen-bischoff/",
+      "description": null
+    },
+    {
+      "name": "Lotus Wu",
+      "title": "Outreach Chair",
+      "headshot": "lotus-wu.jpg",
+      "linkedin": "https://www.linkedin.com/in/lotuswu/",
+      "description": null
+    },
+    {
+      "name": "Zak Azar",
+      "title": "Pledge Educator - Fall 2026",
+      "headshot": "zak-azar.jpg",
+      "linkedin": "https://www.linkedin.com/in/zakhourazar/",
+      "description": null
+    },
+    {
+      "name": "Seonghee Park",
+      "title": "Pledge Educator - Fall 2026",
+      "headshot": "seonghee-park.jpg",
+      "linkedin": "https://www.linkedin.com/in/seonghee-park-17b607278/",
+      "description": null
+    }
+  ]
+}

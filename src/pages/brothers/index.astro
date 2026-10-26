@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import Button from '../../components/Button.astro';
+import BrothersHeader from '../../components/BrothersHeader.astro';
+import BrotherDirectory from '../../components/BrotherDirectory';
+import { people } from '../../lib/data';
+import { cardImage } from '../../lib/headshots';
+
+const active = await Promise.all(
+  people.people
+    .filter((person) => person.status === 'active')
+    .map(async ({ headshot, ...person }) => ({ ...person, image: headshot ? await cardImage('brothers', headshot) : null })),
+);
+const classCount = new Set(active.map((person) => person.pledgeClass)).size;
+---
+
+<BaseLayout title="Deltasigs" description="Meet the brothers of the Sigma Upsilon Chapter of Delta Sigma Pi at the University of Washington.">
+  <BrothersHeader eyebrow="Sigma Upsilon Chapter" title="Deltasigs">
+    <p class="text-body-lg text-text-muted">
+      {active.length} brothers across {classCount} pledge classes.
+    </p>
+    <Button href="/recruitment" variant="text" class="mt-2">
+      Join Us <span aria-hidden="true">&rarr;</span>
+    </Button>
+  </BrothersHeader>
+
+  <section class="pb-24 sm:pb-32" aria-label="Brothers directory">
+    <Container>
+      <BrotherDirectory
+        client:load
+        people={active}
+        pledgeClasses={people.pledgeClasses}
+        noun={{ one: 'brother', many: 'brothers' }}
+      />
+    </Container>
+  </section>
+</BaseLayout>

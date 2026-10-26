@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import BrothersHeader from '../../components/BrothersHeader.astro';
+import { executiveBoard } from '../../lib/data';
+import { cardImage } from '../../lib/headshots';
+
+const officers = await Promise.all(
+  executiveBoard.officers.map(async (officer) => ({
+    ...officer,
+    image: await cardImage('executive-board', officer.headshot),
+  })),
+);
+---
+
+<BaseLayout
+  title="Executive Board"
+  description={`The ${executiveBoard.schoolYear} Executive Board of the Sigma Upsilon Chapter of Delta Sigma Pi.`}
+>
+  <BrothersHeader eyebrow="Our Leadership" title="Executive Board" accent={executiveBoard.schoolYear} />
+
+  <section class="pb-24 sm:pb-32" aria-label="Officers">
+    <Container>
+      <ul class="grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4">
+        {
+          officers.map((officer) => (
+            <li class="reveal">
+              <article class="group relative" data-officer={officer.description ? '' : undefined}>
+                <div class="relative overflow-hidden rounded-card bg-surface">
+                  <img
+                    src={officer.image.src}
+                    srcset={officer.image.srcSet}
+                    sizes="(min-width: 1024px) 270px, (min-width: 640px) 33vw, 50vw"
+                    width={officer.image.width}
+                    height={officer.image.height}
+                    alt={`Headshot of ${officer.name}`}
+                    loading="lazy"
+                    decoding="async"
+                    class="aspect-[4/5] w-full object-cover transition-transform duration-300 ease-out-soft group-hover:scale-[1.03]"
+                  />
+                  {officer.description && (
+                    <div
+                      id={`role-${officer.headshot.replace(/\.\w+$/, '')}`}
+                      class="absolute inset-x-0 bottom-0 translate-y-full bg-ink/90 p-4 text-small text-white backdrop-blur-sm transition-transform duration-300 ease-out-soft group-hover:translate-y-0 group-data-[open]:translate-y-0"
+                    >
+                      {officer.description}
+                    </div>
+                  )}
+                </div>
+                <p class="mt-4 eyebrow">{officer.title}</p>
+                <h2 class="mt-1.5 text-[1.375rem] leading-snug">{officer.name}</h2>
+                <div class="mt-2 flex flex-wrap items-center gap-x-4">
+                  {officer.linkedin && (
+                    <a
+                      href={officer.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="inline-flex min-h-11 items-center gap-2 text-small font-semibold text-primary underline-offset-4 hover:underline"
+                      aria-label={`${officer.name} on LinkedIn (opens in a new tab)`}
+                    >
+                      <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <rect x="3" y="9" width="4" height="12" rx="0.5" />
+                        <circle cx="5" cy="5" r="2" />
+                        <path d="M10 9h3.8v1.7c.6-1 1.9-2 3.9-2 3.2 0 4.3 2 4.3 5.3V21h-4v-6.2c0-1.6-.4-2.7-1.9-2.7s-2.1 1.1-2.1 2.7V21h-4Z" />
+                      </svg>
+                      LinkedIn
+                    </a>
+                  )}
+                  {officer.description && (
+                    <button
+                      type="button"
+                      class="inline-flex min-h-11 items-center text-small font-semibold text-text-muted transition duration-200 hover:text-primary"
+                      aria-expanded="false"
+                      aria-controls={`role-${officer.headshot.replace(/\.\w+$/, '')}`}
+                      data-officer-toggle
+                    >
+                      About the role
+                    </button>
+                  )}
+                </div>
+              </article>
+            </li>
+          ))
+        }
+      </ul>
+    </Container>
+  </section>
+</BaseLayout>
+
+<script>
+  // On touch screens there is no hover, so a tap on "About the role" opens the description.
+  document.querySelectorAll<HTMLButtonElement>('[data-officer-toggle]').forEach((button) => {
+    const card = button.closest<HTMLElement>('[data-officer]');
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      button.setAttribute('aria-expanded', String(open));
+      card?.toggleAttribute('data-open', open);
+    });
+  });
+</script>

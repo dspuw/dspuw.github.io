@@ -1,0 +1,34 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Container from '../../components/Container.astro';
+import BrothersHeader from '../../components/BrothersHeader.astro';
+import BrotherDirectory from '../../components/BrotherDirectory';
+import { people } from '../../lib/data';
+import { cardImage } from '../../lib/headshots';
+
+const alumni = await Promise.all(
+  people.people
+    .filter((person) => person.status === 'alumni')
+    .map(async ({ headshot, ...person }) => ({ ...person, image: headshot ? await cardImage('brothers', headshot) : null })),
+);
+const classCount = new Set(alumni.map((person) => person.pledgeClass)).size;
+---
+
+<BaseLayout title="Alumni" description="Alumni of the Sigma Upsilon Chapter of Delta Sigma Pi at the University of Washington.">
+  <BrothersHeader eyebrow="Sigma Upsilon Chapter" title="Our Alumni">
+    <p class="text-body-lg text-text-muted">
+      {alumni.length} alumni across {classCount} pledge classes.
+    </p>
+  </BrothersHeader>
+
+  <section class="pb-24 sm:pb-32" aria-label="Alumni directory">
+    <Container>
+      <BrotherDirectory
+        client:load
+        people={alumni}
+        pledgeClasses={people.pledgeClasses}
+        noun={{ one: 'alum', many: 'alumni' }}
+      />
+    </Container>
+  </section>
+</BaseLayout>

@@ -1,0 +1,3258 @@
+{
+  "pledgeClasses": [
+    "Alpha Gamma",
+    "Alpha Beta",
+    "Alpha Alpha",
+    "Omega",
+    "Psi",
+    "Chi",
+    "Phi",
+    "Upsilon",
+    "Tau",
+    "Sigma",
+    "Rho",
+    "Pi",
+    "Omicron",
+    "Xi",
+    "Nu",
+    "Mu",
+    "Lambda",
+    "Kappa",
+    "Iota",
+    "Theta",
+    "Eta",
+    "Zeta"
+  ],
+  "people": [
+    {
+      "id": "eleri-lyon",
+      "name": "Eleri Lyon",
+      "pledgeClass": "Upsilon",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "eleri-lyon.jpg",
+      "linkedin": "https://www.linkedin.com/in/elerilyon/"
+    },
+    {
+      "id": "lissette-pasion",
+      "name": "Lissette Pasion",
+      "pledgeClass": "Upsilon",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lissette-pasion.jpg",
+      "linkedin": "https://www.linkedin.com/in/lissette-pasion-58799a255/"
+    },
+    {
+      "id": "aidan-snyder",
+      "name": "Aidan Snyder",
+      "pledgeClass": "Phi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "aidan-snyder.jpg",
+      "linkedin": "https://www.linkedin.com/in/aidangsnyder/"
+    },
+    {
+      "id": "aishwarya-rajaram",
+      "name": "Aishwarya Rajaram",
+      "pledgeClass": "Phi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "aishwarya-rajaram.jpg",
+      "linkedin": "https://www.linkedin.com/in/aishwarya-rajaram/"
+    },
+    {
+      "id": "ellen-huynh",
+      "name": "Ellen Huynh",
+      "pledgeClass": "Phi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ellen-huynh.jpg",
+      "linkedin": "https://www.linkedin.com/in/ellen-huynh-83817020b/"
+    },
+    {
+      "id": "kai-hutchison",
+      "name": "Kai Hutchison",
+      "pledgeClass": "Phi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kai-hutchison.jpg",
+      "linkedin": "https://www.linkedin.com/in/kai-hutchison/"
+    },
+    {
+      "id": "noa-avitan",
+      "name": "Noa Avitan",
+      "pledgeClass": "Phi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "noa-avitan.jpg",
+      "linkedin": "https://www.linkedin.com/in/noa-avitan/"
+    },
+    {
+      "id": "srisubrahmanyar-ramasamy",
+      "name": "Srisubrahmanyar Ramasamy",
+      "pledgeClass": "Phi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "srisubrahmanyar-ramasamy.jpg",
+      "linkedin": "https://www.linkedin.com/in/rssub18/"
+    },
+    {
+      "id": "agastya-mongia",
+      "name": "Agastya Mongia",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "agastya-mongia.jpg",
+      "linkedin": "https://www.linkedin.com/in/agastyamongia/"
+    },
+    {
+      "id": "annie-chen",
+      "name": "Annie Chen",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "annie-chen.jpg",
+      "linkedin": "https://www.linkedin.com/in/annie-chen08/"
+    },
+    {
+      "id": "ariel-orellana-castro",
+      "name": "Ariel Orellana-Castro",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ariel-orellana-castro.jpg",
+      "linkedin": "https://www.linkedin.com/in/ariel-castro-30b93b195/"
+    },
+    {
+      "id": "ashton-meyer-bibbins",
+      "name": "Ashton Meyer-Bibbins",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ashton-meyer-bibbins.jpg",
+      "linkedin": "https://www.linkedin.com/in/ashton-meyer-bibbins-9a51731a2/"
+    },
+    {
+      "id": "elizabeth-szczesny",
+      "name": "Elizabeth Szczesny",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "elizabeth-szczesny.jpg",
+      "linkedin": "https://www.linkedin.com/in/elizabeth-szczesny-876181280/"
+    },
+    {
+      "id": "enrique-pinero",
+      "name": "Enrique Piñero",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "enrique-pinero.jpg",
+      "linkedin": "https://www.linkedin.com/in/enrique-pi%C3%B1ero-31176620b/"
+    },
+    {
+      "id": "jacqueline-choi",
+      "name": "Jacqueline Choi",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jacqueline-choi.jpg",
+      "linkedin": "https://www.linkedin.com/in/s-jacqueline-choi/"
+    },
+    {
+      "id": "joseph-chen",
+      "name": "Joseph Chen",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "joseph-chen.jpg",
+      "linkedin": "https://www.linkedin.com/in/josephcchen/"
+    },
+    {
+      "id": "libby-potter",
+      "name": "Libby Potter",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "libby-potter.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "marin-brivic",
+      "name": "Marin Brivic",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "marin-brivic.jpg",
+      "linkedin": "https://www.linkedin.com/in/marin-brivic-107b65285/"
+    },
+    {
+      "id": "ryan-zumwalt",
+      "name": "Ryan Zumwalt",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ryan-zumwalt.jpg",
+      "linkedin": "https://www.linkedin.com/in/ryan-zumwalt-947948168/"
+    },
+    {
+      "id": "victoria-ngo",
+      "name": "Victoria Ngo",
+      "pledgeClass": "Chi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "victoria-ngo.jpg",
+      "linkedin": "https://www.linkedin.com/in/victoria-ngo-75a191257/"
+    },
+    {
+      "id": "andrew-luu",
+      "name": "Andrew Luu",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "andrew-luu.jpg",
+      "linkedin": "https://www.linkedin.com/in/acdluu/"
+    },
+    {
+      "id": "camden-rowland",
+      "name": "Camden Rowland",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "camden-rowland.jpg",
+      "linkedin": "https://www.linkedin.com/in/camden-rowland-48662228a/"
+    },
+    {
+      "id": "grace-townsend",
+      "name": "Grace Townsend",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "grace-townsend.jpg",
+      "linkedin": "https://www.linkedin.com/in/gracetownsend39/"
+    },
+    {
+      "id": "gurucharan-lingamallu",
+      "name": "Gurucharan Lingamallu",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "gurucharan-lingamallu.jpg",
+      "linkedin": "https://www.linkedin.com/in/gurul/"
+    },
+    {
+      "id": "justin-tran",
+      "name": "Justin Tran",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "justin-tran.jpg",
+      "linkedin": "https://www.linkedin.com/in/justdtran/"
+    },
+    {
+      "id": "matthew-chiu",
+      "name": "Matthew Chiu",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "matthew-chiu.jpg",
+      "linkedin": "https://www.linkedin.com/in/matt-chiu/"
+    },
+    {
+      "id": "mina-wang",
+      "name": "Mina Wang",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mina-wang.jpg",
+      "linkedin": "https://www.linkedin.com/in/mw-minawang/"
+    },
+    {
+      "id": "nigel-herbert",
+      "name": "Nigel Herbert",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nigel-herbert.jpg",
+      "linkedin": "https://www.linkedin.com/in/nigelherbert/"
+    },
+    {
+      "id": "rachel-park",
+      "name": "Rachel Park",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rachel-park.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "samindhi-wijesinghe",
+      "name": "Samindhi Wijesinghe",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "samindhi-wijesinghe.jpg",
+      "linkedin": "https://www.linkedin.com/in/samindhi-wijesinghe-423717223/"
+    },
+    {
+      "id": "seonghee-park",
+      "name": "Seonghee Park",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "seonghee-park.jpg",
+      "linkedin": "https://www.linkedin.com/in/seonghee-park-17b607278/"
+    },
+    {
+      "id": "shinjini-mitra-mustafi",
+      "name": "Shinjini Mitra Mustafi",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "shinjini-mitra-mustafi.jpg",
+      "linkedin": "https://www.linkedin.com/in/shinjini-mitra-mustafi-910106219/"
+    },
+    {
+      "id": "vinisha-surayapalem",
+      "name": "Vinisha Surayapalem",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "vinisha-surayapalem.jpg",
+      "linkedin": "https://www.linkedin.com/in/vinishasurayapalem/"
+    },
+    {
+      "id": "zak-azar",
+      "name": "Zak Azar",
+      "pledgeClass": "Psi",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "zak-azar.jpg",
+      "linkedin": "https://www.linkedin.com/in/zakhourazar/"
+    },
+    {
+      "id": "catherine-park",
+      "name": "Catherine Park",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "catherine-park.jpg",
+      "linkedin": "https://www.linkedin.com/in/catherineparkk/"
+    },
+    {
+      "id": "elle-kim",
+      "name": "Elle Kim",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "elle-kim.jpg",
+      "linkedin": "https://www.linkedin.com/in/elle-kim-096822335/"
+    },
+    {
+      "id": "hannah-tran",
+      "name": "Hannah Tran",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "hannah-tran.jpg",
+      "linkedin": "https://www.linkedin.com/in/hannahetran/"
+    },
+    {
+      "id": "jack-wright",
+      "name": "Jack Wright",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jack-wright.jpg",
+      "linkedin": "https://www.linkedin.com/in/jack-wright-84ab99300/"
+    },
+    {
+      "id": "jake-ku",
+      "name": "Jake Ku",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jake-ku.jpg",
+      "linkedin": "https://www.linkedin.com/in/jake-ku/"
+    },
+    {
+      "id": "lucas-tweedy",
+      "name": "Lucas Tweedy",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lucas-tweedy.jpg",
+      "linkedin": "https://www.linkedin.com/in/lucas-tweedy-464739284/"
+    },
+    {
+      "id": "luke-jones",
+      "name": "Luke Jones",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "luke-jones.jpg",
+      "linkedin": "https://www.linkedin.com/in/luke-jones5/"
+    },
+    {
+      "id": "olin-blycker",
+      "name": "Olin Blycker",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "olin-blycker.jpg",
+      "linkedin": "https://www.linkedin.com/in/olin-blycker-711822335/"
+    },
+    {
+      "id": "silvana-salazar",
+      "name": "Silvana Salazar",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "silvana-salazar.jpg",
+      "linkedin": "https://www.linkedin.com/in/silvsalazar5/"
+    },
+    {
+      "id": "rio-shintani",
+      "name": "Rio Shintani",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rio-shintani.jpg",
+      "linkedin": "https://www.linkedin.com/in/rioshintani/"
+    },
+    {
+      "id": "rohan-talwar",
+      "name": "Rohan Talwar",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rohan-talwar.jpg",
+      "linkedin": "https://www.linkedin.com/in/rohan-talwar-/"
+    },
+    {
+      "id": "silas-ulrich",
+      "name": "Silas Ulrich",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "silas-ulrich.jpg",
+      "linkedin": "https://www.linkedin.com/in/silas-ulrich-a363a7330/"
+    },
+    {
+      "id": "tara-sardana",
+      "name": "Tara Sardana",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "tara-sardana.jpg",
+      "linkedin": "https://www.linkedin.com/in/tara-sardana-b4b91b297/"
+    },
+    {
+      "id": "vaishali-raman",
+      "name": "Vaishali Raman",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "vaishali-raman.jpg",
+      "linkedin": "https://www.linkedin.com/in/vaishaliraman/"
+    },
+    {
+      "id": "vivian-lam",
+      "name": "Vivian Lam",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "vivian-lam.jpg",
+      "linkedin": "https://www.linkedin.com/in/vivian-lam-173370251/"
+    },
+    {
+      "id": "wenta-efrem",
+      "name": "Wenta Efrem",
+      "pledgeClass": "Omega",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "wenta-efrem.jpg",
+      "linkedin": "https://www.linkedin.com/in/wenta-efrem/"
+    },
+    {
+      "id": "ashwin-anand",
+      "name": "Ashwin Anand",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ashwin-anand.jpg",
+      "linkedin": "https://www.linkedin.com/in/ashwin-anand-/"
+    },
+    {
+      "id": "bella-nguyen",
+      "name": "Bella Nguyen",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "bella-nguyen.jpg",
+      "linkedin": "https://www.linkedin.com/in/bellaanguyen/"
+    },
+    {
+      "id": "delaney-flanigen",
+      "name": "Delaney Flanigen",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "delaney-flanigen.jpg",
+      "linkedin": "https://www.linkedin.com/in/delaneyflanigen19/"
+    },
+    {
+      "id": "eleanor-knight",
+      "name": "Eleanor Knight",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "eleanor-knight.jpg",
+      "linkedin": "https://www.linkedin.com/in/eleanorruthknight/"
+    },
+    {
+      "id": "ella-nguyen",
+      "name": "Ella Nguyen",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ella-nguyen.jpg",
+      "linkedin": "https://www.linkedin.com/in/ellanguyenn/"
+    },
+    {
+      "id": "ellen-boling",
+      "name": "Ellen Boling",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ellen-boling.jpg",
+      "linkedin": "https://www.linkedin.com/in/ellen-boling-735501243/"
+    },
+    {
+      "id": "isaac-kirby",
+      "name": "Isaac Kirby",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "isaac-kirby.jpg",
+      "linkedin": "https://www.linkedin.com/in/isaac-kirby-b36b32293/"
+    },
+    {
+      "id": "jeff-lin",
+      "name": "Jeff Lin",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jeff-lin.jpg",
+      "linkedin": "https://www.linkedin.com/in/jeffylin/"
+    },
+    {
+      "id": "naya-nebriaga",
+      "name": "Naya Nebriaga",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "naya-nebriaga.jpg",
+      "linkedin": "https://www.linkedin.com/in/naya-nebriaga/"
+    },
+    {
+      "id": "nazar-sherstiuk",
+      "name": "Nazar Sherstiuk",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nazar-sherstiuk.jpg",
+      "linkedin": "https://www.linkedin.com/in/nazar-sherstiuk/"
+    },
+    {
+      "id": "norah-brooks",
+      "name": "Norah Brooks",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "norah-brooks.jpg",
+      "linkedin": "https://www.linkedin.com/in/norah-brooks-a67716278/"
+    },
+    {
+      "id": "reuel-alejo",
+      "name": "Reuel Alejo",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "reuel-alejo.jpg",
+      "linkedin": "https://www.linkedin.com/in/reuel-alejo/"
+    },
+    {
+      "id": "rishit-balaji",
+      "name": "Rishit Balaji",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rishit-balaji.jpg",
+      "linkedin": "https://www.linkedin.com/in/rishit-balaji-1674a8290/"
+    },
+    {
+      "id": "stella-smit",
+      "name": "Stella Smit",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "stella-smit.jpg",
+      "linkedin": "https://www.linkedin.com/in/stellasmit/"
+    },
+    {
+      "id": "yudhith-anil",
+      "name": "Yudhith Anil",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "yudhith-anil.jpg",
+      "linkedin": "https://www.linkedin.com/in/yudhith-anil-a70104238/"
+    },
+    {
+      "id": "zarin-sadruddin",
+      "name": "Zarin Sadruddin",
+      "pledgeClass": "Alpha Alpha",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "zarin-sadruddin.jpg",
+      "linkedin": "https://www.linkedin.com/in/zarin-sadruddin-398978227/"
+    },
+    {
+      "id": "ashwit-mathur",
+      "name": "Ashwit Mathur",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ashwit-mathur.jpg",
+      "linkedin": "https://www.linkedin.com/in/ashwit-mathur/"
+    },
+    {
+      "id": "clara-ruival",
+      "name": "Clara Ruival",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "clara-ruival.jpg",
+      "linkedin": "https://www.linkedin.com/in/clara-ruival-516b352a0/"
+    },
+    {
+      "id": "aarna-nair",
+      "name": "Aarna Nair",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "aarna-nair.jpg",
+      "linkedin": "https://www.linkedin.com/in/aarna-nair-7a3297248/"
+    },
+    {
+      "id": "diane-chang",
+      "name": "Diane Chang",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "diane-chang.jpg",
+      "linkedin": "https://www.linkedin.com/in/diane-chang-/"
+    },
+    {
+      "id": "lotus-wu",
+      "name": "Lotus Wu",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lotus-wu.jpg",
+      "linkedin": "https://www.linkedin.com/in/lotuswu/"
+    },
+    {
+      "id": "riley-gillespie",
+      "name": "Riley Gillespie",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "riley-gillespie.jpg",
+      "linkedin": "https://www.linkedin.com/in/rileygillespie/"
+    },
+    {
+      "id": "tanvi-kakkireni",
+      "name": "Tanvi Kakkireni",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "tanvi-kakkireni.jpg",
+      "linkedin": "https://www.linkedin.com/in/tanvi-kakkireni-331b79269/"
+    },
+    {
+      "id": "sean-kern",
+      "name": "Sean Kern",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sean-kern.jpg",
+      "linkedin": "https://www.linkedin.com/in/sean-kern/"
+    },
+    {
+      "id": "shira-avitan",
+      "name": "Shira Avitan",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "shira-avitan.jpg",
+      "linkedin": "https://www.linkedin.com/in/shira-avitan/"
+    },
+    {
+      "id": "manishka-narayan",
+      "name": "Manishka Narayan",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "manishka-narayan.jpg",
+      "linkedin": "https://www.linkedin.com/in/manishka-narayan-62557a277/"
+    },
+    {
+      "id": "victor-vitorino",
+      "name": "Victor Vitorino",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "victor-vitorino.jpg",
+      "linkedin": "https://www.linkedin.com/in/victor-vitorino-29aa8b309/"
+    },
+    {
+      "id": "dev-chheda",
+      "name": "Dev Chheda",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "dev-chheda.jpg",
+      "linkedin": "https://www.linkedin.com/in/dev-chheda-41507b235/"
+    },
+    {
+      "id": "izayah-qiu",
+      "name": "Izayah Qiu",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "izayah-qiu.jpg",
+      "linkedin": "https://www.linkedin.com/in/izayahqiu06/"
+    },
+    {
+      "id": "manav-johar",
+      "name": "Manav Johar",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "manav-johar.jpg",
+      "linkedin": "https://www.linkedin.com/in/manav-johar-26a40a27b/"
+    },
+    {
+      "id": "ruhi-subramanian",
+      "name": "Ruhi Subramanian",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ruhi-subramanian.jpg",
+      "linkedin": "https://www.linkedin.com/in/ruhi-lakshmi-subramanian/"
+    },
+    {
+      "id": "arhana-baijal",
+      "name": "Arhana Baijal",
+      "pledgeClass": "Alpha Beta",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "arhana-baijal.jpg",
+      "linkedin": "https://www.linkedin.com/in/arhana-baijal-330313280/"
+    },
+    {
+      "id": "eshaan-garg",
+      "name": "Eshaan Garg",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "eshaan-garg.jpg",
+      "linkedin": "https://www.linkedin.com/in/eshaan-garg/"
+    },
+    {
+      "id": "gabriel-knudsen",
+      "name": "Gabriel Knudsen",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "gabriel-knudsen.jpg",
+      "linkedin": "https://www.linkedin.com/in/gabrielknudsen/"
+    },
+    {
+      "id": "dheeraj-tallapragada",
+      "name": "Dheeraj Tallapragada",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "dheeraj-tallapragada.jpg",
+      "linkedin": "https://www.linkedin.com/in/dheerajtallapragada/"
+    },
+    {
+      "id": "harrison-saino",
+      "name": "Harrison Saino",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "harrison-saino.jpg",
+      "linkedin": "https://www.linkedin.com/in/harrison-saino-32b793387/"
+    },
+    {
+      "id": "maddie-lambert",
+      "name": "Maddie Lambert",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "maddie-lambert.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "marton-mezei",
+      "name": "Marton Mezei",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "marton-mezei.jpg",
+      "linkedin": "https://www.linkedin.com/in/martonmezei/"
+    },
+    {
+      "id": "michelle-park",
+      "name": "Michelle Park",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "michelle-park.jpg",
+      "linkedin": "https://www.linkedin.com/in/michellechenipark/"
+    },
+    {
+      "id": "serina-su",
+      "name": "Serina Su",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "serina-su.jpg",
+      "linkedin": "https://www.linkedin.com/in/serinasu/"
+    },
+    {
+      "id": "sofia-hessler",
+      "name": "Sofia Hessler",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sofia-hessler.jpg",
+      "linkedin": "https://www.linkedin.com/in/sofiahessler/"
+    },
+    {
+      "id": "ryan-lederle",
+      "name": "Ryan Lederle",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ryan-lederle.jpg",
+      "linkedin": "https://www.linkedin.com/in/ryan-lederle/"
+    },
+    {
+      "id": "robin-diep",
+      "name": "Robin Diep",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "robin-diep.jpg",
+      "linkedin": "https://www.linkedin.com/in/robindiep/"
+    },
+    {
+      "id": "owen-bischoff",
+      "name": "Owen Bischoff",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "owen-bischoff.jpg",
+      "linkedin": "https://www.linkedin.com/in/owen-bischoff/"
+    },
+    {
+      "id": "soliyana-berta",
+      "name": "Soliyana Berta",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "soliyana-berta.jpg",
+      "linkedin": "https://www.linkedin.com/in/soliyana-berta-056360324/"
+    },
+    {
+      "id": "wilfred-leung",
+      "name": "Wilfred Leung",
+      "pledgeClass": "Alpha Gamma",
+      "status": "active",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "wilfred-leung.jpg",
+      "linkedin": "https://www.linkedin.com/in/wilfredleung1/"
+    },
+    {
+      "id": "colin-bryant",
+      "name": "Colin Bryant",
+      "pledgeClass": "Psi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "colin-bryant.jpg",
+      "linkedin": "https://www.linkedin.com/in/colin-bryant-/"
+    },
+    {
+      "id": "faith-kim",
+      "name": "Faith Kim",
+      "pledgeClass": "Psi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "faith-kim.jpg",
+      "linkedin": "https://www.linkedin.com/in/faithkim727/"
+    },
+    {
+      "id": "bella-woo",
+      "name": "Bella Woo",
+      "pledgeClass": "Chi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "bella-woo.jpg",
+      "linkedin": "https://www.linkedin.com/in/bella-woo95/"
+    },
+    {
+      "id": "charlie-olsen",
+      "name": "Charlie Olsen",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "charlie-olsen.jpg",
+      "linkedin": "https://www.linkedin.com/in/charlie-olsen1/"
+    },
+    {
+      "id": "amy-oguejiofor",
+      "name": "Amy Oguejiofor",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "amy-oguejiofor.jpg",
+      "linkedin": "https://www.linkedin.com/in/amy-oguejiofor06/"
+    },
+    {
+      "id": "hannah-koo",
+      "name": "Hannah Koo",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "hannah-koo.jpg",
+      "linkedin": "https://www.linkedin.com/in/hannah-koo-706152217/"
+    },
+    {
+      "id": "michael-schwamborn",
+      "name": "Michael Schwamborn",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "michael-schwamborn.jpg",
+      "linkedin": "https://www.linkedin.com/in/michael-schwamborn/"
+    },
+    {
+      "id": "trevaun-reeves",
+      "name": "Trévaun Reeves",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "trevaun-reeves.jpg",
+      "linkedin": "https://www.linkedin.com/in/tre01/"
+    },
+    {
+      "id": "mckenna-nelson",
+      "name": "McKenna Nelson",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mckenna-nelson.jpg",
+      "linkedin": "https://www.linkedin.com/in/mckenna-nelson03/"
+    },
+    {
+      "id": "serena-le",
+      "name": "Serena Le",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "serena-le.jpg",
+      "linkedin": "https://www.linkedin.com/in/serena-le1/"
+    },
+    {
+      "id": "sai-pipavath",
+      "name": "Sai Pipavath",
+      "pledgeClass": "Phi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sai-pipavath.jpg",
+      "linkedin": "https://www.linkedin.com/in/saipipavath/"
+    },
+    {
+      "id": "aidan-hong",
+      "name": "Aidan Hong",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "aidan-hong.jpg",
+      "linkedin": "https://www.linkedin.com/in/aidanhong/"
+    },
+    {
+      "id": "ayaan-rahim",
+      "name": "Ayaan Rahim",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ayaan-rahim.jpg",
+      "linkedin": "https://www.linkedin.com/in/ayaan-rahim-48705a1ab/"
+    },
+    {
+      "id": "brendan-wilk",
+      "name": "Brendan Wilk",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "brendan-wilk.jpg",
+      "linkedin": "https://www.linkedin.com/in/bmwilk04/"
+    },
+    {
+      "id": "dahyun-kang",
+      "name": "Dahyun Kang",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "dahyun-kang.jpg",
+      "linkedin": "https://www.linkedin.com/in/dahyun-kang-rok0823/"
+    },
+    {
+      "id": "kate-staddon",
+      "name": "Kate Staddon",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kate-staddon.jpg",
+      "linkedin": "https://www.linkedin.com/in/kate-staddon/"
+    },
+    {
+      "id": "lauren-cheung",
+      "name": "Lauren Cheung",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lauren-cheung.jpg",
+      "linkedin": "https://www.linkedin.com/in/laurenncheung/"
+    },
+    {
+      "id": "nishant-shah",
+      "name": "Nishant Shah",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nishant-shah.jpg",
+      "linkedin": "https://www.linkedin.com/in/nishantshah02/"
+    },
+    {
+      "id": "noor-rajan",
+      "name": "Noor Rajan",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "noor-rajan.jpg",
+      "linkedin": "https://www.linkedin.com/in/noorrajan/"
+    },
+    {
+      "id": "ryan-patterson",
+      "name": "Ryan Patterson",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ryan-patterson.jpg",
+      "linkedin": "https://www.linkedin.com/in/ryanpatterson2/"
+    },
+    {
+      "id": "michaela-isaacs",
+      "name": "Michaela Isaacs",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "michaela-isaacs.jpg",
+      "linkedin": "https://www.linkedin.com/in/michaelaisaacs/"
+    },
+    {
+      "id": "bailey-kennedy",
+      "name": "Bailey Kennedy",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "bailey-kennedy.jpg",
+      "linkedin": "https://www.linkedin.com/in/baileylkennedy/"
+    },
+    {
+      "id": "lily-kasic",
+      "name": "Lily Kasic",
+      "pledgeClass": "Upsilon",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lily-kasic.jpg",
+      "linkedin": "https://www.linkedin.com/in/lilykasic/"
+    },
+    {
+      "id": "kenna-kwok",
+      "name": "Kenna Kwok",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kenna-kwok.jpg",
+      "linkedin": "https://www.linkedin.com/in/kennakwok/"
+    },
+    {
+      "id": "adora-pham",
+      "name": "Adora Pham",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "adora-pham.jpg",
+      "linkedin": "https://www.linkedin.com/in/adora-pham/"
+    },
+    {
+      "id": "kyle-zeng",
+      "name": "Kyle Zeng",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kyle-zeng.jpg",
+      "linkedin": "https://www.linkedin.com/in/kyle-zeng/"
+    },
+    {
+      "id": "murat-akyuz",
+      "name": "Murat Akyuz",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "murat-akyuz.jpg",
+      "linkedin": "https://www.linkedin.com/in/muratakyuz/"
+    },
+    {
+      "id": "anvitha-bavineni",
+      "name": "Anvitha Bavineni",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "anvitha-bavineni.jpg",
+      "linkedin": "https://www.linkedin.com/in/anvithabavineni/"
+    },
+    {
+      "id": "raj-lakhani",
+      "name": "Raj Lakhani",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "raj-lakhani.jpg",
+      "linkedin": "https://www.linkedin.com/in/rajlakhani02/"
+    },
+    {
+      "id": "connor-chan",
+      "name": "Connor Chan",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "connor-chan.jpg",
+      "linkedin": "https://www.linkedin.com/in/connor-chan/"
+    },
+    {
+      "id": "do-hun-kim",
+      "name": "Do Hun Kim",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "do-hun-kim.jpg",
+      "linkedin": "https://www.linkedin.com/in/do-hun-kim/"
+    },
+    {
+      "id": "gracie-pitts",
+      "name": "Gracie Pitts",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "gracie-pitts.jpg",
+      "linkedin": "https://www.linkedin.com/in/gracie-pitts-91841021a/"
+    },
+    {
+      "id": "jake-harper",
+      "name": "Jake Harper",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jake-harper.jpg",
+      "linkedin": "https://www.linkedin.com/in/jake--harper/"
+    },
+    {
+      "id": "kohei-jonah-foss",
+      "name": "Kohei (Jonah) Foss",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kohei-jonah-foss.jpg",
+      "linkedin": "https://www.linkedin.com/in/koheifoss/"
+    },
+    {
+      "id": "maya-matta",
+      "name": "Maya Matta",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "maya-matta.jpg",
+      "linkedin": "https://www.linkedin.com/in/maya-cm/"
+    },
+    {
+      "id": "mayank-pathak",
+      "name": "Mayank Pathak",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mayank-pathak.jpg",
+      "linkedin": "https://www.linkedin.com/in/mayank-pathak13/"
+    },
+    {
+      "id": "rachel-merrill",
+      "name": "Rachel Merrill",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rachel-merrill.jpg",
+      "linkedin": "https://www.linkedin.com/in/rachelcmerrill/"
+    },
+    {
+      "id": "sean-lim",
+      "name": "Sean Lim",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sean-lim.jpg",
+      "linkedin": "https://www.linkedin.com/in/aseanlim/"
+    },
+    {
+      "id": "tania-malik",
+      "name": "Tania Malik",
+      "pledgeClass": "Tau",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "tania-malik.jpg",
+      "linkedin": "https://www.linkedin.com/in/taniagmalik/"
+    },
+    {
+      "id": "amanda-song",
+      "name": "Amanda Song",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "amanda-song.jpg",
+      "linkedin": "https://www.linkedin.com/in/amandasong183/"
+    },
+    {
+      "id": "donna-te",
+      "name": "Donna Te",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "donna-te.jpg",
+      "linkedin": "https://www.linkedin.com/in/donna-te003/"
+    },
+    {
+      "id": "gabriela-pineda",
+      "name": "Gabriela Pineda",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "gabriela-pineda.jpg",
+      "linkedin": "https://www.linkedin.com/in/gaby-pineda/"
+    },
+    {
+      "id": "madeline-siu",
+      "name": "Madeline Siu",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "madeline-siu.jpg",
+      "linkedin": "https://www.linkedin.com/in/madelinesiu/"
+    },
+    {
+      "id": "nathan-lee",
+      "name": "Nathan Lee",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nathan-lee.jpg",
+      "linkedin": "https://www.linkedin.com/in/nathanlee-cs/"
+    },
+    {
+      "id": "swathi-narayan",
+      "name": "Swathi Narayan",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "swathi-narayan.jpg",
+      "linkedin": "https://www.linkedin.com/in/-swathinarayan/"
+    },
+    {
+      "id": "courtney-hong",
+      "name": "Courtney Hong",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "courtney-hong.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "evelyn-wong",
+      "name": "Evelyn Wong",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "evelyn-wong.jpg",
+      "linkedin": "https://www.linkedin.com/in/evelyn-wong8/"
+    },
+    {
+      "id": "jeffrey-numrych",
+      "name": "Jeffrey Numrych",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jeffrey-numrych.jpg",
+      "linkedin": "https://www.linkedin.com/in/jeffreynumrych/"
+    },
+    {
+      "id": "mariana-salazar",
+      "name": "Mariana Salazar",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mariana-salazar.jpg",
+      "linkedin": "https://www.linkedin.com/in/mariana-salazar-a9a512195/"
+    },
+    {
+      "id": "omar-fageeri",
+      "name": "Omar Fageeri",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "omar-fageeri.jpg",
+      "linkedin": "https://www.linkedin.com/in/omar-fageeri-280682168/"
+    },
+    {
+      "id": "tara-manhas",
+      "name": "Tara Manhas",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "tara-manhas.jpg",
+      "linkedin": "https://www.linkedin.com/in/taramanhas/"
+    },
+    {
+      "id": "thai-wichienwidhtaya",
+      "name": "Thai Wichienwidhtaya",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "thai-wichienwidhtaya.jpg",
+      "linkedin": "https://www.linkedin.com/in/thai-w/"
+    },
+    {
+      "id": "ulysses-hammer",
+      "name": "Ulysses Hammer",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ulysses-hammer.jpg",
+      "linkedin": "https://www.linkedin.com/in/ulysseshammer/"
+    },
+    {
+      "id": "janice-kim",
+      "name": "Janice Kim",
+      "pledgeClass": "Sigma",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "janice-kim.jpg",
+      "linkedin": "https://www.linkedin.com/in/janicebkim/"
+    },
+    {
+      "id": "audrey-chen",
+      "name": "Audrey Chen",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "audrey-chen.jpg",
+      "linkedin": "https://www.linkedin.com/in/audreychen13/"
+    },
+    {
+      "id": "daphne-dsa",
+      "name": "Daphne D’sa",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "daphne-dsa.jpg",
+      "linkedin": "https://www.linkedin.com/in/daphnedsa/"
+    },
+    {
+      "id": "datta-dave",
+      "name": "Datta Dave",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "datta-dave.jpg",
+      "linkedin": "https://www.linkedin.com/in/datta-dave/"
+    },
+    {
+      "id": "datyous-mahmoudian",
+      "name": "Datyous Mahmoudian",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "datyous-mahmoudian.jpg",
+      "linkedin": "https://www.linkedin.com/in/datyous-mahmoudian/"
+    },
+    {
+      "id": "emily-le",
+      "name": "Emily Le",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "emily-le.jpg",
+      "linkedin": "https://www.linkedin.com/in/emilyle1/"
+    },
+    {
+      "id": "emily-sanger",
+      "name": "Emily Sanger",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "emily-sanger.jpg",
+      "linkedin": "https://www.linkedin.com/in/esanger4/"
+    },
+    {
+      "id": "felicia-jap",
+      "name": "Felicia Jap",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "felicia-jap.jpg",
+      "linkedin": "https://www.linkedin.com/in/feliciajap/"
+    },
+    {
+      "id": "harriet-sanders",
+      "name": "Harriet Sanders",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "harriet-sanders.jpg",
+      "linkedin": "https://www.linkedin.com/in/harriet-sanders/"
+    },
+    {
+      "id": "lauren-jensen",
+      "name": "Lauren Jensen",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lauren-jensen.jpg",
+      "linkedin": "https://www.linkedin.com/in/lauren-jensen-302427198/"
+    },
+    {
+      "id": "sai-raksha-rayala",
+      "name": "Sai Raksha Rayala",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sai-raksha-rayala.jpg",
+      "linkedin": "https://www.linkedin.com/in/sai-raksha-rayala/"
+    },
+    {
+      "id": "yuyu-madigan",
+      "name": "YuYu Madigan",
+      "pledgeClass": "Rho",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "yuyu-madigan.jpg",
+      "linkedin": "https://www.linkedin.com/in/fymadigan/"
+    },
+    {
+      "id": "ananya-rao",
+      "name": "Ananya Rao",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ananya-rao.jpg",
+      "linkedin": "https://www.linkedin.com/in/ananyarao25/"
+    },
+    {
+      "id": "ashley-gibson",
+      "name": "Ashley Gibson",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ashley-gibson.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "brittany-do",
+      "name": "Brittany Do",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "brittany-do.jpg",
+      "linkedin": "https://www.linkedin.com/in/brittanydo/"
+    },
+    {
+      "id": "elijah-brown",
+      "name": "Elijah Brown",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "elijah-brown.jpg",
+      "linkedin": "https://www.linkedin.com/in/elijahgbrown/"
+    },
+    {
+      "id": "gary-nguyen",
+      "name": "Gary Nguyen",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "gary-nguyen.jpg",
+      "linkedin": "https://www.linkedin.com/in/gary-nguyen00/"
+    },
+    {
+      "id": "laura-wang",
+      "name": "Laura Wang",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "laura-wang.jpg",
+      "linkedin": "https://www.linkedin.com/in/laura-wang-2024/"
+    },
+    {
+      "id": "manisha-srivatsan",
+      "name": "Manisha Srivatsan",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "manisha-srivatsan.jpg",
+      "linkedin": "https://www.linkedin.com/in/manishasrivatsan/"
+    },
+    {
+      "id": "miles-lang",
+      "name": "Miles Lang",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "miles-lang.jpg",
+      "linkedin": "https://www.linkedin.com/in/mileslang1/"
+    },
+    {
+      "id": "raia-karmali",
+      "name": "Raia Karmali",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "raia-karmali.jpg",
+      "linkedin": "https://www.linkedin.com/in/raiakarmali/"
+    },
+    {
+      "id": "rand-mattis",
+      "name": "Rand Mattis",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rand-mattis.jpg",
+      "linkedin": "https://www.linkedin.com/in/rand-mattis/"
+    },
+    {
+      "id": "stephanie-claeys",
+      "name": "Stephanie Claeys",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "stephanie-claeys.jpg",
+      "linkedin": "https://www.linkedin.com/in/stephanie-claeys/"
+    },
+    {
+      "id": "veronica-lin",
+      "name": "Veronica Lin",
+      "pledgeClass": "Pi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "veronica-lin.jpg",
+      "linkedin": "https://www.linkedin.com/in/veronica--lin/"
+    },
+    {
+      "id": "anson-siow",
+      "name": "Anson Siow",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "anson-siow.jpg",
+      "linkedin": "https://www.linkedin.com/in/ansonsiow/"
+    },
+    {
+      "id": "bonnie-ting",
+      "name": "Bonnie Ting",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "bonnie-ting.jpg",
+      "linkedin": "https://www.linkedin.com/in/bonnie-ting/"
+    },
+    {
+      "id": "bryant-calderon",
+      "name": "Bryant Calderon",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "bryant-calderon.jpg",
+      "linkedin": "https://www.linkedin.com/in/calderon-bryant4/"
+    },
+    {
+      "id": "cayla-surovsky",
+      "name": "Cayla Surovsky",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "cayla-surovsky.jpg",
+      "linkedin": "https://www.linkedin.com/in/cayla-surovsky/"
+    },
+    {
+      "id": "ethan-do",
+      "name": "Ethan Do",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ethan-do.jpg",
+      "linkedin": "https://www.linkedin.com/in/ethanmkdo/"
+    },
+    {
+      "id": "jazzlyn-rowland",
+      "name": "Jazzlyn Rowland",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jazzlyn-rowland.jpg",
+      "linkedin": "https://www.linkedin.com/in/jazzlynrowland/"
+    },
+    {
+      "id": "joshua-lee",
+      "name": "Joshua Lee",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "joshua-lee.jpg",
+      "linkedin": "https://www.linkedin.com/in/jwlee2/"
+    },
+    {
+      "id": "kiran-pradhan",
+      "name": "Kiran Pradhan",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kiran-pradhan.jpg",
+      "linkedin": "https://www.linkedin.com/in/kiran-pradhan/"
+    },
+    {
+      "id": "megan-shu",
+      "name": "Megan Shu",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "megan-shu.jpg",
+      "linkedin": "https://www.linkedin.com/in/meganshu/"
+    },
+    {
+      "id": "nick-nagari",
+      "name": "Nick Nagari",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nick-nagari.jpg",
+      "linkedin": "https://www.linkedin.com/in/nicknagari/"
+    },
+    {
+      "id": "nicole-from",
+      "name": "Nicole From",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nicole-from.jpg",
+      "linkedin": "https://www.linkedin.com/in/nicolefrom/"
+    },
+    {
+      "id": "pranav-shekar",
+      "name": "Pranav Shekar",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "pranav-shekar.jpg",
+      "linkedin": "https://www.linkedin.com/in/pranav-shekar/"
+    },
+    {
+      "id": "ryan-jung",
+      "name": "Ryan Jung",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ryan-jung.jpg",
+      "linkedin": "https://www.linkedin.com/in/ryan-jung-328a59179/"
+    },
+    {
+      "id": "sophie-muza",
+      "name": "Sophie Muza",
+      "pledgeClass": "Omicron",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sophie-muza.jpg",
+      "linkedin": "https://www.linkedin.com/in/sophiemuza/"
+    },
+    {
+      "id": "abigail-currah",
+      "name": "Abigail Currah",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "abigail-currah.jpg",
+      "linkedin": "https://www.linkedin.com/in/abigail-currah/"
+    },
+    {
+      "id": "jake-rhyner",
+      "name": "Jake Rhyner",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jake-rhyner.jpg",
+      "linkedin": "https://www.linkedin.com/in/jakerhyner123/"
+    },
+    {
+      "id": "joseph-caraan",
+      "name": "Joseph Caraan",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "joseph-caraan.jpg",
+      "linkedin": "https://www.linkedin.com/in/josephcaraan/"
+    },
+    {
+      "id": "julie-fergus",
+      "name": "Julie Fergus",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "julie-fergus.jpg",
+      "linkedin": "https://www.linkedin.com/in/jmfergus/"
+    },
+    {
+      "id": "kate-moon",
+      "name": "Kate Moon",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kate-moon.jpg",
+      "linkedin": "https://www.linkedin.com/in/kate-moon17/"
+    },
+    {
+      "id": "kira-dudsic",
+      "name": "Kira Dudsic",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kira-dudsic.jpg",
+      "linkedin": "https://www.linkedin.com/in/kiradudsic/"
+    },
+    {
+      "id": "larry-shan",
+      "name": "Larry Shan",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "larry-shan.jpg",
+      "linkedin": "https://www.linkedin.com/in/larryshan/"
+    },
+    {
+      "id": "luke-jobe",
+      "name": "Luke Jobe",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "luke-jobe.jpg",
+      "linkedin": "https://www.linkedin.com/in/lukejobe/"
+    },
+    {
+      "id": "madison-rothe",
+      "name": "Madison Rothe",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "madison-rothe.jpg",
+      "linkedin": "https://www.linkedin.com/in/madison-rothe/"
+    },
+    {
+      "id": "maya-sahawneh",
+      "name": "Maya Sahawneh",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "maya-sahawneh.jpg",
+      "linkedin": "https://www.linkedin.com/in/mayasahawneh/"
+    },
+    {
+      "id": "michael-mcbroom",
+      "name": "Michael McBroom",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "michael-mcbroom.jpg",
+      "linkedin": "https://www.linkedin.com/in/michael-mcbroom/"
+    },
+    {
+      "id": "morgan-schiebel",
+      "name": "Morgan Schiebel",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "morgan-schiebel.jpg",
+      "linkedin": "https://www.linkedin.com/in/morgan-schiebel/"
+    },
+    {
+      "id": "ross-dempster",
+      "name": "Ross Dempster",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ross-dempster.jpg",
+      "linkedin": "https://www.linkedin.com/in/ross-dempster/"
+    },
+    {
+      "id": "sushank-adhikari",
+      "name": "Sushank Adhikari",
+      "pledgeClass": "Xi",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sushank-adhikari.jpg",
+      "linkedin": "https://www.linkedin.com/in/sushankadhikari/"
+    },
+    {
+      "id": "amrit-singh",
+      "name": "Amrit Singh",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "amrit-singh.jpg",
+      "linkedin": "https://www.linkedin.com/in/amritsingh2410/"
+    },
+    {
+      "id": "dayoung-cheong",
+      "name": "Dayoung Cheong",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "dayoung-cheong.jpg",
+      "linkedin": "https://www.linkedin.com/in/dayoungcheong/"
+    },
+    {
+      "id": "emily-reed",
+      "name": "Emily Reed",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "emily-reed.jpg",
+      "linkedin": "https://www.linkedin.com/in/emily-reed-0202/"
+    },
+    {
+      "id": "katie-chua",
+      "name": "Katie Chua",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "katie-chua.jpg",
+      "linkedin": "https://www.linkedin.com/in/katie-chua/"
+    },
+    {
+      "id": "kristina-te",
+      "name": "Kristina Te",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kristina-te.jpg",
+      "linkedin": "https://www.linkedin.com/in/kristinate/"
+    },
+    {
+      "id": "lena-abovskiy",
+      "name": "Lena Abovskiy",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lena-abovskiy.jpg",
+      "linkedin": "https://www.linkedin.com/in/lena-abovskiy/"
+    },
+    {
+      "id": "michelle-pham",
+      "name": "Michelle Pham",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "michelle-pham.jpg",
+      "linkedin": "https://www.linkedin.com/in/michelletapham/"
+    },
+    {
+      "id": "mikaela-cagampam",
+      "name": "Mikaela Cagampam",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mikaela-cagampam.jpg",
+      "linkedin": "https://www.linkedin.com/in/mikaelacagampan/"
+    },
+    {
+      "id": "natalia-villamil",
+      "name": "Natalia Villamil",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "natalia-villamil.jpg",
+      "linkedin": "https://www.linkedin.com/in/nvillamil/"
+    },
+    {
+      "id": "samuel-kuo",
+      "name": "Samuel Kuo",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "samuel-kuo.jpg",
+      "linkedin": "https://www.linkedin.com/in/kuosam/"
+    },
+    {
+      "id": "sarah-jacob",
+      "name": "Sarah Jacob",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sarah-jacob.jpg",
+      "linkedin": "https://www.linkedin.com/in/sarah-jacob-380260161/"
+    },
+    {
+      "id": "sarah-schmitz",
+      "name": "Sarah Schmitz",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sarah-schmitz.jpg",
+      "linkedin": "https://www.linkedin.com/in/sarahaschmitz/"
+    },
+    {
+      "id": "smrithi-sudip",
+      "name": "Smrithi Sudip",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "smrithi-sudip.jpg",
+      "linkedin": "https://www.linkedin.com/in/smrithi-sudip/"
+    },
+    {
+      "id": "steele-olson",
+      "name": "Steele Olson",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "steele-olson.jpg",
+      "linkedin": "https://www.linkedin.com/in/steeleolson/"
+    },
+    {
+      "id": "teanen-chen",
+      "name": "Teanen Chen",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "teanen-chen.jpg",
+      "linkedin": "https://www.linkedin.com/in/teanenchen/"
+    },
+    {
+      "id": "yi-chen-wang",
+      "name": "Yi Chen Wang",
+      "pledgeClass": "Nu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "yi-chen-wang.jpg",
+      "linkedin": "https://www.linkedin.com/in/yichenwangg/"
+    },
+    {
+      "id": "alan-tran",
+      "name": "Alan Tran",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "alan-tran.jpg",
+      "linkedin": "https://www.linkedin.com/in/alantrann/"
+    },
+    {
+      "id": "alexander-wen",
+      "name": "Alexander Wen",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "alexander-wen.jpg",
+      "linkedin": "https://www.linkedin.com/in/alexanderwen1/"
+    },
+    {
+      "id": "amara-le",
+      "name": "Amara Le",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "amara-le.jpg",
+      "linkedin": "https://www.linkedin.com/in/amara-le/"
+    },
+    {
+      "id": "april-avery",
+      "name": "April Avery",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "april-avery.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "christopher-lam",
+      "name": "Christopher Lam",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "christopher-lam.jpg",
+      "linkedin": "https://www.linkedin.com/in/chris643/"
+    },
+    {
+      "id": "clara-stark",
+      "name": "Clara Stark",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "clara-stark.jpg",
+      "linkedin": "https://www.linkedin.com/in/clarastark1/"
+    },
+    {
+      "id": "hannah-luu",
+      "name": "Hannah Luu",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "hannah-luu.jpg",
+      "linkedin": "https://www.linkedin.com/in/hannahluu/"
+    },
+    {
+      "id": "israel-sixto-sanchez",
+      "name": "Israel Sixto-Sanchez",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "israel-sixto-sanchez.jpg",
+      "linkedin": "https://www.linkedin.com/in/israelsixto/"
+    },
+    {
+      "id": "juyoun-park",
+      "name": "Juyoun Park",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "juyoun-park.jpg",
+      "linkedin": "https://www.linkedin.com/in/juyounxpark/"
+    },
+    {
+      "id": "lawrence-kimura",
+      "name": "Lawrence Kimura",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lawrence-kimura.jpg",
+      "linkedin": "https://www.linkedin.com/in/lawrencekimura/"
+    },
+    {
+      "id": "lianna-kajani",
+      "name": "Lianna Kajani",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "lianna-kajani.jpg",
+      "linkedin": "https://www.linkedin.com/in/liannakajani/"
+    },
+    {
+      "id": "nicholas-chindavongsa",
+      "name": "Nicholas Chindavongsa",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nicholas-chindavongsa.jpg",
+      "linkedin": "https://www.linkedin.com/in/nicholaschindavongsa/"
+    },
+    {
+      "id": "sebastian-pasion",
+      "name": "Sebastian Pasion",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sebastian-pasion.jpg",
+      "linkedin": "https://www.linkedin.com/in/sebastianpasion/"
+    },
+    {
+      "id": "shannon-fitzpatrick",
+      "name": "Shannon Fitzpatrick",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "shannon-fitzpatrick.jpg",
+      "linkedin": "https://www.linkedin.com/in/shannonfitzpatrick99/"
+    },
+    {
+      "id": "tara-deshpande",
+      "name": "Tara Deshpande",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "tara-deshpande.jpg",
+      "linkedin": "https://www.linkedin.com/in/tarabdeshpande/"
+    },
+    {
+      "id": "teya-mcguire",
+      "name": "Teya McGuire",
+      "pledgeClass": "Mu",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "teya-mcguire.jpg",
+      "linkedin": "https://www.linkedin.com/in/teya-mcguire/"
+    },
+    {
+      "id": "andre-magallanes",
+      "name": "André Magallanes",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "andre-magallanes.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "andrew-wang",
+      "name": "Andrew Wang",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "andrew-wang.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "cooper-wechkin",
+      "name": "Cooper Wechkin",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "cooper-wechkin.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "grace-lyu",
+      "name": "Grace Lyu",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "grace-lyu.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "isaac-kim",
+      "name": "Isaac Kim",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "isaac-kim.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "jason-hurwitz",
+      "name": "Jason Hurwitz",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jason-hurwitz.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "julia-hughes",
+      "name": "Julia Hughes",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "julia-hughes.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "justin-tran-lambda-class",
+      "name": "Justin Tran",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "justin-tran-lambda-class.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "miranda-reisman",
+      "name": "Miranda Reisman",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "miranda-reisman.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "rachel-mills",
+      "name": "Rachel Mills",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "rachel-mills.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "sabrina-zhu",
+      "name": "Sabrina Zhu",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sabrina-zhu.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "taryn-lum",
+      "name": "Taryn Lum",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "taryn-lum.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "victoria-engl",
+      "name": "Victoria Engl",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "victoria-engl.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "yin-deng",
+      "name": "Yin Deng",
+      "pledgeClass": "Lambda",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "yin-deng.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "ben-vandehey",
+      "name": "Ben Vandehey",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ben-vandehey.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "catherine-schwarzwalder",
+      "name": "Catherine Schwarzwalder",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "catherine-schwarzwalder.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "edan-patterson",
+      "name": "Edan Patterson",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "edan-patterson.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "emily-calderon",
+      "name": "Emily Calderon",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "emily-calderon.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "jacob-lu",
+      "name": "Jacob Lu",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jacob-lu.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "kendrick-lu",
+      "name": "Kendrick Lu",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kendrick-lu.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "kiana-rahni",
+      "name": "Kiana Rahni",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kiana-rahni.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "mackenzie-mcdonald",
+      "name": "Mackenzie Mcdonald",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mackenzie-mcdonald.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "mckenzie-granston",
+      "name": "Mckenzie Granston",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mckenzie-granston.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "michelle-lee",
+      "name": "Michelle Lee",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "michelle-lee.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "robert-lin",
+      "name": "Robert Lin",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "robert-lin.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "roy-chapman",
+      "name": "Roy Chapman",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "roy-chapman.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "scott-elder",
+      "name": "Scott Elder",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "scott-elder.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "stephen-lee",
+      "name": "Stephen Lee",
+      "pledgeClass": "Kappa",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "stephen-lee.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "amanda-kristine-hofmann",
+      "name": "Amanda Kristine Hofmann",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "amanda-kristine-hofmann.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "angela-nb-li",
+      "name": "Angela NB Li",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "angela-nb-li.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "bianca-backman",
+      "name": "Bianca Backman",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "bianca-backman.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "chelsea-le",
+      "name": "Chelsea Le",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "chelsea-le.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "chris-ho",
+      "name": "Chris Ho",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "chris-ho.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "erin-nieuwenhuis",
+      "name": "Erin Nieuwenhuis",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "erin-nieuwenhuis.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "jared-walker",
+      "name": "Jared Walker",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "jared-walker.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "kate-jung",
+      "name": "Kate Jung",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "kate-jung.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "matthew-lam",
+      "name": "Matthew Lam",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "matthew-lam.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "nathaniel-wipfler",
+      "name": "Nathaniel Wipfler",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "nathaniel-wipfler.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "raphael-gaultier",
+      "name": "Raphaël Gaultier",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "raphael-gaultier.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "ryan-washburne",
+      "name": "Ryan Washburne",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ryan-washburne.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "shanzeh-jooma",
+      "name": "Shanzeh Jooma",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "shanzeh-jooma.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "ted-chan",
+      "name": "Ted Chan",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ted-chan.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "vipech-bun",
+      "name": "Vipech Bun",
+      "pledgeClass": "Iota",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "vipech-bun.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "aaron-cooley",
+      "name": "Aaron Cooley",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "aaron-cooley.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "abby-liu",
+      "name": "Abby Liu",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "abby-liu.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "ashley-lim",
+      "name": "Ashley Lim",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "ashley-lim.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "david-chong",
+      "name": "David Chong",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "david-chong.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "honie-moon",
+      "name": "Honie Moon",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "honie-moon.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "joanne-kim",
+      "name": "Joanne Kim",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "joanne-kim.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "mark-leman",
+      "name": "Mark Leman",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "mark-leman.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "olivia-howland",
+      "name": "Olivia Howland",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "olivia-howland.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "patrick-maund",
+      "name": "Patrick Maund",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "patrick-maund.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "pranal-angolkar",
+      "name": "Pranal Angolkar",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "pranal-angolkar.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "sophia-urrutia",
+      "name": "Sophia Urrutia",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "sophia-urrutia.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "truman-ngo",
+      "name": "Truman Ngo",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "truman-ngo.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "valerie-chan",
+      "name": "Valerie Chan",
+      "pledgeClass": "Theta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": "valerie-chan.jpg",
+      "linkedin": null
+    },
+    {
+      "id": "alyssa-chow",
+      "name": "Alyssa Chow",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "angus-elder",
+      "name": "Angus Elder",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "ben-brinkman",
+      "name": "Ben Brinkman",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "brendon-krall",
+      "name": "Brendon Krall",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "chris-williams",
+      "name": "Chris Williams",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "connor-chapman",
+      "name": "Connor Chapman",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "erica-benedicto",
+      "name": "Erica Benedicto",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "keenan-goodman",
+      "name": "Keenan Goodman",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "kira-iwai",
+      "name": "Kira Iwai",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "michelle-chen",
+      "name": "Michelle Chen",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "mike-guevarra",
+      "name": "Mike Guevarra",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "navid-azodi",
+      "name": "Navid Azodi",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "patricia-wang",
+      "name": "Patricia Wang",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "regan-cline",
+      "name": "Regan Cline",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "scott-tatsuno",
+      "name": "Scott Tatsuno",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "selma-chang",
+      "name": "Selma Chang",
+      "pledgeClass": "Eta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "alan-cai",
+      "name": "Alan Cai",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "alan-haagen",
+      "name": "Alan Haagen",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "alison-takahashi",
+      "name": "Alison Takahashi",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "ayadejha-salyers",
+      "name": "Ayadejha Salyers",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "cassie-le",
+      "name": "Cassie Le",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "chris-cave",
+      "name": "Chris Cave",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "chloe-wong",
+      "name": "Chloe Wong",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "delo-baker",
+      "name": "Delo Baker",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "emily-lindner",
+      "name": "Emily Lindner",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "eric-chen",
+      "name": "Eric Chen",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "hanna-dudsic",
+      "name": "Hanna Dudsic",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "jasmin-garcia",
+      "name": "Jasmin Garcia",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "jennifer-louie",
+      "name": "Jennifer Louie",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "kerstin-huang",
+      "name": "Kerstin Huang",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "lily-chaerin-ahn",
+      "name": "Lily Chaerin Ahn",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "michael-kwan",
+      "name": "Michael Kwan",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "rose-jao",
+      "name": "Rose Jao",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    },
+    {
+      "id": "sheldon-spring",
+      "name": "Sheldon Spring",
+      "pledgeClass": "Zeta",
+      "status": "alumni",
+      "major": null,
+      "graduationYear": null,
+      "headshot": null,
+      "linkedin": null
+    }
+  ]
+}
