@@ -1,5 +1,5 @@
 ---
-// Text-only page header for pages that lead with content instead of a big photo.
+// Text-only page header on a full-width tinted band, for pages that lead with content instead of a photo.
 import Container from './Container.astro';
 
 interface Props {
@@ -11,8 +11,8 @@ interface Props {
 const { eyebrow, title, accent } = Astro.props;
 ---
 
-<section class="pt-12 pb-10 sm:pt-20 sm:pb-14" aria-labelledby="page-title">
-  <Container>
+<section class="mb-12 border-b border-border bg-surface sm:mb-16" aria-labelledby="page-title">
+  <Container class="pt-14 pb-10 sm:pt-20 sm:pb-12">
     <div class="grid items-end gap-8 lg:grid-cols-12">
       <div class="lg:col-span-8">
         <p class="eyebrow reveal">{eyebrow}</p>

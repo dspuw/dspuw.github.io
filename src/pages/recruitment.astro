@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero.astro';
 import Countdown from '../components/Countdown';
 import { recruitment } from '../lib/data';
 import { bannerMessage } from '../lib/recruitment';
-import heroPhoto from '../assets/images/recruitment/brothers-at-paccar.jpg';
+import heroPhoto from '../assets/images/gallery/xi-class-paccar-hall-2.jpg';
 
 const { page, eligibility, events, faq, contacts, email } = recruitment;
 const open = recruitment.status === 'open';
@@ -27,7 +27,7 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
     title={page.hero.title}
     accent={page.hero.subtitle}
     photo={heroPhoto}
-    alt="Brothers smiling together in matching chapter sweatshirts inside PACCAR Hall"
+    alt="A pledge class in business attire in front of PACCAR Hall"
     placeholder="Placeholder photo: swap in a newer chapter photo"
   >
     <div class="reveal mt-8 flex max-w-2xl items-start gap-3 rounded-card border border-border bg-surface p-5">
@@ -44,24 +44,23 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
   </PageHero>
 
   <!-- Join Us! -->
-  <section class="py-24 sm:py-32" aria-labelledby="join-title">
-    <Container class="grid gap-10 lg:grid-cols-12">
-      <div class="lg:col-span-4">
+  <section class="py-20 sm:py-24" aria-labelledby="join-title">
+    <Container class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-6">
         <p class="eyebrow reveal">01</p>
         <h2 id="join-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{page.intro.heading}</h2>
+        <p class="reveal mt-8 text-body-lg text-text-muted">{page.intro.paragraphs[0]}</p>
+        {page.intro.paragraphs.slice(2).map((p) => <p class="reveal mt-6 text-body-lg text-text-muted">{p}</p>)}
       </div>
-      <div class="lg:col-span-8">
-        <p class="reveal max-w-2xl text-body-lg text-text-muted">{page.intro.paragraphs[0]}</p>
-        <blockquote class="reveal my-10 border-l-2 border-accent pl-6 font-display text-[1.75rem] leading-[1.3] sm:text-[2.25rem]">
-          {page.intro.paragraphs[1]}
-        </blockquote>
-        {page.intro.paragraphs.slice(2).map((p) => <p class="reveal max-w-2xl text-body-lg text-text-muted">{p}</p>)}
-      </div>
+      <blockquote class="reveal rounded-card bg-brand p-10 font-display text-[1.75rem] leading-[1.3] text-white sm:p-14 sm:text-[2.5rem] lg:col-span-6">
+        <span class="block text-[4rem] leading-none text-accent-on-brand" aria-hidden="true">&ldquo;</span>
+        {page.intro.paragraphs[1]}
+      </blockquote>
     </Container>
   </section>
 
   <!-- Schedule -->
-  <section id="schedule" class="border-y border-border bg-surface py-24 sm:py-32" aria-labelledby="schedule-title">
+  <section id="schedule" class="border-y border-border bg-surface py-20 sm:py-24" aria-labelledby="schedule-title">
     <Container class="grid gap-10 lg:grid-cols-12">
       <div class="lg:col-span-4">
         <p class="eyebrow reveal">02</p>
@@ -104,34 +103,30 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
   </section>
 
   <!-- Eligibility -->
-  <section class="py-24 sm:py-32" aria-labelledby="eligibility-title">
-    <Container class="grid gap-10 lg:grid-cols-12">
-      <div class="lg:col-span-4">
-        <p class="eyebrow reveal">03</p>
-        <h2 id="eligibility-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{page.eligibilityHeading}</h2>
-      </div>
-      <div class="lg:col-span-8">
-        <ol class="grid gap-4 sm:grid-cols-2">
-          {
-            eligibility.map((rule, index) => (
-              <li class="reveal rounded-card border border-border p-6">
-                <p class="font-display text-[1.25rem] text-accent-text italic">{`0${index + 1}`}</p>
-                <p class="mt-3 text-body-lg">{rule}</p>
-              </li>
-            ))
-          }
-        </ol>
-        <p class="reveal mt-10 max-w-2xl text-body-lg text-text-muted">
-          If you have any questions or concerns, please contact {contactNames}, {contactTitle}, at{' '}
-          <a href={`mailto:${email}`} class="font-semibold text-primary underline underline-offset-4">{email}</a>.
-        </p>
-      </div>
+  <section class="py-20 sm:py-24" aria-labelledby="eligibility-title">
+    <Container>
+      <p class="eyebrow reveal">03</p>
+      <h2 id="eligibility-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{page.eligibilityHeading}</h2>
+      <ol class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          eligibility.map((rule, index) => (
+            <li class="reveal rounded-card border border-border bg-surface p-6 sm:p-8">
+              <p class="font-display text-[1.5rem] text-accent-text italic">{`0${index + 1}`}</p>
+              <p class="mt-4 text-body-lg">{rule}</p>
+            </li>
+          ))
+        }
+      </ol>
+      <p class="reveal mt-10 max-w-3xl text-body-lg text-text-muted">
+        If you have any questions or concerns, please contact {contactNames}, {contactTitle}, at{' '}
+        <a href={`mailto:${email}`} class="font-semibold text-primary underline underline-offset-4">{email}</a>.
+      </p>
     </Container>
   </section>
 
   {
     faq.length > 0 && (
-      <section class="border-t border-border py-24 sm:py-32" aria-labelledby="faq-title">
+      <section class="border-t border-border py-20 sm:py-24" aria-labelledby="faq-title">
         <Container class="grid gap-10 lg:grid-cols-12">
           <div class="lg:col-span-4">
             <p class="eyebrow reveal">04</p>

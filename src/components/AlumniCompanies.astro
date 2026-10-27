@@ -14,19 +14,23 @@ const unknown = alumniCompanies.companies.filter((c) => c.logo && !logos[c.logo]
 if (unknown.length) throw new Error(`Missing logo files: ${unknown.map((c) => c.logo).join(', ')}`);
 ---
 
-<section class="border-t border-border py-24 sm:py-32" aria-labelledby="alumni-title">
-  <Container class="grid gap-12 lg:grid-cols-12">
-    <div class="lg:col-span-4">
-      <p class="eyebrow reveal">04</p>
-      <h2 id="alumni-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{alumniCompanies.heading}</h2>
-      <p class="reveal mt-6 max-w-sm text-body-lg text-text-muted">{alumniCompanies.intro}</p>
-      <Button href={alumniCompanies.link.href} variant="text" class="reveal mt-4">
-        {alumniCompanies.link.label}
-        <span aria-hidden="true">&rarr;</span>
-      </Button>
+<section class="border-y border-border bg-surface py-20 sm:py-24" aria-labelledby="alumni-title">
+  <Container>
+    <div class="grid items-end gap-6 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <p class="eyebrow reveal">04</p>
+        <h2 id="alumni-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{alumniCompanies.heading}</h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="reveal text-body-lg text-text-muted">{alumniCompanies.intro}</p>
+        <Button href={alumniCompanies.link.href} variant="text" class="reveal mt-2">
+          {alumniCompanies.link.label}
+          <span aria-hidden="true">&rarr;</span>
+        </Button>
+      </div>
     </div>
 
-    <ul class="reveal grid grid-cols-2 border-t border-l border-border sm:grid-cols-3 lg:col-span-8 lg:grid-cols-4" role="list">
+    <ul class="reveal mt-12 grid grid-cols-2 overflow-hidden rounded-card border-t border-l border-border bg-bg sm:grid-cols-3 lg:grid-cols-6" role="list">
       {
         alumniCompanies.companies.map((company) => {
           const logo = company.logo ? logos[company.logo] : undefined;
@@ -34,7 +38,7 @@ if (unknown.length) throw new Error(`Missing logo files: ${unknown.map((c) => c.
           // Evens out how heavy each wordmark looks next to the others.
           const size = { sm: 'h-5 sm:h-6', md: 'h-6 sm:h-7', lg: 'h-9 sm:h-10' }[company.size ?? 'md'];
           return (
-            <li class="flex min-h-24 items-center justify-center gap-2.5 border-r border-b border-border px-4 py-6 transition-colors duration-200 hover:bg-surface sm:px-6">
+            <li class="flex min-h-24 items-center justify-center gap-2.5 border-r border-b border-border px-4 py-6 transition-colors duration-200 hover:bg-surface sm:min-h-28 sm:px-6">
               {logo && company.type === 'wordmark' && (
                 <img src={logo.src} alt={company.name} loading="lazy" decoding="async" class:list={['w-auto object-contain', size, company.wide ? 'max-w-[10.5rem]' : 'max-w-[8.5rem]', invert]} />
               )}

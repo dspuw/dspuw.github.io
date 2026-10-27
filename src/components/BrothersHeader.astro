@@ -15,7 +15,7 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 <PageHeader {...Astro.props}>
   <slot />
-  <nav slot="below" aria-label="Brothers" class="reveal mt-10 border-b border-border">
+  <nav slot="below" aria-label="Brothers" class="reveal mt-10 -mb-10 sm:-mb-12">
     <ul class="-mb-px flex gap-6 overflow-x-auto">
       {
         views.map((view) => (

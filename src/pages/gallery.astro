@@ -15,7 +15,7 @@ const photos = await galleryPhotos();
     <PlaceholderTag>Placeholder photos: add newer chapter events to gallery.json</PlaceholderTag>
   </PageHeader>
 
-  <section class="pb-24 sm:pb-32" aria-label="Photos">
+  <section class="pb-20 sm:pb-24" aria-label="Photos">
     <Container>
       <Gallery client:visible photos={photos} categories={gallery.categories} />
     </Container>

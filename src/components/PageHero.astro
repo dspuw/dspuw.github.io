@@ -1,4 +1,5 @@
 ---
+// Full-width photo banner with the page title over it, for pages that open with a photo.
 import type { ImageMetadata } from 'astro';
 import { Picture } from 'astro:assets';
 import Container from './Container.astro';
@@ -7,7 +8,7 @@ import PlaceholderTag from './PlaceholderTag.astro';
 interface Props {
   eyebrow: string;
   title: string;
-  /** Second line of the title, set in italic brand purple. */
+  /** Second line of the title, set in italic. */
   accent?: string;
   photo: ImageMetadata;
   alt: string;
@@ -17,26 +18,35 @@ interface Props {
 const { eyebrow, title, accent, photo, alt, placeholder } = Astro.props;
 ---
 
-<section class="pt-12 sm:pt-20" aria-labelledby="page-title">
-  <Container>
-    <p class="eyebrow reveal">{eyebrow}</p>
-    <h1 id="page-title" class="reveal mt-5 text-[3rem] leading-[1] sm:text-display-lg lg:text-display-xl">
-      {title}
-      {accent && <span class="block text-primary italic">{accent}</span>}
-    </h1>
-    <slot />
-    <figure class="reveal relative mt-12 overflow-hidden rounded-card sm:mt-16">
-      <Picture
-        src={photo}
-        formats={['avif', 'webp']}
-        widths={[640, 1024, 1600]}
-        sizes="(min-width: 1200px) 1152px, 100vw"
-        alt={alt}
-        class="aspect-[4/3] w-full object-cover sm:aspect-[21/8]"
-        loading="eager"
-        fetchpriority="high"
-      />
-      {placeholder && <PlaceholderTag class="absolute top-4 left-4">{placeholder}</PlaceholderTag>}
-    </figure>
-  </Container>
+<section aria-labelledby="page-title">
+  <div class="relative isolate flex min-h-[28rem] items-end overflow-hidden bg-ink text-white sm:min-h-[34rem] lg:min-h-[38rem]">
+    <Picture
+      src={photo}
+      formats={['avif', 'webp']}
+      widths={[640, 1024, 1600, 2000]}
+      sizes="100vw"
+      alt={alt}
+      class="absolute inset-0 -z-20 size-full object-cover"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/40 to-ink/10" aria-hidden="true"></div>
+    {placeholder && (
+      <Container class="absolute inset-x-0 top-6">
+        <PlaceholderTag>{placeholder}</PlaceholderTag>
+      </Container>
+    )}
+    <Container class="pt-32 pb-12 sm:pb-16">
+      <p class="eyebrow reveal text-accent-on-brand">{eyebrow}</p>
+      <h1 id="page-title" class="reveal mt-4 max-w-4xl text-[3rem] leading-[1] sm:text-display-lg lg:text-display-xl">
+        {title}
+        {accent && <span class="block text-accent-on-brand italic">{accent}</span>}
+      </h1>
+    </Container>
+  </div>
+  {Astro.slots.has('default') && (
+    <Container>
+      <slot />
+    </Container>
+  )}
 </section>
