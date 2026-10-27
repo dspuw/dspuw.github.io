@@ -20,25 +20,70 @@ const cards = [
 ---
 
 <BaseLayout>
-  <!-- Hero -->
-  <section class="pt-12 sm:pt-20" aria-labelledby="hero-title">
-    <Container class="grid items-center gap-10 lg:grid-cols-12 lg:gap-12">
-      <div class="lg:col-span-6">
-        <p class="eyebrow reveal">University of Washington</p>
-        <h1 id="hero-title" class="reveal mt-5 text-[3.5rem] leading-[0.98] sm:text-display-xl">
-          {home.hero.title}
-          <span class="block text-primary italic">{home.hero.subtitle}</span>
-        </h1>
-        <p class="reveal mt-8 max-w-md text-body-lg text-text-muted">{home.hero.tagline}</p>
-        <div class="reveal mt-6 flex flex-wrap gap-3">
-          <Button href={home.joinUs.link.href}>{home.joinUs.link.label}</Button>
-          <Button href={home.about.link.href} variant="secondary">{home.about.link.label}</Button>
-        </div>
+  <!-- Hero: on phones the photo sits behind the title; on desktop the title panel and photo split the width -->
+  <section class="relative isolate overflow-hidden bg-brand text-white lg:grid lg:min-h-[calc(100svh-7rem)] lg:grid-cols-2" aria-labelledby="hero-title">
+    <div class="absolute inset-0 -z-10 lg:relative lg:inset-auto lg:z-0 lg:order-2">
+      <Picture
+        src={heroPhoto}
+        formats={['avif', 'webp']}
+        widths={[640, 1024, 1536]}
+        sizes="(min-width: 1024px) 50vw, 100vw"
+        alt="Sigma Upsilon brothers in business attire filling a lecture hall, with the front row holding a purple and gold Delta Sigma Pi banner"
+        class="absolute inset-0 size-full object-cover object-[50%_68%]"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/55 to-ink/10 lg:hidden" aria-hidden="true"></div>
+    </div>
 
-        <ul class="mt-12 grid grid-cols-2 gap-4 border-t border-border pt-8 sm:gap-8">
+    <div class="flex min-h-[calc(100svh-7rem)] items-end px-5 pt-40 pb-12 sm:px-8 sm:pb-16 lg:min-h-0 lg:items-center lg:py-20 lg:pr-16 lg:pl-[max(3rem,calc((100vw-1520px)/2+3rem))]">
+      <div class="max-w-2xl">
+        <p class="eyebrow reveal text-accent-on-brand">University of Washington</p>
+        <h1 id="hero-title" class="reveal mt-5 text-[3.25rem] leading-[0.98] sm:text-display-xl">
+          {home.hero.title}
+          <span class="block text-accent-on-brand italic">{home.hero.subtitle}</span>
+        </h1>
+        <p class="reveal mt-6 max-w-lg text-body-lg text-white/85">{home.hero.tagline}</p>
+        <div class="reveal mt-8 flex flex-wrap gap-3">
+          <a
+            href={home.joinUs.link.href}
+            class="inline-flex min-h-12 items-center justify-center rounded-button bg-white px-6 text-small font-semibold text-ink shadow-soft transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:bg-accent-on-brand"
+          >
+            {home.joinUs.link.label}
+          </a>
+          <a
+            href={home.about.link.href}
+            class="inline-flex min-h-12 items-center justify-center rounded-button border border-white/40 px-6 text-small font-semibold text-white transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:border-white hover:bg-white/10"
+          >
+            {home.about.link.label}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About DSP, with the chapter facts beside it -->
+  <section class="py-20 sm:py-24" aria-labelledby="about-title">
+    <Container class="grid gap-12 lg:grid-cols-12 lg:gap-16">
+      <div class="lg:col-span-7">
+        <p class="eyebrow reveal">01 · {home.about.heading}</p>
+        <h2 id="about-title" class="sr-only">{home.about.heading}</h2>
+        <p class="reveal mt-6 font-display text-[1.5rem] leading-[1.4] text-text sm:text-[2rem] sm:leading-[1.35]">
+          {home.about.paragraphs[0]}
+        </p>
+        <Button href={home.about.link.href} variant="text" class="reveal mt-6">
+          {home.about.link.label}
+          <span aria-hidden="true">&rarr;</span>
+        </Button>
+      </div>
+
+      <aside class="reveal self-start rounded-card bg-surface p-8 sm:p-10 lg:col-span-5" aria-label="Chapter facts">
+        <p class="eyebrow">Sigma Upsilon Chapter</p>
+        {home.about.paragraphs.slice(1).map((paragraph) => <p class="mt-4 text-body-lg text-text-muted">{paragraph}</p>)}
+        <ul class="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-8">
           {
             site.stats.map((stat) => (
-              <li class="reveal">
+              <li>
                 <StatCounter
                   client:visible
                   value={stat.value}
@@ -50,44 +95,7 @@ const cards = [
             ))
           }
         </ul>
-      </div>
-
-      <figure class="reveal overflow-hidden rounded-card lg:col-span-6">
-        <Picture
-          src={heroPhoto}
-          formats={['avif', 'webp']}
-          widths={[480, 800, 1200, 1536]}
-          sizes="(min-width: 1360px) 640px, (min-width: 1024px) 46vw, 100vw"
-          alt="Sigma Upsilon brothers in business attire filling a lecture hall, with the front row holding a purple and gold Delta Sigma Pi banner"
-          class="aspect-[4/5] w-full object-cover object-[50%_62%]"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </figure>
-    </Container>
-  </section>
-
-  <!-- About DSP -->
-  <section class="py-20 sm:py-24" aria-labelledby="about-title">
-    <Container class="grid gap-10 lg:grid-cols-12">
-      <div class="lg:col-span-4">
-        <p class="eyebrow reveal">01</p>
-        <h2 id="about-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{home.about.heading}</h2>
-      </div>
-      <div class="lg:col-span-8">
-        <p class="reveal font-display text-[1.5rem] leading-[1.4] text-text sm:text-[1.875rem]">
-          {home.about.paragraphs[0]}
-        </p>
-        {
-          home.about.paragraphs.slice(1).map((paragraph) => (
-            <p class="reveal mt-8 max-w-2xl text-body-lg text-text-muted">{paragraph}</p>
-          ))
-        }
-        <Button href={home.about.link.href} variant="text" class="reveal mt-6">
-          {home.about.link.label}
-          <span aria-hidden="true">&rarr;</span>
-        </Button>
-      </div>
+      </aside>
     </Container>
   </section>
 
