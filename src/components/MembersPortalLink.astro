@@ -1,0 +1,61 @@
+---
+// The members-only RateMyBrofessor link from site.json. Renders nothing until membersPortal.url is set.
+import { site } from '../lib/data';
+
+interface Props {
+  /** nav: button in the top bar. mobile: in the phone menu. pill: under the Brothers tabs. */
+  variant: 'nav' | 'mobile' | 'pill';
+}
+const { variant } = Astro.props;
+const { label, note, url } = site.membersPortal;
+---
+
+{
+  url && (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      class:list={[
+        'group items-center transition duration-200',
+        variant !== 'nav' && 'gap-3',
+        variant === 'nav' && 'inline-flex min-h-11 min-w-11 justify-center gap-1.5 rounded-full text-[0.8125rem] font-medium text-text hover:bg-surface sm:border sm:border-border sm:pr-4 sm:pl-1.5',
+        variant === 'mobile' && 'flex',
+        variant === 'mobile' && 'min-h-16 rounded-2xl bg-surface px-3 py-3',
+        variant === 'pill' && 'mx-auto mt-4 inline-flex min-h-11 rounded-full border border-border py-1.5 pr-4 pl-1.5 text-small hover:bg-surface',
+      ]}
+    >
+      <span
+        class:list={[
+          'inline-flex shrink-0 items-center justify-center rounded-full bg-primary text-on-primary',
+          variant === 'pill' ? 'h-8 gap-1.5 px-3 text-[0.75rem] font-semibold' : variant === 'nav' ? 'size-7' : 'size-9',
+        ]}
+        aria-hidden="true"
+      >
+        <svg class:list={[variant === 'nav' ? 'size-3.5' : 'size-4']} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+        </svg>
+        {variant === 'pill' && 'Members'}
+      </span>
+      {
+        variant === 'nav' ? (
+          <span class="sr-only sm:not-sr-only">Members</span>
+        ) : variant === 'pill' ? (
+          <span class="font-medium text-text">
+            {label} <span class="hidden text-text-muted sm:inline">· {note}</span> <span aria-hidden="true">&rsaquo;</span>
+          </span>
+        ) : (
+          <span class="min-w-0">
+            <span class:list={['block font-semibold text-text', variant === 'mobile' ? 'text-[1.125rem]' : 'text-small']}>
+              {label} <span aria-hidden="true">&rsaquo;</span>
+            </span>
+            <span class="block text-[0.75rem] text-text-muted">{note}</span>
+          </span>
+        )
+      }
+      {variant === 'nav' && <span class="sr-only">: {label}</span>}
+      <span class="sr-only">(opens in a new tab)</span>
+    </a>
+  )
+}

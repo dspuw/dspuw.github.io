@@ -13,30 +13,6 @@ const year = new Date().getFullYear();
       <div>
         <Logo class="w-28" />
         <SocialLinks class="mt-6" />
-        {
-          site.membersPortal.url && (
-            <a
-              href={site.membersPortal.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="group mt-6 flex max-w-xs items-center gap-3 rounded-2xl bg-bg p-3 pr-4 transition duration-200 hover:bg-surface-2"
-            >
-              <span class="inline-flex size-10 shrink-0 items-center justify-center rounded-full bg-surface-2 text-primary" aria-hidden="true">
-                <svg class="size-[1.125rem]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-                  <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                </svg>
-              </span>
-              <span>
-                <span class="block font-medium text-text">
-                  {site.membersPortal.label} <span aria-hidden="true">&rsaquo;</span>
-                </span>
-                <span class="block text-[0.75rem]">{site.membersPortal.note}</span>
-                <span class="sr-only">(opens in a new tab)</span>
-              </span>
-            </a>
-          )
-        }
       </div>
 
       <nav aria-label="Footer">
