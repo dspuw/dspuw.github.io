@@ -1,6 +1,7 @@
 ---
 import PageHeader from './PageHeader.astro';
 import { site } from '../lib/data';
+import MembersPortalLink from './MembersPortalLink.astro';
 
 interface Props {
   eyebrow: string;
@@ -15,7 +16,8 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 
 <PageHeader {...Astro.props}>
   {Astro.slots.has('default') && <slot />}
-  <nav slot="below" aria-label="Brothers" class="reveal mt-10 flex justify-center">
+  <div slot="below" class="reveal mt-10 flex flex-col items-center">
+  <nav aria-label="Brothers" class="flex max-w-full justify-center">
     <ul class="inline-flex max-w-full gap-1 overflow-x-auto rounded-full bg-surface p-1">
       {
         views.map((view) => (
@@ -35,4 +37,6 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
       }
     </ul>
   </nav>
+  <MembersPortalLink variant="pill" />
+  </div>
 </PageHeader>

@@ -3,6 +3,7 @@ import { site } from '../lib/data';
 import Logo from './Logo.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import Button from './Button.astro';
+import MembersPortalLink from './MembersPortalLink.astro';
 
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 
@@ -86,8 +87,9 @@ function isCurrent(href: string) {
     </ul>
 
     <div class="flex items-center gap-1">
+      <MembersPortalLink variant="nav" />
       <ThemeToggle />
-      <Button href="/recruitment" class="min-h-9 px-4 text-[0.8125rem] max-[359px]:hidden">Join Us</Button>
+      <Button href="/recruitment" class="min-h-9 px-4 text-[0.8125rem] whitespace-nowrap max-[379px]:hidden">Join Us</Button>
       <button
         type="button"
         class="inline-flex size-11 items-center justify-center rounded-full text-text transition duration-200 hover:bg-surface lg:hidden"
@@ -127,6 +129,11 @@ function isCurrent(href: string) {
                       </a>
                     </li>
                   ))}
+                  {site.membersPortal.url && (
+                    <li class="mt-2">
+                      <MembersPortalLink variant="mobile" />
+                    </li>
+                  )}
                 </ul>
               </>
             ) : (
