@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero.astro';
 import Countdown from '../components/Countdown';
 import { recruitment } from '../lib/data';
 import { bannerMessage } from '../lib/recruitment';
-import heroPhoto from '../assets/images/gallery/xi-class-paccar-hall-2.jpg';
+import heroPhoto from '../assets/images/recruitment/brothers-foster-backdrop.jpg';
 
 const { page, eligibility, events, faq, contacts, email } = recruitment;
 const open = recruitment.status === 'open';
@@ -27,8 +27,8 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
     title={page.hero.title}
     accent={page.hero.subtitle}
     photo={heroPhoto}
-    alt="A pledge class in business attire in front of PACCAR Hall"
-    placeholder="Placeholder photo: swap in a newer chapter photo"
+    alt="Brothers smiling together in front of a Foster School of Business backdrop"
+    focus="50% 20%"
   >
     <div class="reveal mt-8 flex max-w-2xl items-start gap-3 rounded-card border border-border bg-surface p-5">
       <span class:list={['mt-2 size-2 shrink-0 rounded-full', open ? 'bg-success' : 'bg-accent']} aria-hidden="true"></span>

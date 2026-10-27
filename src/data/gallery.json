@@ -1,10 +1,113 @@
 {
   "categories": [
+    "Professional",
     "Pledge Classes",
     "Banquets",
     "Brotherhood"
   ],
   "photos": [
+    {
+      "image": "fall-2025-chapter-photo.jpg",
+      "alt": "The whole chapter in business attire in a lecture hall, with the Delta Sigma Pi crest on the screen",
+      "category": "Professional",
+      "event": "Fall 2025 Chapter Photo"
+    },
+    {
+      "image": "fall-2025-chapter-crest.jpg",
+      "alt": "A group of brothers in business attire in front of the Delta Sigma Pi crest",
+      "category": "Professional",
+      "event": "Fall 2025 Chapter Photo"
+    },
+    {
+      "image": "spring-2025-foster-event.jpg",
+      "alt": "Brothers in front of a Foster School of Business backdrop",
+      "category": "Professional",
+      "event": "Spring 2025 Foster Event"
+    },
+    {
+      "image": "winter-2026-conference.jpg",
+      "alt": "Four brothers in business attire with conference lanyards on the steps of a hotel lobby",
+      "category": "Professional",
+      "event": "Winter 2026 Conference"
+    },
+    {
+      "image": "winter-2026-conference-group.jpg",
+      "alt": "Five brothers in business attire wearing conference name badges",
+      "category": "Professional",
+      "event": "Winter 2026 Conference"
+    },
+    {
+      "image": "fall-2025-speaker-event-group.jpg",
+      "alt": "Brothers and guests gathered at the front of a lecture hall after a speaker event",
+      "category": "Professional",
+      "event": "Fall 2025 Speaker Event"
+    },
+    {
+      "image": "fall-2025-speaker-event.jpg",
+      "alt": "A full lecture hall listening to a speaker presentation",
+      "category": "Professional",
+      "event": "Fall 2025 Speaker Event"
+    },
+    {
+      "image": "spring-2026-professional-event.jpg",
+      "alt": "Brothers posing in a lecture hall under a Welcome to Air slide",
+      "category": "Professional",
+      "event": "Spring 2026 Professional Event"
+    },
+    {
+      "image": "banquet-2025-stage.jpg",
+      "alt": "Two brothers hosting on stage under a Welcome to Banquet 2025 slide",
+      "category": "Banquets",
+      "event": "Banquet 2025"
+    },
+    {
+      "image": "banquet-2025-trio.jpg",
+      "alt": "Three brothers in formal wear in the Banquet 2025 hall",
+      "category": "Banquets",
+      "event": "Banquet 2025"
+    },
+    {
+      "image": "spring-2026-formal-waterfront.jpg",
+      "alt": "Brothers in formal wear on a waterfront deck at sunset",
+      "category": "Banquets",
+      "event": "Spring 2026 Formal"
+    },
+    {
+      "image": "spring-2026-formal-group.jpg",
+      "alt": "A group of brothers in formal wear on a waterfront deck",
+      "category": "Banquets",
+      "event": "Spring 2026 Formal"
+    },
+    {
+      "image": "spring-2026-formal-stage.jpg",
+      "alt": "A brother speaking on stage at a formal dinner",
+      "category": "Banquets",
+      "event": "Spring 2026 Formal"
+    },
+    {
+      "image": "spring-2026-formal-suits.jpg",
+      "alt": "Brothers in suits lined up in front of a garden hedge",
+      "category": "Banquets",
+      "event": "Spring 2026 Formal"
+    },
+    {
+      "image": "spring-2026-formal-garden.jpg",
+      "alt": "Brothers in formal dresses lined up in front of a flowering hedge",
+      "category": "Banquets",
+      "event": "Spring 2026 Formal"
+    },
+    {
+      "image": "fall-2025-chapter-meeting.jpg",
+      "alt": "A large group of brothers filling a lecture hall at a chapter meeting",
+      "category": "Brotherhood",
+      "event": "Fall 2025 Chapter Meeting"
+    },
+    {
+      "image": "graduation-2026.jpg",
+      "alt": "Two graduating brothers in caps, gowns and Foster stoles at commencement",
+      "category": "Brotherhood",
+      "event": "Graduation 2026"
+    },
     {
       "image": "xi-class-paccar-hall-1.jpg",
       "alt": "The Xi Class smiling together in front of PACCAR Hall",
