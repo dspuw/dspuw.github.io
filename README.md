@@ -191,4 +191,4 @@ Same steps as Fall. After recruitment ends, set `lastCycle` to Winter of this ye
 | Deploy workflow | `.github/workflows/deploy.yml` |
 | Saved copy of the old Squarespace site | `reference/` |
 
-The custom domain `dspuw.net` is not connected yet. That is a separate step, done when the chapter is ready.
+The site uses the custom domain `dspuw.com`. It is set in the repo's Settings > Pages, and its DNS records point to GitHub Pages. Renew the domain every year with whichever registrar it was bought from.
