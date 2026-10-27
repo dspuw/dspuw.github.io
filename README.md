@@ -1,6 +1,6 @@
 # dspuw.github.io
 
-The website for the Sigma Upsilon Chapter of Delta Sigma Pi at the University of Washington, live at **https://dspuw.github.io**.
+The website for the Sigma Upsilon Chapter of Delta Sigma Pi at the University of Washington, live at **https://dspuw.net** (also reachable at https://dspuw.github.io).
 
 This guide is for the VP of Technology. You don't need to know how to code. Almost everything that changes from quarter to quarter lives in a few text files in `src/data`, and the site rebuilds itself when you save a change on GitHub.
 
