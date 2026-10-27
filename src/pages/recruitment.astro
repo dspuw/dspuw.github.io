@@ -5,7 +5,7 @@ import PageHero from '../components/PageHero.astro';
 import Countdown from '../components/Countdown';
 import { recruitment } from '../lib/data';
 import { bannerMessage } from '../lib/recruitment';
-import heroPhoto from '../assets/images/recruitment/brothers-foster-backdrop.jpg';
+import heroPhoto from '../assets/images/recruitment/brothers-foster-backdrop-group.jpg';
 
 const { page, eligibility, events, faq, contacts, email } = recruitment;
 const open = recruitment.status === 'open';
@@ -28,7 +28,8 @@ const contactTitle = contacts.length > 1 ? `${contacts[0]!.title}s` : contacts[0
     accent={page.hero.subtitle}
     photo={heroPhoto}
     alt="Brothers smiling together in front of a Foster School of Business backdrop"
-    focus="50% 20%"
+    focus="50% 45%"
+    aspect="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[16/9]"
   >
     <div class="reveal mx-auto mt-5 flex max-w-2xl items-start gap-3 rounded-2xl bg-surface p-5 text-left sm:p-6">
       <span class:list={['mt-2 size-2 shrink-0 rounded-full', open ? 'bg-success' : 'bg-accent']} aria-hidden="true"></span>
