@@ -19,6 +19,8 @@ const siteSchema = z.object({
   socials: z.object({ instagram: z.url(), linkedin: z.url() }),
   // The main point of contact, shown on Home and Contact.
   email: z.email(),
+  // Private members-only site. The footer link only shows once url is filled in.
+  membersPortal: z.object({ label: z.string(), note: z.string(), url: z.union([z.url(), z.literal('')]) }),
   stats: z.array(
     z.object({ value: z.number(), suffix: z.string().optional(), label: z.string() }),
   ),
