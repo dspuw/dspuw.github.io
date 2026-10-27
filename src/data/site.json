@@ -7,6 +7,11 @@
     "linkedin": "https://www.linkedin.com/company/dspuw/"
   },
   "email": "dspuw.recruitment@gmail.com",
+  "membersPortal": {
+    "label": "RateMyBrofessor",
+    "note": "Members only. Sign in with an approved UW email.",
+    "url": "https://dspscholarship.com"
+  },
   "stats": [
     {
       "value": 2012,

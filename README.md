@@ -51,6 +51,9 @@ All of these live in `src/data`. A few rules apply to every file:
 - **`socials`:** the Instagram and LinkedIn links.
 - **`email`:** the chapter's main point of contact, shown on the Home and Contact pages.
   - There is no contact form right now. If you want one later, get a free access key from [Web3Forms](https://web3forms.com) that delivers to the chapter email, and ask a developer (or Claude) to add the form back.
+- **`membersPortal`:** the members-only RateMyBrofessor link in the footer.
+  - Put the site's address in `url`. Leave it as `""` to hide the link.
+  - The link is public, but RateMyBrofessor has its own login, so only approved UW emails can get in. Access is managed on that site, not here.
 - **`stats`:** the numbers on the home page (founded 2012, 75+ brothers). Only change these if the facts change.
 - **`nav` and `footerLinks`:** the menu links.
 - **`landAcknowledgment`:** shown in the footer of every page. Do not reword it.
