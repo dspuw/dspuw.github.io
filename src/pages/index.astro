@@ -8,7 +8,7 @@ import StatCounter from '../components/StatCounter';
 import AlumniCompanies from '../components/AlumniCompanies.astro';
 import { home, site } from '../lib/data';
 import heroPhoto from '../assets/images/home/chapter-group-with-letters-banner.jpg';
-import brothersPhoto from '../assets/images/home/brothers-banquet-2026.jpg';
+import brothersPhoto from '../assets/images/home/brothers-chapter-crest-fall-2025.jpg';
 import joinPhoto from '../assets/images/home/brothers-speaker-event.jpg';
 
 const [founded, brothers] = site.stats;
@@ -75,17 +75,17 @@ const [founded, brothers] = site.stats;
       <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-5 lg:grid-cols-3 lg:grid-rows-[minmax(17rem,auto)_minmax(17rem,auto)_minmax(26rem,auto)]">
         <a
           href={home.whoWeAre.link.href}
-          class="group reveal relative isolate flex min-h-[30rem] flex-col justify-between overflow-hidden rounded-card p-8 text-white sm:p-10 lg:col-span-2 lg:row-span-2"
+          class="group reveal relative isolate flex min-h-[30rem] flex-col justify-end gap-6 overflow-hidden rounded-card p-8 text-white sm:p-10 lg:col-span-2 lg:row-span-2"
         >
           <Picture
             src={brothersPhoto}
             formats={['avif', 'webp']}
             widths={[640, 1024, 1600]}
             sizes="(min-width: 1024px) 66vw, 100vw"
-            alt="Brothers in formal wear on a waterfront deck at sunset at Banquet 2026"
-            class="absolute inset-0 -z-20 size-full object-cover object-[50%_45%] transition-transform duration-300 ease-out-soft group-hover:scale-[1.02]"
+            alt="Brothers in business attire in front of the Delta Sigma Pi crest projected on a lecture hall screen"
+            class="absolute inset-0 -z-20 size-full object-cover object-[50%_30%] transition-transform duration-300 ease-out-soft group-hover:scale-[1.02]"
           />
-          <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/60 via-transparent to-ink/60" aria-hidden="true"></div>
+          <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/85 via-ink/35 to-transparent" aria-hidden="true"></div>
           <div>
             <p class="font-display text-[1.0625rem] font-semibold text-white/80">{home.whoWeAre.heading}</p>
             <p class="mt-2 max-w-md font-display text-[2rem] leading-[1.1] font-semibold tracking-[-0.03em] sm:text-[2.75rem]">
