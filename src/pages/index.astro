@@ -5,144 +5,156 @@ import Container from '../components/Container.astro';
 import Button from '../components/Button.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import StatCounter from '../components/StatCounter';
-import EmailCard from '../components/EmailCard.astro';
 import AlumniCompanies from '../components/AlumniCompanies.astro';
 import { home, site } from '../lib/data';
 import heroPhoto from '../assets/images/home/chapter-group-with-letters-banner.jpg';
-import brothersPhoto from '../assets/images/home/brothers-chapter-crest.jpg';
+import brothersPhoto from '../assets/images/home/brothers-banquet-2026.jpg';
 import joinPhoto from '../assets/images/home/brothers-speaker-event.jpg';
 
-const cards = [
-  { ...home.whoWeAre, photo: brothersPhoto, alt: 'Brothers in business attire in front of the Delta Sigma Pi crest' },
-  { ...home.joinUs, photo: joinPhoto, alt: 'Brothers and guests gathered at the front of a lecture hall after a speaker event' },
-];
+const [founded, brothers] = site.stats;
 ---
 
 <BaseLayout>
-  <!-- Hero: on phones the photo sits behind the title; on desktop the title panel and photo split the width -->
-  <section class="relative isolate overflow-hidden bg-brand text-white lg:grid lg:min-h-[calc(100svh-7rem)] lg:grid-cols-2" aria-labelledby="hero-title">
-    <div class="absolute inset-0 -z-10 lg:relative lg:inset-auto lg:z-0 lg:order-2">
-      <Picture
-        src={heroPhoto}
-        formats={['avif', 'webp']}
-        widths={[640, 1024, 1536]}
-        sizes="(min-width: 1024px) 50vw, 100vw"
-        alt="Sigma Upsilon brothers in business attire filling a lecture hall, with the front row holding a purple and gold Delta Sigma Pi banner"
-        class="absolute inset-0 size-full object-cover object-[50%_68%]"
-        loading="eager"
-        fetchpriority="high"
-      />
-      <div class="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/55 to-ink/10 lg:hidden" aria-hidden="true"></div>
-    </div>
-
-    <div class="flex min-h-[calc(100svh-7rem)] items-end px-5 pt-40 pb-12 sm:px-8 sm:pb-16 lg:min-h-0 lg:items-center lg:py-20 lg:pr-16 lg:pl-[max(3rem,calc((100vw-1520px)/2+3rem))]">
-      <div class="max-w-2xl">
-        <p class="eyebrow reveal text-accent-on-brand">University of Washington</p>
-        <h1 id="hero-title" class="reveal mt-5 text-[3.25rem] leading-[0.98] sm:text-display-xl">
-          {home.hero.title}
-          <span class="block text-accent-on-brand italic">{home.hero.subtitle}</span>
-        </h1>
-        <p class="reveal mt-6 max-w-lg text-body-lg text-white/85">{home.hero.tagline}</p>
-        <div class="reveal mt-8 flex flex-wrap gap-3">
-          <a
-            href={home.joinUs.link.href}
-            class="inline-flex min-h-12 items-center justify-center rounded-button bg-white px-6 text-small font-semibold text-ink shadow-soft transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:bg-accent-on-brand"
-          >
-            {home.joinUs.link.label}
-          </a>
-          <a
-            href={home.about.link.href}
-            class="inline-flex min-h-12 items-center justify-center rounded-button border border-white/40 px-6 text-small font-semibold text-white transition duration-200 ease-out-soft hover:-translate-y-0.5 hover:border-white hover:bg-white/10"
-          >
-            {home.about.link.label}
-          </a>
-        </div>
+  <!-- Hero: a centered headline over a large rounded photo -->
+  <section class="pt-16 sm:pt-24" aria-labelledby="hero-title">
+    <Container class="text-center">
+      <p class="eyebrow reveal">University of Washington</p>
+      <h1 id="hero-title" class="reveal mx-auto mt-3 max-w-5xl text-[3.5rem] leading-[1] sm:text-display-xl lg:text-[8rem]">
+        {home.hero.title}
+      </h1>
+      <p class="reveal mt-3 font-display text-[1.75rem] font-semibold tracking-[-0.03em] text-text-muted sm:text-[2.75rem]">
+        {home.hero.subtitle}
+      </p>
+      <p class="reveal mx-auto mt-6 max-w-xl text-body-lg text-text-muted sm:text-[1.3125rem]">{home.hero.tagline}</p>
+      <div class="reveal mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+        <Button href={home.joinUs.link.href} class="min-h-12 px-7 text-body">Join Us</Button>
+        <a href={home.about.link.href} class="inline-flex min-h-12 items-center gap-1 text-body font-medium text-primary hover:underline">
+          {home.about.link.label} <span aria-hidden="true">&rsaquo;</span>
+        </a>
       </div>
-    </div>
-  </section>
+    </Container>
 
-  <!-- About DSP, with the chapter facts beside it -->
-  <section class="py-20 sm:py-24" aria-labelledby="about-title">
-    <Container class="grid gap-12 lg:grid-cols-12 lg:gap-16">
-      <div class="lg:col-span-7">
-        <p class="eyebrow reveal">01 · {home.about.heading}</p>
-        <h2 id="about-title" class="sr-only">{home.about.heading}</h2>
-        <p class="reveal mt-6 font-display text-[1.5rem] leading-[1.4] text-text sm:text-[2rem] sm:leading-[1.35]">
-          {home.about.paragraphs[0]}
-        </p>
-        <Button href={home.about.link.href} variant="text" class="reveal mt-6">
-          {home.about.link.label}
-          <span aria-hidden="true">&rarr;</span>
-        </Button>
+    <Container class="mt-14 sm:mt-20">
+      <div class="reveal overflow-hidden rounded-card bg-surface">
+        <Picture
+          src={heroPhoto}
+          formats={['avif', 'webp']}
+          widths={[640, 1024, 1600, 2000]}
+          sizes="(min-width: 1520px) 1424px, 100vw"
+          alt="Sigma Upsilon brothers in business attire filling a lecture hall, with the front row holding a purple and gold Delta Sigma Pi banner"
+          class="aspect-[4/3] w-full object-cover object-[50%_60%] sm:aspect-[16/9] lg:aspect-[2/1]"
+          loading="eager"
+          fetchpriority="high"
+        />
       </div>
-
-      <aside class="reveal self-start rounded-card bg-surface p-8 sm:p-10 lg:col-span-5" aria-label="Chapter facts">
-        <p class="eyebrow">Sigma Upsilon Chapter</p>
-        {home.about.paragraphs.slice(1).map((paragraph) => <p class="mt-4 text-body-lg text-text-muted">{paragraph}</p>)}
-        <ul class="mt-8 grid grid-cols-2 gap-6 border-t border-border pt-8">
-          {
-            site.stats.map((stat) => (
-              <li>
-                <StatCounter
-                  client:visible
-                  value={stat.value}
-                  suffix={stat.suffix}
-                  label={stat.label}
-                  from={stat.value > 1000 ? stat.value - 40 : 0}
-                />
-              </li>
-            ))
-          }
-        </ul>
-      </aside>
     </Container>
   </section>
 
-  <!-- Who We Are / Join Us -->
-  <section class="pb-20 sm:pb-24" aria-label="Explore the chapter">
-    <Container class="grid gap-6 md:grid-cols-2">
-      {
-        cards.map((card, index) => (
-          <a
-            href={card.link.href}
-            class="group reveal relative isolate flex min-h-[28rem] flex-col justify-end overflow-hidden rounded-card p-8 text-white sm:min-h-[34rem] sm:p-10"
-          >
-            <Picture
-              src={card.photo}
-              formats={['avif', 'webp']}
-              widths={[480, 800, 1200]}
-              sizes="(min-width: 768px) 50vw, 100vw"
-              alt={card.alt}
-              class="absolute inset-0 -z-20 size-full object-cover transition-transform duration-300 ease-out-soft group-hover:scale-[1.03]"
-            />
-            <div class="absolute inset-0 -z-10 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" aria-hidden="true" />
-            <p class="eyebrow text-accent-on-brand">{`0${index + 2}`}</p>
-            <h2 class="mt-3 text-[2.25rem] leading-[1.05] sm:text-h2">{card.heading}</h2>
-            <p class="mt-3 max-w-sm text-body-lg text-white/80">{card.text}</p>
-            <span class="mt-6 inline-flex items-center gap-2 text-small font-semibold">
-              {card.link.label}
-              <span aria-hidden="true" class="transition-transform duration-200 group-hover:translate-x-1">
-                &rarr;
-              </span>
-            </span>
-          </a>
-        ))
-      }
+  <!-- About DSP, as one large statement -->
+  <section class="py-24 sm:py-32" aria-labelledby="about-title">
+    <Container>
+      <div class="mx-auto max-w-5xl">
+        <h2 id="about-title" class="eyebrow reveal font-semibold tracking-[-0.01em]">{home.about.heading}</h2>
+        <p class="reveal mt-5 font-display text-[1.625rem] leading-[1.3] font-semibold tracking-[-0.025em] text-text sm:text-[2.5rem] sm:leading-[1.2]">
+          {home.about.paragraphs[0]}
+        </p>
+        <a href={home.about.link.href} class="reveal mt-8 inline-flex min-h-11 items-center gap-1 text-body-lg font-medium text-primary hover:underline">
+          {home.about.link.label} <span aria-hidden="true">&rsaquo;</span>
+        </a>
+      </div>
+    </Container>
+  </section>
+
+  <!-- The chapter at a glance: photo tiles, facts and the chapter story -->
+  <section class="pb-24 sm:pb-32" aria-labelledby="chapter-title">
+    <Container>
+      <h2 id="chapter-title" class="reveal text-center text-[2.5rem] leading-[1.05] sm:text-h2 lg:text-display-lg">
+        The Sigma Upsilon Chapter.
+      </h2>
+
+      <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-5 lg:grid-cols-3 lg:grid-rows-[minmax(17rem,auto)_minmax(17rem,auto)_minmax(26rem,auto)]">
+        <a
+          href={home.whoWeAre.link.href}
+          class="group reveal relative isolate flex min-h-[30rem] flex-col justify-between overflow-hidden rounded-card p-8 text-white sm:p-10 lg:col-span-2 lg:row-span-2"
+        >
+          <Picture
+            src={brothersPhoto}
+            formats={['avif', 'webp']}
+            widths={[640, 1024, 1600]}
+            sizes="(min-width: 1024px) 66vw, 100vw"
+            alt="Brothers in formal wear on a waterfront deck at sunset at Banquet 2026"
+            class="absolute inset-0 -z-20 size-full object-cover object-[50%_45%] transition-transform duration-300 ease-out-soft group-hover:scale-[1.02]"
+          />
+          <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/60 via-transparent to-ink/60" aria-hidden="true"></div>
+          <div>
+            <p class="font-display text-[1.0625rem] font-semibold text-white/80">{home.whoWeAre.heading}</p>
+            <p class="mt-2 max-w-md font-display text-[2rem] leading-[1.1] font-semibold tracking-[-0.03em] sm:text-[2.75rem]">
+              {home.whoWeAre.text}
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1 self-start rounded-full bg-white/15 px-5 py-2.5 text-small font-medium backdrop-blur-md transition duration-200 group-hover:bg-white/25">
+            {home.whoWeAre.link.label} <span aria-hidden="true">&rsaquo;</span>
+          </span>
+        </a>
+
+        <div class="reveal flex flex-col justify-end rounded-card bg-surface p-8 sm:p-10">
+          {founded && <StatCounter client:visible value={founded.value} suffix={founded.suffix} label={founded.label} from={founded.value - 40} />}
+        </div>
+        <div class="reveal flex flex-col justify-end rounded-card bg-surface p-8 sm:p-10">
+          {brothers && <StatCounter client:visible value={brothers.value} suffix={brothers.suffix} label={brothers.label} />}
+        </div>
+
+        <div class="reveal flex flex-col justify-between gap-8 rounded-card bg-surface p-8 sm:p-10">
+          <p class="font-display text-[1.0625rem] font-semibold text-primary">Since 2012</p>
+          <p class="text-body-lg text-text-muted">{home.about.paragraphs[1]}</p>
+        </div>
+
+        <a
+          href={home.joinUs.link.href}
+          class="group reveal relative isolate flex min-h-[26rem] flex-col justify-between overflow-hidden rounded-card p-8 text-white sm:p-10 lg:col-span-2"
+        >
+          <Picture
+            src={joinPhoto}
+            formats={['avif', 'webp']}
+            widths={[640, 1024, 1600]}
+            sizes="(min-width: 1024px) 66vw, 100vw"
+            alt="Brothers and guests gathered at the front of a lecture hall after a speaker event"
+            class="absolute inset-0 -z-20 size-full object-cover object-[50%_55%] transition-transform duration-300 ease-out-soft group-hover:scale-[1.02]"
+          />
+          <div class="absolute inset-0 -z-10 bg-gradient-to-b from-ink/65 via-ink/10 to-ink/60" aria-hidden="true"></div>
+          <div>
+            <p class="font-display text-[1.0625rem] font-semibold text-white/80">{home.joinUs.heading}</p>
+            <p class="mt-2 max-w-md font-display text-[2rem] leading-[1.1] font-semibold tracking-[-0.03em] sm:text-[2.75rem]">
+              {home.joinUs.text}
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-1 self-start rounded-full bg-white px-5 py-2.5 text-small font-medium text-ink transition duration-200 group-hover:bg-white/90">
+            {home.joinUs.link.label} <span aria-hidden="true">&rsaquo;</span>
+          </span>
+        </a>
+      </div>
     </Container>
   </section>
 
   <AlumniCompanies />
 
   <!-- Contact Us -->
-  <section id="contact" class="bg-brand text-white" aria-labelledby="contact-title">
-    <Container class="grid gap-12 py-20 sm:py-24 lg:grid-cols-12">
-      <div class="lg:col-span-5">
-        <p class="eyebrow reveal text-accent-on-brand">05</p>
-        <h2 id="contact-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{home.contact.heading}</h2>
-        <p class="reveal mt-6 max-w-md text-body-lg text-white/80">{home.contact.text}</p>
-        <SocialLinks class="reveal mt-8 [&_a]:border-white/25 [&_a]:text-white [&_a:hover]:border-accent-on-brand [&_a:hover]:text-accent-on-brand" />
+  <section id="contact" class="py-24 sm:py-32" aria-labelledby="contact-title">
+    <Container>
+      <div class="reveal rounded-card bg-surface px-6 py-16 text-center sm:px-12 sm:py-24">
+        <h2 id="contact-title" class="text-[2.5rem] leading-[1.05] sm:text-h2 lg:text-display-lg">{home.contact.heading}</h2>
+        <p class="mx-auto mt-5 max-w-xl text-body-lg text-text-muted sm:text-[1.3125rem]">{home.contact.text}</p>
+        <a
+          href={`mailto:${site.email}`}
+          class="mt-8 inline-block font-display text-[1.375rem] font-semibold tracking-[-0.02em] [overflow-wrap:anywhere] text-primary hover:underline sm:text-[2rem]"
+        >
+          {site.email}
+        </a>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <Button href={`mailto:${site.email}`} class="min-h-12 px-7 text-body">Send an email</Button>
+          <SocialLinks />
+        </div>
       </div>
-      <EmailCard class="reveal lg:col-span-6 lg:col-start-7 lg:self-center" />
     </Container>
   </section>
 </BaseLayout>

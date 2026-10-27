@@ -16,7 +16,7 @@ export default function Gallery({ photos, categories }: Props) {
 
   return (
     <div>
-      <div role="group" aria-label="Filter photos" className="flex flex-wrap gap-2">
+      <div role="group" aria-label="Filter photos" className="flex flex-wrap justify-center gap-2">
         {filters.map((name) => (
           <button
             key={name}
@@ -24,10 +24,10 @@ export default function Gallery({ photos, categories }: Props) {
             aria-pressed={category === name}
             onClick={() => setCategory(name)}
             className={[
-              'inline-flex min-h-11 items-center rounded-full border px-5 text-small font-semibold transition duration-200',
+              'inline-flex min-h-11 items-center rounded-full px-5 text-small font-medium transition duration-200',
               category === name
-                ? 'border-primary bg-primary text-on-primary'
-                : 'border-border bg-bg text-text hover:border-primary hover:text-primary',
+                ? 'bg-text text-bg'
+                : 'bg-surface text-text hover:bg-surface-2',
             ].join(' ')}
           >
             {name}
@@ -186,7 +186,7 @@ function Lightbox({ photos, index, onChange, onClose }: LightboxProps) {
           </svg>
         </button>
         <div className="text-center">
-          <p className="font-display text-[1.25rem]">{photo.event}</p>
+          <p className="font-display text-[1.25rem] font-semibold tracking-[-0.02em]">{photo.event}</p>
           <p className="text-small text-white/60">{photo.category}</p>
         </div>
         <button type="button" onClick={() => step(1)} className={`${control} inline-flex sm:hidden`} aria-label="Next photo">

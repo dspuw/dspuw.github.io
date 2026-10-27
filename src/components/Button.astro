@@ -7,10 +7,8 @@ interface Props {
 const { href, variant = 'primary', class: className } = Astro.props;
 
 const styles = {
-  primary:
-    'px-5 bg-primary text-on-primary shadow-soft hover:bg-primary-hover hover:shadow-lift hover:-translate-y-0.5',
-  secondary:
-    'px-5 border border-border bg-bg text-text hover:border-primary hover:text-primary hover:-translate-y-0.5',
+  primary: 'px-6 bg-primary text-on-primary hover:bg-primary-hover',
+  secondary: 'px-6 bg-surface-2 text-text hover:bg-border',
   text: 'text-primary underline-offset-4 hover:underline',
 };
 ---
@@ -18,7 +16,7 @@ const styles = {
 <a
   href={href}
   class:list={[
-    'inline-flex min-h-11 items-center justify-center gap-2 rounded-button text-small font-semibold transition duration-200 ease-out-soft',
+    'inline-flex min-h-11 items-center justify-center gap-1.5 rounded-button text-[0.9375rem] font-medium transition duration-200 ease-out-soft active:scale-[0.98]',
     styles[variant],
     className,
   ]}

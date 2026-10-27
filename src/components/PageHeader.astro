@@ -1,30 +1,30 @@
 ---
-// Text-only page header on a full-width tinted band, for pages that lead with content instead of a photo.
+// Text-only page opener with a large centered headline, for pages that lead with content instead of a photo.
 import Container from './Container.astro';
 
 interface Props {
   eyebrow: string;
   title: string;
-  /** Second line of the title, set in italic brand purple. */
+  /** Second line of the title, set in gray. */
   accent?: string;
 }
 const { eyebrow, title, accent } = Astro.props;
 ---
 
-<section class="mb-12 border-b border-border bg-surface sm:mb-16" aria-labelledby="page-title">
-  <Container class="pt-14 pb-10 sm:pt-20 sm:pb-12">
-    <div class="grid items-end gap-8 lg:grid-cols-12">
-      <div class="lg:col-span-8">
-        <p class="eyebrow reveal">{eyebrow}</p>
-        <h1 id="page-title" class="reveal mt-5 text-[3rem] leading-[1] sm:text-display-lg lg:text-display-xl">
-          {title}
-          {accent && <span class="block text-primary italic">{accent}</span>}
-        </h1>
-      </div>
-      <div class="reveal lg:col-span-4 lg:pb-3">
-        <slot />
-      </div>
-    </div>
+<section class="pt-16 pb-12 sm:pt-24 sm:pb-16" aria-labelledby="page-title">
+  <Container class="text-center">
+    <p class="eyebrow reveal">{eyebrow}</p>
+    <h1 id="page-title" class="reveal mx-auto mt-3 max-w-5xl text-[3rem] leading-[1.02] sm:text-display-lg lg:text-display-xl">
+      {title}
+      {accent && <span class="block text-text-muted">{accent}</span>}
+    </h1>
+    {
+      Astro.slots.has('default') && (
+        <div class="reveal mx-auto mt-6 max-w-2xl text-body-lg text-text-muted sm:text-[1.375rem] sm:leading-[1.5]">
+          <slot />
+        </div>
+      )
+    }
     <slot name="below" />
   </Container>
 </section>

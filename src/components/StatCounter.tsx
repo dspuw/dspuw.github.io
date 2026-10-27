@@ -45,8 +45,7 @@ export default function StatCounter({ value, suffix = '', label, from = 0 }: Pro
 
   return (
     <div ref={ref}>
-      <p className="text-small text-text-muted">{label}</p>
-      <p className="mt-1 font-display text-[2.75rem] leading-none tracking-[-0.02em] text-text tabular-nums sm:text-[3.5rem]">
+      <p className="font-display text-[4.5rem] leading-none font-semibold tracking-[-0.05em] text-primary tabular-nums sm:text-[6rem]">
         <span aria-hidden="true">
           {display}
           {suffix}
@@ -56,6 +55,7 @@ export default function StatCounter({ value, suffix = '', label, from = 0 }: Pro
           {suffix}
         </span>
       </p>
+      <p className="mt-3 font-display text-[1.3125rem] font-semibold tracking-[-0.02em] text-text">{label}</p>
     </div>
   );
 }

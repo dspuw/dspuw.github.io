@@ -1,58 +1,62 @@
 @import 'tailwindcss';
 @import '@fontsource-variable/inter';
-@import '@fontsource-variable/newsreader';
-@import '@fontsource-variable/newsreader/wght-italic.css';
+@import '@fontsource-variable/inter-tight';
 
 /* Dark mode follows the data-theme attribute set by ThemeToggle. */
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
 
 /*
  * Design tokens. Every color on the site comes from this block.
- * Purple is the primary brand color; gold is the accent and is used sparingly.
- * Warm paper and ink neutrals give the site its heritage feel.
+ * The look is bright and quiet: white and soft gray surfaces, near-black text,
+ * and the chapter's purple saved for buttons, links and small highlights.
+ * Gold is the accent and appears only in tiny touches.
  */
 :root {
-  /* Fixed brand purple for surfaces that stay purple in both themes (banner). */
+  /* Fixed brand purple, the same in both themes (theme-color, small marks). */
   --dsp-brand: #4b2e83;
   --dsp-primary: #4b2e83;
   --dsp-primary-hover: #3a2266;
-  --dsp-primary-soft: #ece7f4;
+  --dsp-primary-soft: #efebf7;
   --dsp-on-primary: #ffffff;
   --dsp-accent: #b7a57a;
   --dsp-accent-text: #7a6a3e;
-  /* On the purple brand surface, gold text needs this lighter tone. */
-  --dsp-accent-on-brand: #d8cba6;
-  --dsp-ink: #16121f;
-  --dsp-bg: #faf8f4;
-  --dsp-surface: #f2efe8;
-  --dsp-border: #e3ded3;
-  --dsp-text: #16121f;
-  --dsp-text-muted: #5a5566;
+  /* Gold that reads on dark photo overlays. */
+  --dsp-accent-on-brand: #e2d6b4;
+  --dsp-ink: #000000;
+  --dsp-bg: #ffffff;
+  --dsp-surface: #f5f5f7;
+  --dsp-surface-2: #ebebef;
+  --dsp-border: #e3e3e8;
+  --dsp-text: #1d1d1f;
+  --dsp-text-muted: #6e6e73;
   --dsp-success: #15803d;
   --dsp-error: #b91c1c;
-  --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.06);
-  --dsp-shadow-md: 0 12px 32px rgb(22 18 31 / 0.10);
+  --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.04);
+  --dsp-shadow-md: 0 20px 48px rgb(0 0 0 / 0.08);
+  --dsp-glass: rgb(255 255 255 / 0.72);
   color-scheme: light;
 }
 
 [data-theme='dark'] {
-  --dsp-primary: #b9a6e0;
-  --dsp-primary-hover: #d0c2ee;
-  --dsp-primary-soft: #241d33;
-  --dsp-on-primary: #0f0c16;
+  --dsp-primary: #c3b3ea;
+  --dsp-primary-hover: #d8ccf3;
+  --dsp-primary-soft: #221c30;
+  --dsp-on-primary: #120e1a;
   --dsp-accent: #c9b98f;
   --dsp-accent-text: #d8cba6;
-  --dsp-accent-on-brand: #d8cba6;
-  --dsp-ink: #0b0910;
-  --dsp-bg: #0f0c16;
-  --dsp-surface: #19151f;
-  --dsp-border: #2b2634;
-  --dsp-text: #f3f0ea;
-  --dsp-text-muted: #a8a2b3;
+  --dsp-accent-on-brand: #e2d6b4;
+  --dsp-ink: #000000;
+  --dsp-bg: #000000;
+  --dsp-surface: #141416;
+  --dsp-surface-2: #1d1d20;
+  --dsp-border: #2a2a2e;
+  --dsp-text: #f5f5f7;
+  --dsp-text-muted: #a1a1a6;
   --dsp-success: #4ade80;
   --dsp-error: #f87171;
-  --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-  --dsp-shadow-md: 0 12px 32px rgb(0 0 0 / 0.5);
+  --dsp-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+  --dsp-shadow-md: 0 20px 48px rgb(0 0 0 / 0.6);
+  --dsp-glass: rgb(22 22 24 / 0.72);
   color-scheme: dark;
 }
 
@@ -68,6 +72,8 @@
   --color-ink: var(--dsp-ink);
   --color-bg: var(--dsp-bg);
   --color-surface: var(--dsp-surface);
+  --color-surface-2: var(--dsp-surface-2);
+  --color-glass: var(--dsp-glass);
   --color-border: var(--dsp-border);
   --color-text: var(--dsp-text);
   --color-text-muted: var(--dsp-text-muted);
@@ -79,29 +85,29 @@
 
 @theme {
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Newsreader Variable', ui-serif, Georgia, serif;
+  --font-display: 'Inter Tight Variable', 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 
-  --radius-card: 16px;
-  --radius-button: 12px;
+  --radius-card: 24px;
+  --radius-button: 999px;
 
   --container-content: 1520px;
 
   /* Type scale: size / line height. Phone sizes are set in the utilities below. */
-  --text-display-xl: 6rem;
-  --text-display-xl--line-height: 0.98;
-  --text-display-lg: 4rem;
-  --text-display-lg--line-height: 1.02;
-  --text-h2: 3rem;
-  --text-h2--line-height: 1.08;
+  --text-display-xl: 6.5rem;
+  --text-display-xl--line-height: 1;
+  --text-display-lg: 4.5rem;
+  --text-display-lg--line-height: 1.03;
+  --text-h2: 3.5rem;
+  --text-h2--line-height: 1.06;
   --text-h3: 1.5rem;
   --text-h3--line-height: 1.25;
-  --text-body-lg: 1.125rem;
-  --text-body-lg--line-height: 1.7;
+  --text-body-lg: 1.1875rem;
+  --text-body-lg--line-height: 1.6;
   --text-body: 1rem;
   --text-body--line-height: 1.65;
   --text-small: 0.875rem;
   --text-small--line-height: 1.5;
-  --text-eyebrow: 0.8125rem;
+  --text-eyebrow: 1.0625rem;
   --text-eyebrow--line-height: 1.4;
 
   --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
@@ -119,7 +125,7 @@
   h1,
   h2,
   h3 {
-    @apply font-display font-normal tracking-[-0.02em] text-balance;
+    @apply font-display font-semibold tracking-[-0.035em] text-balance;
   }
   :focus-visible {
     outline: 3px solid var(--dsp-accent);
@@ -131,17 +137,18 @@
   }
 }
 
+/* The small label above a headline. */
 @utility eyebrow {
-  @apply font-sans text-eyebrow font-semibold tracking-[0.12em] text-accent-text uppercase;
+  @apply font-display text-eyebrow font-semibold tracking-[-0.01em] text-primary;
 }
 
 /* Fade and slide in on scroll. Reveal.astro adds .is-visible. */
 @utility reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(24px);
   transition:
-    opacity 280ms var(--ease-out-soft),
-    transform 280ms var(--ease-out-soft);
+    opacity 290ms var(--ease-out-soft),
+    transform 290ms var(--ease-out-soft);
   &.is-visible {
     opacity: 1;
     transform: none;

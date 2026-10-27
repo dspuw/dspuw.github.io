@@ -174,13 +174,13 @@ export default function BrotherDirectory({ people, pledgeClasses, noun }: Props)
       </div>
 
       {groups.length === 0 ? (
-        <div className="mt-12 rounded-card border border-border bg-surface px-6 py-16 text-center">
+        <div className="mt-12 rounded-card bg-surface px-6 py-16 text-center">
           <p className="font-display text-h3">No {noun.many} match your search.</p>
           <p className="mt-2 text-text-muted">Try another name or clear the filters.</p>
           <button
             type="button"
             onClick={reset}
-            className="mt-6 inline-flex min-h-11 items-center rounded-button border border-border bg-bg px-5 text-small font-semibold transition duration-200 hover:border-primary hover:text-primary"
+            className="mt-6 inline-flex min-h-11 items-center rounded-button bg-primary px-6 text-small font-medium text-on-primary transition duration-200 hover:bg-primary-hover"
           >
             Clear filters
           </button>
@@ -188,7 +188,7 @@ export default function BrotherDirectory({ people, pledgeClasses, noun }: Props)
       ) : (
         groups.map((group) => (
           <section key={group.name} aria-labelledby={`class-${group.name}`} className="mt-14 first:mt-12">
-            <div className="flex items-baseline justify-between gap-4 border-b border-border pb-3">
+            <div className="flex items-baseline justify-between gap-4 border-b border-border pb-4">
               <h2 id={`class-${group.name}`} className="text-[1.75rem] leading-tight sm:text-[2rem]">
                 {group.name} Class
               </h2>
@@ -253,7 +253,7 @@ function PersonCard({ person }: { person: DirectoryPerson }) {
           </span>
         )}
       </div>
-      <p className="mt-3 font-display text-[1.1875rem] leading-snug text-text transition-colors duration-200 group-hover:text-primary">
+      <p className="mt-3 font-display text-[1.1875rem] leading-snug font-semibold tracking-[-0.02em] text-text transition-colors duration-200 group-hover:text-primary">
         {person.name}
       </p>
       <p className="mt-0.5 text-small text-text-muted">{details.length > 0 ? details.join(' · ') : `${person.pledgeClass} Class`}</p>

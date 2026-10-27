@@ -6,14 +6,18 @@ const message = bannerMessage(recruitment);
 const open = recruitment.status === 'open';
 ---
 
-<div class="bg-brand text-white" role="region" aria-label="Recruitment status">
-  <p class="mx-auto max-w-content px-4 py-2.5 text-center text-small sm:px-6 lg:px-8">
-    <span class="mr-2 inline-block size-2 rounded-full bg-accent align-middle" aria-hidden="true"></span>
+<div class="bg-surface text-text" role="region" aria-label="Recruitment status">
+  <p class="mx-auto max-w-content px-4 py-2.5 text-center text-[0.8125rem] leading-snug text-text-muted sm:px-6 lg:px-8">
+    <span class:list={['mr-2 inline-block size-1.5 rounded-full align-middle', open ? 'bg-success' : 'bg-primary']} aria-hidden="true"></span>
     {message}
     {
-      open && (
-        <a href="/recruitment" class="ml-1 font-semibold underline underline-offset-4">
-          See the schedule
+      open ? (
+        <a href="/recruitment" class="ml-1 font-medium text-primary hover:underline">
+          See the schedule <span aria-hidden="true">&rsaquo;</span>
+        </a>
+      ) : (
+        <a href="/recruitment" class="ml-1 font-medium whitespace-nowrap text-primary hover:underline">
+          Learn more <span aria-hidden="true">&rsaquo;</span>
         </a>
       )
     }
