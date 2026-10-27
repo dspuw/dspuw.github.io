@@ -12,10 +12,12 @@ interface Props {
   accent?: string;
   photo: ImageMetadata;
   alt: string;
+  /** Which part of the photo stays in view when it is cropped, as a CSS object-position. */
+  focus?: string;
   /** Shows a placeholder tag on the photo until a newer one is added. */
   placeholder?: string;
 }
-const { eyebrow, title, accent, photo, alt, placeholder } = Astro.props;
+const { eyebrow, title, accent, photo, alt, focus = 'center', placeholder } = Astro.props;
 ---
 
 <section aria-labelledby="page-title">
@@ -27,6 +29,7 @@ const { eyebrow, title, accent, photo, alt, placeholder } = Astro.props;
       sizes="100vw"
       alt={alt}
       class="absolute inset-0 -z-20 size-full object-cover"
+      style={`object-position: ${focus}`}
       loading="eager"
       fetchpriority="high"
     />

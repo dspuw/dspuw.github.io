@@ -4,9 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
 import PageHero from '../components/PageHero.astro';
 import { about } from '../lib/data';
-import heroPhoto from '../assets/images/about/chi-class-on-campus-steps.jpg';
-import formalPhoto from '../assets/images/gallery/kappa-class-lecture-hall.jpg';
-import portraitPhoto from '../assets/images/home/professional-workshop.jpg';
+import heroPhoto from '../assets/images/about/chapter-photo-fall-2025.jpg';
+import formalPhoto from '../assets/images/about/brothers-conference-business-attire.jpg';
+import portraitPhoto from '../assets/images/about/brothers-conference-lounge.jpg';
 import professionalism from '../assets/images/about/pillar-professionalism.jpg';
 import communityService from '../assets/images/about/pillar-community-service.jpg';
 import scholarship from '../assets/images/about/pillar-scholarship.jpg';
@@ -25,8 +25,7 @@ const pillarPhotos = {
     eyebrow="Sigma Upsilon Chapter"
     title={about.hero.title}
     photo={heroPhoto}
-    alt="The Chi pledge class in business attire on the steps of a campus building"
-    placeholder="Placeholder photo: swap in a newer chapter photo"
+    alt="The whole chapter in business attire in a lecture hall, with the Delta Sigma Pi crest on the screen behind them"
   />
 
   <!-- Our Story -->
@@ -45,7 +44,7 @@ const pillarPhotos = {
             formats={['avif', 'webp']}
             widths={[480, 960]}
             sizes="(min-width: 1024px) 420px, 60vw"
-            alt="A pledge class in business attire at the front of a lecture hall"
+            alt="Four brothers in business attire with conference lanyards on the steps of a hotel lobby"
             class="aspect-[3/4] size-full rounded-card object-cover"
           />
         </div>
@@ -55,7 +54,7 @@ const pillarPhotos = {
             formats={['avif', 'webp']}
             widths={[320, 640]}
             sizes="(min-width: 1024px) 280px, 40vw"
-            alt="Brothers at a professional development workshop"
+            alt="Four brothers in business attire with conference lanyards seated on a lounge sofa"
             class="aspect-[2/3] size-full rounded-card object-cover"
           />
         </div>
