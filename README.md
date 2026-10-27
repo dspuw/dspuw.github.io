@@ -1,6 +1,6 @@
 # dspuw.github.io
 
-The website for the Sigma Upsilon Chapter of Delta Sigma Pi at the University of Washington, live at **https://dspuw.com** (also reachable at https://dspuw.github.io).
+The website for the Sigma Upsilon Chapter of Delta Sigma Pi at the University of Washington, live at **https://dspuw.net** (also reachable at https://dspuw.github.io).
 
 This guide is for the VP of Technology. You don't need to know how to code. Almost everything that changes from quarter to quarter lives in a few text files in `src/data`, and the site rebuilds itself when you save a change on GitHub.
 
@@ -191,4 +191,4 @@ Same steps as Fall. After recruitment ends, set `lastCycle` to Winter of this ye
 | Deploy workflow | `.github/workflows/deploy.yml` |
 | Saved copy of the old Squarespace site | `reference/` |
 
-The site uses the custom domain `dspuw.com`. It is set in the repo's Settings > Pages, and its DNS records point to GitHub Pages. Renew the domain every year with whichever registrar it was bought from.
+The site uses the custom domain `dspuw.net`. It is set in the repo's Settings > Pages, and its DNS records point to GitHub Pages. The domain is registered through Squarespace Domains; keep it renewing every year.
