@@ -25,16 +25,16 @@
       "event": "Spring 2025 Foster Event"
     },
     {
-      "image": "winter-2026-conference.jpg",
-      "alt": "Four brothers in business attire with conference lanyards on the steps of a hotel lobby",
+      "image": "lead-2026.jpg",
+      "alt": "Four brothers in business attire with LEAD conference lanyards on the steps of a hotel lobby",
       "category": "Professional",
-      "event": "Winter 2026 Conference"
+      "event": "2026 LEAD Provincial Conference"
     },
     {
-      "image": "winter-2026-conference-group.jpg",
-      "alt": "Five brothers in business attire wearing conference name badges",
+      "image": "lead-2026-group.jpg",
+      "alt": "Five brothers in business attire wearing LEAD conference name badges",
       "category": "Professional",
-      "event": "Winter 2026 Conference"
+      "event": "2026 LEAD Provincial Conference"
     },
     {
       "image": "fall-2025-speaker-event-group.jpg",
@@ -67,34 +67,34 @@
       "event": "Banquet 2025"
     },
     {
-      "image": "spring-2026-formal-waterfront.jpg",
+      "image": "banquet-2026-waterfront.jpg",
       "alt": "Brothers in formal wear on a waterfront deck at sunset",
       "category": "Banquets",
-      "event": "Spring 2026 Formal"
+      "event": "Banquet 2026"
     },
     {
-      "image": "spring-2026-formal-group.jpg",
+      "image": "banquet-2026-group.jpg",
       "alt": "A group of brothers in formal wear on a waterfront deck",
       "category": "Banquets",
-      "event": "Spring 2026 Formal"
+      "event": "Banquet 2026"
     },
     {
-      "image": "spring-2026-formal-stage.jpg",
-      "alt": "A brother speaking on stage at a formal dinner",
+      "image": "banquet-2026-stage.jpg",
+      "alt": "A brother speaking on stage at Banquet 2026",
       "category": "Banquets",
-      "event": "Spring 2026 Formal"
+      "event": "Banquet 2026"
     },
     {
-      "image": "spring-2026-formal-suits.jpg",
+      "image": "banquet-2026-suits.jpg",
       "alt": "Brothers in suits lined up in front of a garden hedge",
       "category": "Banquets",
-      "event": "Spring 2026 Formal"
+      "event": "Banquet 2026"
     },
     {
-      "image": "spring-2026-formal-garden.jpg",
+      "image": "banquet-2026-garden.jpg",
       "alt": "Brothers in formal dresses lined up in front of a flowering hedge",
       "category": "Banquets",
-      "event": "Spring 2026 Formal"
+      "event": "Banquet 2026"
     },
     {
       "image": "fall-2025-chapter-meeting.jpg",
@@ -103,16 +103,10 @@
       "event": "Fall 2025 Chapter Meeting"
     },
     {
-      "image": "graduation-2026.jpg",
-      "alt": "Two graduating brothers in caps, gowns and Foster stoles at commencement",
+      "image": "foster-graduation-2026.jpg",
+      "alt": "Two graduating brothers in caps, gowns and Foster School of Business stoles at the Foster graduation ceremony",
       "category": "Brotherhood",
-      "event": "Graduation 2026"
-    },
-    {
-      "image": "xi-class-paccar-hall-1.jpg",
-      "alt": "The Xi Class smiling together in front of PACCAR Hall",
-      "category": "Pledge Classes",
-      "event": "Xi Class - Pledge Pictures"
+      "event": "Foster Graduation 2026"
     },
     {
       "image": "10th-banquet-roses.jpg",
@@ -127,22 +121,10 @@
       "event": "Chi Class - Pledge Pictures"
     },
     {
-      "image": "xi-class-portrait-pair.jpg",
-      "alt": "Two brothers in blazers posing together inside a campus building",
-      "category": "Pledge Classes",
-      "event": "Xi Class - Pledge Pictures"
-    },
-    {
       "image": "10th-banquet-celebrating.jpg",
       "alt": "Brothers laughing and celebrating together at the 10th Annual Banquet",
       "category": "Banquets",
       "event": "DSP's 10th Annual Banquet"
-    },
-    {
-      "image": "xi-class-paccar-hall-2.jpg",
-      "alt": "The Xi Class in business attire in front of PACCAR Hall",
-      "category": "Pledge Classes",
-      "event": "Xi Class - Pledge Pictures"
     },
     {
       "image": "10th-banquet-group.jpg",
@@ -151,40 +133,10 @@
       "event": "DSP's 10th Annual Banquet"
     },
     {
-      "image": "friendsgiving-2019-dinner.jpg",
-      "alt": "Brothers sharing food and holding a DSP Friendsgiving 2019 sign",
-      "category": "Brotherhood",
-      "event": "DSP Friendsgiving 2019"
-    },
-    {
-      "image": "friendsgiving-2019-sign.jpg",
-      "alt": "Brothers gathered around a DSP Friendsgiving 2019 letter board",
-      "category": "Brotherhood",
-      "event": "DSP Friendsgiving 2019"
-    },
-    {
       "image": "10th-banquet-friends.jpg",
       "alt": "Brothers in formal wear smiling together at the 10th Annual Banquet",
       "category": "Banquets",
       "event": "DSP's 10th Annual Banquet"
-    },
-    {
-      "image": "friendsgiving-2019-couch.jpg",
-      "alt": "Brothers piled on a couch with plates at DSP Friendsgiving 2019",
-      "category": "Brotherhood",
-      "event": "DSP Friendsgiving 2019"
-    },
-    {
-      "image": "7th-banquet-tuxedos.jpg",
-      "alt": "Brothers in tuxedos and formal wear at the 7th Annual Banquet",
-      "category": "Banquets",
-      "event": "DSP's 7th Annual Banquet"
-    },
-    {
-      "image": "7th-banquet-trio.jpg",
-      "alt": "Three brothers smiling together outside before the 7th Annual Banquet",
-      "category": "Banquets",
-      "event": "DSP's 7th Annual Banquet"
     },
     {
       "image": "10th-banquet-bow-ties.jpg",
@@ -193,46 +145,16 @@
       "event": "DSP's 10th Annual Banquet"
     },
     {
-      "image": "7th-banquet-stage.jpg",
-      "alt": "Brothers dancing on stage at the 7th Annual Banquet",
-      "category": "Banquets",
-      "event": "DSP's 7th Annual Banquet"
-    },
-    {
-      "image": "7th-banquet-group.jpg",
-      "alt": "A group of brothers in formal wear at the 7th Annual Banquet",
-      "category": "Banquets",
-      "event": "DSP's 7th Annual Banquet"
-    },
-    {
-      "image": "7th-banquet-table.jpg",
-      "alt": "Brothers smiling at their table during the 7th Annual Banquet",
-      "category": "Banquets",
-      "event": "DSP's 7th Annual Banquet"
-    },
-    {
       "image": "10th-banquet-balloons.jpg",
       "alt": "Brothers posing in front of black and gold balloons at the 10th Annual Banquet",
       "category": "Banquets",
       "event": "DSP's 10th Annual Banquet"
     },
     {
-      "image": "kappa-class-paccar-hall.jpg",
-      "alt": "The Kappa Class gathered on the steps of PACCAR Hall",
-      "category": "Pledge Classes",
-      "event": "Kappa Class - Pledge Pictures"
-    },
-    {
       "image": "10th-banquet-trio.jpg",
       "alt": "Three brothers smiling together at the 10th Annual Banquet",
       "category": "Banquets",
       "event": "DSP's 10th Annual Banquet"
-    },
-    {
-      "image": "kappa-class-lecture-hall.jpg",
-      "alt": "The Kappa Class in business attire at the front of a lecture hall",
-      "category": "Pledge Classes",
-      "event": "Kappa Class - Pledge Pictures"
     }
   ]
 }

@@ -15,11 +15,11 @@ function isCurrent(href: string) {
 
 <header
   data-navbar
-  class="group/nav sticky top-0 z-50 border-b border-transparent bg-bg/85 backdrop-blur-md transition-[border-color,box-shadow] duration-200 data-[scrolled]:border-border data-[scrolled]:shadow-soft"
+  class="group/nav sticky top-0 z-50 border-b border-transparent bg-glass backdrop-blur-xl backdrop-saturate-150 transition-[border-color] duration-200 data-[scrolled]:border-border"
 >
-  <nav aria-label="Main" class="mx-auto flex max-w-content items-center justify-between gap-4 px-5 py-4 transition-[padding] duration-200 group-data-[scrolled]/nav:py-2 sm:px-8 lg:px-12">
+  <nav aria-label="Main" class="mx-auto flex max-w-content items-center justify-between gap-4 px-5 py-3 transition-[padding] duration-200 group-data-[scrolled]/nav:py-1.5 sm:px-8 lg:px-12">
     <a href="/" class="shrink-0" aria-label="Delta Sigma Pi, Sigma Upsilon Chapter, home">
-      <Logo class="w-28 transition-[width] duration-200 group-data-[scrolled]/nav:w-24" />
+      <Logo class="w-24 transition-[width] duration-200 group-data-[scrolled]/nav:w-[5.25rem]" />
     </a>
 
     <ul class="hidden items-center gap-1 lg:flex">
@@ -30,8 +30,8 @@ function isCurrent(href: string) {
               <button
                 type="button"
                 class:list={[
-                  'inline-flex min-h-11 items-center gap-1 rounded-button px-3 text-small font-medium transition duration-200 hover:text-primary',
-                  isCurrent(item.href) ? 'text-primary' : 'text-text',
+                  'inline-flex min-h-11 items-center gap-1 rounded-button px-3 text-[0.8125rem] font-medium transition duration-200 hover:text-text',
+                  isCurrent(item.href) ? 'text-text' : 'text-text-muted',
                 ]}
                 aria-expanded="false"
                 aria-controls="brothers-menu"
@@ -41,20 +41,20 @@ function isCurrent(href: string) {
                 <svg class="size-4 transition-transform duration-200" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z" />
                 </svg>
-                {isCurrent(item.href) && <span class="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent" aria-hidden="true" />}
+                {isCurrent(item.href) && <span class="absolute bottom-1 left-1/2 size-1 -translate-x-1/2 rounded-full bg-primary" aria-hidden="true" />}
               </button>
               {/* Padding instead of margin keeps the pointer inside the dropdown while it moves to the menu. */}
               <div
                 class="invisible absolute left-1/2 top-full w-56 -translate-x-1/2 translate-y-1 pt-2 opacity-0 transition duration-200 data-[open]:visible data-[open]:translate-y-0 data-[open]:opacity-100"
                 data-dropdown-menu
               >
-              <ul id="brothers-menu" class="rounded-card border border-border bg-bg p-2 shadow-lift">
+              <ul id="brothers-menu" class="rounded-[18px] border border-border bg-glass p-2 shadow-lift backdrop-blur-xl">
                 {item.children.map((child) => (
                   <li>
                     <a
                       href={child.href}
                       class:list={[
-                        'flex min-h-11 items-center rounded-button px-3 text-small transition duration-200 hover:bg-surface hover:text-primary',
+                        'flex min-h-11 items-center rounded-xl px-3 text-small transition duration-200 hover:bg-surface-2',
                         path === child.href ? 'font-semibold text-primary' : 'text-text',
                       ]}
                       aria-current={path === child.href ? 'page' : undefined}
@@ -71,13 +71,13 @@ function isCurrent(href: string) {
               <a
                 href={item.href}
                 class:list={[
-                  'relative inline-flex min-h-11 items-center rounded-button px-3 text-small font-medium transition duration-200 hover:text-primary',
-                  isCurrent(item.href) ? 'text-primary' : 'text-text',
+                  'relative inline-flex min-h-11 items-center rounded-button px-3 text-[0.8125rem] font-medium transition duration-200 hover:text-text',
+                  isCurrent(item.href) ? 'text-text' : 'text-text-muted',
                 ]}
                 aria-current={isCurrent(item.href) ? 'page' : undefined}
               >
                 {item.label}
-                {isCurrent(item.href) && <span class="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-accent" aria-hidden="true" />}
+                {isCurrent(item.href) && <span class="absolute bottom-1 left-1/2 size-1 -translate-x-1/2 rounded-full bg-primary" aria-hidden="true" />}
               </a>
             </li>
           ),
@@ -87,7 +87,7 @@ function isCurrent(href: string) {
 
     <div class="flex items-center gap-1">
       <ThemeToggle />
-      <Button href="/recruitment" class="max-[359px]:hidden">Join Us</Button>
+      <Button href="/recruitment" class="min-h-9 px-4 text-[0.8125rem] max-[359px]:hidden">Join Us</Button>
       <button
         type="button"
         class="inline-flex size-11 items-center justify-center rounded-full text-text transition duration-200 hover:bg-surface lg:hidden"
@@ -111,14 +111,14 @@ function isCurrent(href: string) {
           <li>
             {item.children ? (
               <>
-                <p class="eyebrow px-3 pt-4 pb-1">{item.label}</p>
+                <p class="px-3 pt-4 pb-1 text-small font-medium text-text-muted">{item.label}</p>
                 <ul>
                   {item.children.map((child) => (
                     <li>
                       <a
                         href={child.href}
                         class:list={[
-                          'flex min-h-12 items-center rounded-button px-3 text-body-lg font-medium',
+                          'flex min-h-12 items-center rounded-2xl px-3 font-display text-[1.5rem] font-semibold tracking-[-0.02em]',
                           path === child.href ? 'bg-primary-soft text-primary' : 'text-text',
                         ]}
                         aria-current={path === child.href ? 'page' : undefined}
@@ -133,7 +133,7 @@ function isCurrent(href: string) {
               <a
                 href={item.href}
                 class:list={[
-                  'flex min-h-12 items-center rounded-button px-3 text-body-lg font-medium',
+                  'flex min-h-12 items-center rounded-2xl px-3 font-display text-[1.5rem] font-semibold tracking-[-0.02em]',
                   isCurrent(item.href) ? 'bg-primary-soft text-primary' : 'text-text',
                 ]}
                 aria-current={isCurrent(item.href) ? 'page' : undefined}

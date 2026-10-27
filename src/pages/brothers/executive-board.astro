@@ -47,15 +47,15 @@ const officers = await Promise.all(
                     </div>
                   )}
                 </div>
-                <p class="mt-4 eyebrow">{officer.title}</p>
-                <h2 class="mt-1.5 text-[1.375rem] leading-snug">{officer.name}</h2>
+                <p class="mt-4 text-small font-medium text-primary">{officer.title}</p>
+                <h2 class="mt-1 text-[1.375rem] leading-snug tracking-[-0.02em]">{officer.name}</h2>
                 <div class="mt-2 flex flex-wrap items-center gap-x-4">
                   {officer.linkedin && (
                     <a
                       href={officer.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="inline-flex min-h-11 items-center gap-2 text-small font-semibold text-primary underline-offset-4 hover:underline"
+                      class="inline-flex min-h-11 items-center gap-2 text-small font-medium text-primary underline-offset-4 hover:underline"
                       aria-label={`${officer.name} on LinkedIn (opens in a new tab)`}
                     >
                       <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -69,7 +69,7 @@ const officers = await Promise.all(
                   {officer.description && (
                     <button
                       type="button"
-                      class="inline-flex min-h-11 items-center text-small font-semibold text-text-muted transition duration-200 hover:text-primary"
+                      class="inline-flex min-h-11 items-center text-small font-medium text-text-muted transition duration-200 hover:text-primary"
                       aria-expanded="false"
                       aria-controls={`role-${officer.headshot.replace(/\.\w+$/, '')}`}
                       data-officer-toggle

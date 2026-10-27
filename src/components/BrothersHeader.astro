@@ -5,7 +5,7 @@ import { site } from '../lib/data';
 interface Props {
   eyebrow: string;
   title: string;
-  /** Second line of the title, set in italic brand purple. */
+  /** Second line of the title, set in gray. */
   accent?: string;
 }
 
@@ -14,17 +14,17 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 ---
 
 <PageHeader {...Astro.props}>
-  <slot />
-  <nav slot="below" aria-label="Brothers" class="reveal mt-10 -mb-10 sm:-mb-12">
-    <ul class="-mb-px flex gap-6 overflow-x-auto">
+  {Astro.slots.has('default') && <slot />}
+  <nav slot="below" aria-label="Brothers" class="reveal mt-10 flex justify-center">
+    <ul class="inline-flex max-w-full gap-1 overflow-x-auto rounded-full bg-surface p-1">
       {
         views.map((view) => (
           <li>
             <a
               href={view.href}
               class:list={[
-                'inline-flex min-h-11 items-center border-b-2 pb-1 text-small font-semibold whitespace-nowrap transition duration-200',
-                path === view.href ? 'border-accent text-primary' : 'border-transparent text-text-muted hover:text-primary',
+                'inline-flex min-h-11 items-center rounded-full px-5 text-small font-medium whitespace-nowrap transition duration-200',
+                path === view.href ? 'bg-bg text-text shadow-soft dark:bg-surface-2' : 'text-text-muted hover:text-text',
               ]}
               aria-current={path === view.href ? 'page' : undefined}
             >

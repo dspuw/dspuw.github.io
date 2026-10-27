@@ -31,13 +31,13 @@ export default function Countdown({ target, title }: Props) {
   ] as const;
 
   return (
-    <div className="rounded-card border border-border bg-surface p-6 sm:p-8">
+    <div className="rounded-card bg-bg p-8 sm:p-10">
       <p className="text-small text-text-muted">Next up: {title}</p>
       <dl className="mt-4 flex gap-8">
         {parts.map(([label, value]) => (
           <div key={label}>
             <dt className="sr-only">{label}</dt>
-            <dd className="font-display text-[2.5rem] leading-none tabular-nums">{value}</dd>
+            <dd className="font-display text-[3rem] leading-none font-semibold tracking-[-0.04em] text-primary tabular-nums">{value}</dd>
             <p aria-hidden="true" className="mt-1 text-small text-text-muted capitalize">
               {label}
             </p>

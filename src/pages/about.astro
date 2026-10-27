@@ -3,21 +3,11 @@ import { Picture } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Container from '../components/Container.astro';
 import PageHero from '../components/PageHero.astro';
+import Button from '../components/Button.astro';
 import { about } from '../lib/data';
 import heroPhoto from '../assets/images/about/chapter-photo-fall-2025.jpg';
-import formalPhoto from '../assets/images/about/brothers-conference-business-attire.jpg';
-import portraitPhoto from '../assets/images/about/brothers-conference-lounge.jpg';
-import professionalism from '../assets/images/about/pillar-professionalism.jpg';
-import communityService from '../assets/images/about/pillar-community-service.jpg';
-import scholarship from '../assets/images/about/pillar-scholarship.jpg';
-import brotherhood from '../assets/images/about/pillar-brotherhood.jpg';
-
-const pillarPhotos = {
-  Professionalism: { src: professionalism, alt: 'Brothers in a professional development session around a conference table' },
-  'Community Service': { src: communityService, alt: 'A hand-drawn "DSP Walks for a Cure" sign at a community service event' },
-  Scholarship: { src: scholarship, alt: 'Brothers meeting with a professional around a table in a bright room' },
-  Brotherhood: { src: brotherhood, alt: 'Three brothers smiling with their arms around each other' },
-} as const;
+import leadPhoto from '../assets/images/about/brothers-conference-business-attire.jpg';
+import loungePhoto from '../assets/images/about/brothers-conference-lounge.jpg';
 ---
 
 <BaseLayout title="About" description={about.story.paragraphs[0]}>
@@ -26,36 +16,39 @@ const pillarPhotos = {
     title={about.hero.title}
     photo={heroPhoto}
     alt="The whole chapter in business attire in a lecture hall, with the Delta Sigma Pi crest on the screen behind them"
+    focus="50% 45%"
   />
 
   <!-- Our Story -->
-  <section class="py-20 sm:py-24" aria-labelledby="story-title">
-    <Container class="grid items-center gap-12 lg:grid-cols-12 lg:gap-16">
-      <div class="lg:col-span-6">
-        <p class="eyebrow reveal">01</p>
-        <h2 id="story-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{about.story.eyebrow}</h2>
-        <p class="reveal mt-8 font-display text-[1.375rem] leading-[1.45] sm:text-[1.75rem]">{about.story.paragraphs[0]}</p>
-        {about.story.paragraphs.slice(1).map((p) => <p class="reveal mt-6 text-body-lg text-text-muted">{p}</p>)}
+  <section class="py-24 sm:py-32" aria-labelledby="story-title">
+    <Container>
+      <div class="mx-auto max-w-5xl">
+        <h2 id="story-title" class="eyebrow reveal">{about.story.eyebrow}</h2>
+        <p class="reveal mt-5 font-display text-[1.625rem] leading-[1.3] font-semibold tracking-[-0.025em] sm:text-[2.5rem] sm:leading-[1.2]">
+          {about.story.paragraphs[0]}
+        </p>
+        {about.story.paragraphs.slice(1).map((p) => <p class="reveal mt-8 max-w-3xl text-body-lg text-text-muted sm:text-[1.3125rem]">{p}</p>)}
       </div>
-      <div class="reveal grid grid-cols-5 gap-4 lg:col-span-6">
-        <div class="col-span-3">
+
+      <div class="mt-16 grid gap-4 sm:mt-20 sm:grid-cols-5 sm:gap-5">
+        <div class="reveal overflow-hidden rounded-card bg-surface sm:col-span-3">
           <Picture
-            src={formalPhoto}
+            src={leadPhoto}
             formats={['avif', 'webp']}
-            widths={[480, 960]}
-            sizes="(min-width: 1024px) 420px, 60vw"
-            alt="Four brothers in business attire with conference lanyards on the steps of a hotel lobby"
-            class="aspect-[3/4] size-full rounded-card object-cover"
+            widths={[480, 960, 1400]}
+            sizes="(min-width: 640px) 60vw, 100vw"
+            alt="Four brothers in business attire with LEAD conference lanyards on the steps of a hotel lobby"
+            class="aspect-[4/3] size-full object-cover object-[50%_70%]"
           />
         </div>
-        <div class="col-span-2 mt-12">
+        <div class="reveal overflow-hidden rounded-card bg-surface sm:col-span-2">
           <Picture
-            src={portraitPhoto}
+            src={loungePhoto}
             formats={['avif', 'webp']}
-            widths={[320, 640]}
-            sizes="(min-width: 1024px) 280px, 40vw"
-            alt="Four brothers in business attire with conference lanyards seated on a lounge sofa"
-            class="aspect-[2/3] size-full rounded-card object-cover"
+            widths={[400, 800, 1000]}
+            sizes="(min-width: 640px) 40vw, 100vw"
+            alt="Four brothers in business attire with LEAD conference lanyards seated on a lounge sofa"
+            class="aspect-[4/3] size-full object-cover object-[50%_65%] sm:aspect-auto"
           />
         </div>
       </div>
@@ -63,16 +56,15 @@ const pillarPhotos = {
   </section>
 
   <!-- Our Purpose -->
-  <section class="border-y border-border bg-surface py-20 sm:py-24" aria-labelledby="purpose-title">
+  <section class="bg-surface py-24 sm:py-32" aria-labelledby="purpose-title">
     <Container>
-      <p class="eyebrow reveal">02</p>
-      <h2 id="purpose-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{about.purpose.eyebrow}</h2>
-      <div class="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
+      <h2 id="purpose-title" class="reveal text-center text-[2.5rem] leading-[1.05] sm:text-h2 lg:text-display-lg">{about.purpose.eyebrow}</h2>
+      <div class="mt-12 grid gap-4 sm:mt-16 sm:gap-5 md:grid-cols-2">
         {
           about.purpose.items.map((item) => (
-            <article class="reveal border-t border-accent pt-8">
-              <h3 class="text-[1.75rem] leading-[1.2]">{item.heading}</h3>
-              <p class="mt-4 text-body-lg text-text-muted">{item.text}</p>
+            <article class="reveal rounded-card bg-bg p-8 sm:p-12">
+              <h3 class="text-[1.75rem] leading-[1.15] sm:text-[2.25rem]">{item.heading}</h3>
+              <p class="mt-5 text-body-lg text-text-muted">{item.text}</p>
             </article>
           ))
         }
@@ -81,46 +73,31 @@ const pillarPhotos = {
   </section>
 
   <!-- Our Pillars -->
-  <section class="py-20 sm:py-24" aria-labelledby="pillars-title">
+  <section class="py-24 sm:py-32" aria-labelledby="pillars-title">
     <Container>
-      <p class="eyebrow reveal">03</p>
-      <h2 id="pillars-title" class="reveal mt-4 text-[2.5rem] leading-[1.05] sm:text-h2">{about.pillars.eyebrow}</h2>
-      <div class="mt-12 grid gap-6 md:grid-cols-2">
+      <h2 id="pillars-title" class="reveal text-center text-[2.5rem] leading-[1.05] sm:text-h2 lg:text-display-lg">{about.pillars.eyebrow}</h2>
+      <div class="mt-12 grid gap-4 sm:mt-16 sm:grid-cols-2 sm:gap-5 xl:grid-cols-4">
         {
-          about.pillars.items.map((pillar, index) => {
-            const photo = pillarPhotos[pillar.name as keyof typeof pillarPhotos];
-            return (
-              <article class="reveal overflow-hidden rounded-card border border-border bg-bg">
-                <Picture
-                  src={photo.src}
-                  formats={['avif', 'webp']}
-                  widths={[480, 800, 1200]}
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  alt={photo.alt}
-                  class="aspect-[16/9] w-full object-cover"
-                />
-                <div class="p-8 sm:p-10">
-                  <p class="font-display text-[1.25rem] text-accent-text italic">{`0${index + 1}`}</p>
-                  <h3 class="mt-2 text-[2rem] leading-[1.1]">{pillar.name}</h3>
-                  <p class="mt-4 text-body-lg text-text-muted">{pillar.text}</p>
-                </div>
-              </article>
-            );
-          })
+          about.pillars.items.map((pillar, index) => (
+            <article class="reveal flex flex-col rounded-card bg-surface p-8 sm:p-10">
+              <p class="font-display text-[4rem] leading-none font-semibold tracking-[-0.05em] text-primary/25 tabular-nums" aria-hidden="true">
+                {index + 1}
+              </p>
+              <h3 class="mt-10 text-[1.75rem] leading-[1.15]">{pillar.name}</h3>
+              <p class="mt-4 text-body text-text-muted">{pillar.text}</p>
+            </article>
+          ))
         }
       </div>
     </Container>
   </section>
 
-  <section class="bg-brand text-white">
-    <Container class="flex flex-col items-start gap-6 py-20 sm:flex-row sm:items-center sm:justify-between">
-      <h2 class="text-[2.25rem] leading-[1.05] sm:text-h2">Join Us</h2>
-      <a
-        href="/recruitment"
-        class="inline-flex min-h-12 items-center rounded-button bg-white px-6 text-small font-semibold text-ink transition duration-200 hover:-translate-y-0.5 hover:bg-accent-on-brand"
-      >
-        Recruitment <span aria-hidden="true" class="ml-2">&rarr;</span>
-      </a>
+  <section class="pb-24 sm:pb-32" aria-labelledby="join-title">
+    <Container class="text-center">
+      <h2 id="join-title" class="reveal text-[2.5rem] leading-[1.05] sm:text-h2 lg:text-display-lg">Join Us</h2>
+      <div class="reveal mt-8">
+        <Button href="/recruitment" class="min-h-12 px-7 text-body">Recruitment</Button>
+      </div>
     </Container>
   </section>
 </BaseLayout>
