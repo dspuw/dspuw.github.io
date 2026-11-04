@@ -191,4 +191,4 @@ Same steps as Fall. After recruitment ends, set `lastCycle` to Winter of this ye
 | Deploy workflow | `.github/workflows/deploy.yml` |
 | Saved copy of the old Squarespace site | `reference/` |
 
-The site uses the custom domain `dspuw.net`. It is set in the repo's Settings > Pages, and its DNS records point to GitHub Pages. The domain is registered through Squarespace Domains; keep it renewing every year.
+The site uses the custom domain `dspuw.net`. It is set in the repo's Settings > Pages. The domain is registered with Cloudflare (Domain Registration), which also runs its DNS; keep auto-renew on so it never lapses. Its A, AAAA and `www` CNAME records point to GitHub Pages and must stay set to **DNS only** (gray cloud), or GitHub can't renew the site's HTTPS certificate.
