@@ -1,7 +1,6 @@
 ---
 import PageHeader from './PageHeader.astro';
 import { site } from '../lib/data';
-import MembersPortalLink from './MembersPortalLink.astro';
 
 interface Props {
   eyebrow: string;
@@ -37,6 +36,5 @@ const path = Astro.url.pathname.replace(/\/$/, '') || '/';
       }
     </ul>
   </nav>
-  <MembersPortalLink variant="pill" />
   </div>
 </PageHeader>

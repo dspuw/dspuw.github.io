@@ -51,7 +51,7 @@ All of these live in `src/data`. A few rules apply to every file:
 - **`socials`:** the Instagram and LinkedIn links.
 - **`email`:** the chapter's main point of contact, shown on the Home and Contact pages.
   - There is no contact form right now. If you want one later, get a free access key from [Web3Forms](https://web3forms.com) that delivers to the chapter email, and ask a developer (or Claude) to add the form back.
-- **`membersPortal`:** the members-only Resources link. Keep the label generic so the public site doesn't say what the members site is. It shows as a Members button in the top bar, in the phone menu, and under the Brothers tabs.
+- **`membersPortal`:** the members-only Resources link. Keep the label generic so the public site doesn't say what the members site is. It shows only as a Members button in the top bar (and in the top bar's phone menu), not on any page.
   - Put the site's address in `url`. Leave it as `""` to hide the link.
   - The link is public, but that site has its own login, so only approved UW emails can get in. Access is managed on that site, not here.
 - **`stats`:** the numbers on the home page (founded 2012, 75+ brothers). Only change these if the facts change.
@@ -108,6 +108,7 @@ All of these live in `src/data`. A few rules apply to every file:
   - **`headshot`:** the file name of the photo in `src/assets/images/brothers`.
     - Use the person's name as the file name, for example `jane-doe.jpg`.
     - A portrait photo works best, and the site crops it to 4:5.
+    - Optional: to line the face up with everyone else's, someone with Python can run `python3 scripts/center-headshots.py src/assets/images/brothers/jane-doe.jpg` (instructions are at the top of that file). Without it, the site crops from the top of the photo.
     - Use `null` to show initials instead.
   - **`linkedin`:** the full LinkedIn URL, or `null`.
   - **`major` and `graduationYear`:** optional, so leave them as `null` if unknown. Once anyone has one filled in, a Major filter and a Graduation Year filter appear on the directory automatically. `graduationYear` is a number with no quotes, for example `2027`.
